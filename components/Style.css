@@ -114,3 +114,18 @@ body{
  font-size: 20px; /* Tamaño de fuente de 20px */
  font-family: var(--font-family); /* Aplica la fuente Poppins */
 }
+/* Selector de clase para un enlace que inicia una encuesta. */
+.empezar__encuesta--link{
+   text-decoration: none; /* Elimina el subrayado (decoración) predeterminado de los enlaces para que parezca texto normal. */
+   color:var(--color-texto-alterno); /* Establece el color del texto utilizando la variable de color alternativo (azul oscuro). */
+}
+/*Selector de clase para un enlace que inicia sesión*/
+.iniciar__sesion--link{
+ text-decoration: none; /* Elimina el subrayado (decoración) predeterminado de los enlaces para que parezca texto normal. */
+   color:var(--color-texto-alterno); /* Establece el color del texto utilizando la variable de color alternativo (azul oscuro). */
+}
+/*Selector de clase para un enlace que registra*/
+.registrarse--link{
+     text-decoration: none; /* Elimina el subrayado (decoración) predeterminado de los enlaces para que parezca texto normal. */
+   color:var(--color-texto-alterno); /* Establece el color del texto utilizando la variable de color alternativo (azul oscuro). */
+}
