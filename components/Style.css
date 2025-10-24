@@ -122,10 +122,10 @@ body{
 /*Selector de clase para un enlace que inicia sesión*/
 .iniciar__sesion--link{
  text-decoration: none; /* Elimina el subrayado (decoración) predeterminado de los enlaces para que parezca texto normal. */
-   color:var(--color-texto-alterno); /* Establece el color del texto utilizando la variable de color alternativo (azul oscuro). */
+   color:var(--color-texto); /* Establece el color del texto utilizando la variable de color alternativo (azul oscuro). */
 }
 /*Selector de clase para un enlace que registra*/
 .registrarse--link{
-     text-decoration: none; /* Elimina el subrayado (decoración) predeterminado de los enlaces para que parezca texto normal. */
-   color:var(--color-texto-alterno); /* Establece el color del texto utilizando la variable de color alternativo (azul oscuro). */
+   text-decoration: none; /* Elimina el subrayado (decoración) predeterminado de los enlaces para que parezca texto normal. */
+   color:var(--color-texto); /* Establece el color del texto utilizando la variable de color alternativo (azul oscuro). */
 }
