@@ -17,6 +17,7 @@
     --color-texto: #FAFAFA; /* Color de texto claro: casi blanco */
     --color-texto-alterno: #021f4a; /* Color de texto alternativo/oscuro: el mismo que el color primario */
 }
+
 /* Estilos para el cuerpo (body) de la página */
 body{
     display: flex; /* Utiliza Flexbox para la disposición de los elementos internos */
@@ -28,13 +29,13 @@ body{
 }
 /* Estilos para la clase que probablemente contiene el logo en el encabezado */
 .encabezado_logo{
-    width: 150px;/* Define un ancho fijo para la imagen del logo */
+    width: 80px;/* Define un ancho fijo para la imagen del logo */
     height: auto; /* Permite que la altura se ajuste automáticamente manteniendo la proporción */
 }
 /* Estilos para el botón principal */
 .contenido--boton__primario{
     background-color: var(--color-botton--primario); /* Color de fondo verde neón */
-    padding: 1.5rem, 1.8rem; /*Establecer el espacio interno*/
+    /* padding: 1.5rem, 1.8rem; Establecer el espacio interno */
     height: 100px; /* Altura fija */
     width: 300px;/* Ancho fijo */
     border-radius: 11px; /* Borde redondeado */
