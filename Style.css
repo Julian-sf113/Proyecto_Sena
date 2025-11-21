@@ -1,0 +1,20 @@
+/* Este selector universal aplica a todos los elementos (*) */
+*{
+   margin: 0; /* Elimina el margen por defecto de todos los elementos */
+   padding: 0; /* Elimina el padding (relleno) por defecto de todos los elementos */
+   box-sizing: border-box; /* Establece el modelo de caja a 'border-box'. Esto significa que el padding y el borde
+       se incluyen dentro del ancho y alto total del elemento, facilitando el diseño. */
+}
+/*:root define variables CSS globales (propiedades personalizadas) */
+:root{
+    --color-primario:#021f4a; /* Color principal: un azul oscuro */
+    --color-secundario: #e6e6e6; /* Color secundario: un gris claro*/
+    --color-botton--primario: #79FC41; /* Color de fondo del botón principal: un verde neón */
+    --color-botton--primario-hover: #007FFF; /* Color de fondo del botón principal al pasar el ratón (hover): un azul vibrante */
+    --color-botton--secundario: #007FFF; /* Color de fondo del botón secundario/terciario: un azul vibrante */
+    --color-botton--secundario-hover: #79FC41;/* Color de fondo del botón secundario/terciario al pasar el ratón (hover): un verde neón */
+    --font-family: "Poppins", sans-serif; /* Familia de la fuente: Poppins (y sans-serif como respaldo) */
+    --font-style: normal; /* Estilo de la fuente: normal */
+    --color-texto: #FAFAFA; /* Color de texto claro: casi blanco */
+    --color-texto-alterno: #021f4a; /* Color de texto alternativo/oscuro: el mismo que el color primario */
+}
