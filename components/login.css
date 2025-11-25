@@ -1,0 +1,168 @@
+@import url("../Style.css");
+
+body.pagina{
+    /* Elimina el margen por defecto del navegador */
+    margin: 0;
+    /* Aplica la fuente definida en la variable CSS */
+    font-family: var(--font-family);
+    /* Establece el color de fondo principal de la página */
+    background-color: var(--color-primario);
+    /* Habilita CSS Grid para la alineación */
+    display: grid;
+    /* Centra el contenido (el div.login) perfectamente en la pantalla (vertical y horizontal) */
+    place-items: center;
+    /* Asegura que el body ocupe el 100% de la altura de la ventana */
+    height: 100vh;
+}
+
+/* === Contenedor principal del Login === */
+.login{
+    /* Color de fondo para la caja del login (puede ser igual al del body) */
+    background-color: var(--color-primario);
+    /* Ancho fijo para el contenedor */
+    width: 380px;
+    /* Relleno interno para separar el contenido de los bordes */
+    padding: 2rem;
+    /* Esquinas redondeadas */
+    border-radius: 12px;
+    /* Habilita CSS Grid para organizar verticalmente sus hijos */
+    display: grid;
+    /* Espacio vertical entre los elementos hijos (logo, título, formulario) */
+    gap: 1.2rem;
+    /* Alineación de texto central por defecto */
+    text-align: center;
+    /* Centra el contenido dentro del grid */
+    justify-content: center;
+}
+
+/* === Logo Contenedor ===*/
+.login__encabezado{
+    /* Habilita Flexbox */
+    display: flex;
+    /* Centra horizontalmente el logo dentro del encabezado */
+    justify-content: center;
+}
+
+.login__logo{
+    /* Define el ancho de la imagen del logo */
+    width: 430px;
+}
+
+/* === Título ===*/
+.login__titulo{
+    /* Color del texto del título */
+    color: var(--color-texto);
+    /* Tamaño de la fuente */
+    font-size: 1.6rem;
+    /* Elimina márgenes predeterminados */
+    margin: 0;
+}
+
+/* === Formulario Contenedor ===*/
+.formulario{
+    /* Habilita CSS Grid */
+    display: grid;
+    /* Espacio vertical entre los grupos de input y el botón */
+    gap: 2rem;
+}
+
+/* Grupo de input (contenedor para inputs relacionados, ej. email y password)*/
+.formulario__grupo{
+    /* Habilita CSS Grid */
+    display: grid;
+    /* Espacio vertical grande entre los inputs dentro del grupo */
+    gap: 3rem;
+    /* Alinea el texto (ej. etiquetas) a la izquierda */
+    text-align: left;
+}
+
+/* Input (Campo de texto) */
+.formulario__input{
+    /* Define el ancho del input */
+    width: 550px;
+    /* Espaciado interno para hacerlo alto */
+    padding: 22px;
+    /* Sin borde visible */
+    border: none;
+    /* Esquinas redondeadas */
+    border-radius: 6px;
+    /* Color de fondo del input (variable) */
+    background-color: var(--color-fondo-formulario);
+    /* Tamaño de la fuente del texto que se introduce */
+    font-size: 1rem;
+}
+
+/* Botón de acción */
+.formulario__boton{
+    /* Color de fondo principal para el botón */
+    background-color: var(--color-botton--primario);
+    /* Color del texto del botón (típicamente blanco/claro) */
+    color: var(--color-texto-alterno);
+    /* Aplica fuente y estilo definidos por variables */
+    font-family: var(--font-family);
+    font-style: var(--font-style);
+    /* Sin borde */
+    border: none;
+    /* Espaciado interno */
+    padding: 10px;
+    /* Esquinas redondeadas */
+    border-radius: 6px;
+    /* Tamaño de la fuente grande para el botón */
+    font-size: 30px;
+    /* Cambia el cursor para indicar que es interactivo */
+    cursor: pointer;
+    /* Elimina el subrayado si es un enlace */
+    text-decoration: none;
+    /* Asegura que el texto esté centrado */
+    text-align: center;
+}
+
+/* Texto de "¿Olvidaste la Contraseña?" */
+.formulario__olvido{
+    /* Color del texto */
+    color: var(--color-texto);
+    /* Alineación central */
+    text-align: center;
+    /* Tamaño de la fuente */
+    font-size: 25px;
+}
+
+/* Enlace dentro del texto (ej. "Haz click aquí") */
+.formulario__link{
+    /* Color azul para el enlace */
+    color:#4da3ff;
+    /* Tamaño de la fuente */
+    font-size: 19px;
+    /* Elimina el subrayado por defecto */
+    text-decoration: none;
+    /* Pequeño espacio a la izquierda para separarlo del texto anterior */
+    padding-left: 8px;
+}
+
+/* Efecto al pasar el ratón sobre el enlace */
+.formulario__link:hover{
+    /* Muestra el subrayado al pasar el ratón */
+    text-decoration: underline;
+}
+
+/* Texto de "No tienes cuenta..." (o similar) */
+.formulario__registro{
+    /* Tamaño de la fuente */
+    font-size: 25px;
+    /* Color del texto */
+    color: var(--color-texto);
+}
+
+/* Footer (Pie de página del login) */
+.login__footer{
+    /* Habilita Flexbox */
+    display: flex;
+    /* Distribuye los elementos en los extremos (espacio entre ellos) */
+    justify-content: space-between;
+    /* Tamaño de fuente pequeña */
+    font-size: .9rem;
+    /* Gran espacio para separarlo del formulario */
+    padding-top: 50px;
+    /* Color del texto */
+    color: var(--color-texto);
+}
