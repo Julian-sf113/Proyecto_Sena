@@ -1,0 +1,531 @@
+@import url("../Style.css");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ==================== RESET & BASE ==================== */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5f5;
+    min-height: 100vh;
+}
+
+/* ==================== HEADER ==================== */
+.encabezado {
+    width: 100%;
+    background-color: var(--color-Principal);
+    color: var(--color-texto);
+}
+
+.encabezado__top {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.header__logo {
+    margin: 0;
+}
+
+.header__logo img {
+    height: 122px;
+    width: auto;
+}
+
+/* Barra de búsqueda */
+.contenido__barra-busqueda {
+    display: flex;
+    flex: 1;
+    max-width: 400px;
+    position: relative;
+}
+
+.contenido__barra-busqueda input {
+    width: 100%;
+    padding: 12px 45px 12px 15px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+}
+
+.contenido__barra-busqueda input::placeholder {
+    color: #999;
+}
+
+.contenido__boton-buscador {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.contenido__boton-buscador img {
+    width: 18px;
+    height: 18px;
+    opacity: 0.6;
+}
+
+/* Iconos de navegación del header */
+.encabezado__top--nav-encabezado {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-encabezado__icono--user,
+.nav-encabezado__icono--carrito,
+.nav-encabezado__icono--menu {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-encabezado__icono--user img,
+.nav-encabezado__icono--carrito img,
+.nav-encabezado__icono--menu img {
+    width: 28px;
+    height: 28px;
+    filter: brightness(0) invert(1);
+    transition: transform 0.2s ease;
+}
+
+.nav-encabezado__icono--user:hover img,
+.nav-encabezado__icono--carrito:hover img,
+.nav-encabezado__icono--menu:hover img {
+    transform: scale(1.1);
+}
+
+/* ==================== CONTENEDOR DE NAVEGACIÓN ==================== */
+.nav-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-Principal);
+    padding: 0 30px;
+    gap: 5px;
+}
+
+/* ==================== NAVEGACIÓN PRINCIPAL ==================== */
+.nav {
+    display: inline-block;
+    position: relative;
+}
+
+.nav__item {
+    list-style: none;
+}
+
+.nav__link {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.nav__link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Submenú */
+.nav__submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    min-width: 180px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    padding: 10px 0;
+    z-index: 1000;
+    list-style: none;
+}
+
+.nav:hover .nav__submenu {
+    display: block;
+    animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.nav__submenu-item {
+    list-style: none;
+}
+
+.nav__submenu-link {
+    color: var(--color-texto-alterno);
+    text-decoration: none;
+    font-size: 13px;
+    padding: 10px 20px;
+    display: block;
+    transition: all 0.2s ease;
+}
+
+.nav__submenu-link:hover {
+    background-color: var(--color-Principal);
+    color: white;
+}
+
+/* ==================== RECOMENDACIONES HERO ==================== */
+.recomendaciones__hero {
+    background-color: var(--color-Principal);
+    padding: 50px 30px 60px;
+    text-align: center;
+}
+
+.recomendaciones__titulo {
+    color: white;
+    font-size: 32px;
+    font-weight: 700;
+    font-style: italic;
+    margin-bottom: 40px;
+    line-height: 1.3;
+}
+
+/* ==================== TARJETAS DE PREFERENCIAS ==================== */
+.preferencias {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.preferencia-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 25px 35px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    min-width: 180px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.preferencia-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    border-color: var(--color-Principal);
+}
+
+.preferencia-card__icono {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 15px;
+    color: var(--color-Principal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.preferencia-card__icono svg,
+.preferencia-card__icono img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+.preferencia-card__nombre {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-texto-alterno);
+    margin-bottom: 8px;
+}
+
+.preferencia-card__valor {
+    font-size: 13px;
+    color: var(--color-Principal);
+    font-weight: 500;
+}
+
+/* ==================== TABLA DE RECOMENDACIÓN ==================== */
+.tabla-recomendacion {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 0 30px;
+}
+
+.tabla-recomendacion__titulo {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--color-Principal);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.tabla-container {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.tabla {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabla__header {
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.tabla__th {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--color-texto-alterno);
+    text-align: left;
+    padding: 15px 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.tabla__th--precio {
+    color: var(--color-Principal);
+}
+
+.tabla__row {
+    border-bottom: 1px solid #f0f0f0;
+    transition: background-color 0.2s ease;
+}
+
+.tabla__row:last-child {
+    border-bottom: none;
+}
+
+.tabla__row:hover {
+    background-color: #f8f9fa;
+}
+
+.tabla__td {
+    padding: 18px 20px;
+    font-size: 13px;
+    color: #333;
+    vertical-align: middle;
+}
+
+.tabla__link {
+    color: var(--color-Principal);
+    text-decoration: underline;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.tabla__link:hover {
+    color: var(--color-primario);
+}
+
+.tabla__td--producto {
+    max-width: 250px;
+    line-height: 1.4;
+}
+
+.tabla__td--precio {
+    font-weight: 600;
+    color: var(--color-texto-alterno);
+    white-space: nowrap;
+}
+
+/* ==================== RATING ESTRELLAS ==================== */
+.rating {
+    display: flex;
+    gap: 2px;
+}
+
+.rating__star {
+    color: #FFD700;
+    font-size: 16px;
+}
+
+.rating__star--empty {
+    color: #ddd;
+}
+
+/* ==================== BOTÓN VER DETALLES ==================== */
+.btn-ver-detalles {
+    display: block;
+    margin: 0 auto;
+    background-color: var(--color-Principal);
+    color: white;
+    border: none;
+    padding: 14px 35px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-ver-detalles:hover {
+    background-color: var(--color-primario);
+    transform: scale(1.02);
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+}
+
+/* ==================== FOOTER ==================== */
+.footer {
+    background-color: var(--color-Principal);
+    color: white;
+    padding: 50px 30px 40px;
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 40px;
+    max-width: 100%;
+}
+
+.footer__left {
+    display: flex;
+    align-items: flex-start;
+}
+
+.footer__logo {
+    margin: 0;
+}
+
+.footer__logo img {
+    height: 122px;
+    width: auto;
+}
+
+.footer__columns {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer__titulo {
+    font-size: 19px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer__link {
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    font-size: 16px;
+    transition: all 0.2s ease;
+    display: block;
+}
+
+.footer__link:hover {
+    color: white;
+    padding-left: 5px;
+}
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+@media (max-width: 1200px) {
+    .footer {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .encabezado__top {
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .contenido__barra-busqueda {
+        order: 3;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .recomendaciones__titulo {
+        font-size: 24px;
+    }
+
+    .preferencias {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .preferencia-card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .tabla-container {
+        overflow-x: auto;
+    }
+
+    .tabla {
+        min-width: 600px;
+    }
+
+    .footer {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer__left {
+        justify-content: center;
+    }
+
+    .footer__columns {
+        align-items: center;
+    }
+
+    .nav__link {
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+
+    .nav-container {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 480px) {
+    .header__logo img {
+        height: 40px;
+    }
+
+    .recomendaciones__hero {
+        padding: 30px 15px 40px;
+    }
+
+    .tabla-recomendacion {
+        padding: 0 15px;
+    }
+
+    .tabla-recomendacion__titulo {
+        font-size: 20px;
+    }
+}

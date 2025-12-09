@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="components/recomendaciones.css">
+    <title>Recomendaciones - Deportex Studio</title>
+</head>
+
+<body>
+    <header class="encabezado">
+        <section class="encabezado__top">
+            <figure class="header__logo">
+                <img src="Images/Logo2.0.png" alt="Logo Deportex Studio">
+            </figure>
+
+            <form class="contenido__barra-busqueda">
+                <input type="text" placeholder="Buscar productos..." class="contenido__barra-busqueda">
+                <button class="contenido__boton-buscador" type="submit"><img src="Images/lupa.png"
+                        alt="lupa del buscador" class=".contenido__barra-busqueda "></button>
+            </form>
+
+            <nav class="encabezado__top--nav-encabezado">
+                <button class="nav-encabezado__icono--user"><img src="Images/avatar.png" alt="Avatar Usuario"></button>
+                <button class="nav-encabezado__icono--carrito"><img src="Images/carrito-de-compras.png"
+                        alt="Carrito de compras"></button>
+                <button class="nav-encabezado__icono--menu"><img src="Images/menu.png" alt="menu"></button>
+            </nav>
+        </section>
+
+        <section class="nav-container">
+            <nav class="nav">
+                <li class="nav__item"><a class="nav__link" href="Principal.html">Inicio</a></li>
+            </nav>
+
+            <nav class="nav">
+                <li class="nav__item"><a class="nav__link" href="#">Deportes</a></li>
+                <ul class="nav__submenu">
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Baloncesto</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Fútbol</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Voleibol</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Ciclismo</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Natación</a></li>
+                </ul>
+            </nav>
+
+            <nav class="nav">
+                <li class="nav__item"><a class="nav__link" href="#">Hombre</a></li>
+                <ul class="nav__submenu">
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Ropa</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Calzado</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Accesorios</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Novedades</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Colección</a></li>
+                </ul>
+            </nav>
+
+            <nav class="nav">
+                <li class="nav__item"><a class="nav__link" href="#">Mujer</a></li>
+                <ul class="nav__submenu">
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Ropa</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Calzado</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Accesorios</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Novedades</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Coleccion</a></li>
+                </ul>
+            </nav>
+
+            <nav class="nav">
+                <li class="nav__item"><a class="nav__link" href="#">Junior</a></li>
+                <ul class="nav__submenu">
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Ropa</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Calzado</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Accesorios</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Novedades</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Coleccion</a></li>
+                </ul>
+            </nav>
+        </section>
+    </header>
+
+    <!-- Sección Hero de Recomendaciones -->
+    <main class="recomendaciones">
+        <section class="recomendaciones__hero">
+            <h1 class="recomendaciones__titulo">Recomendaciones según<br>Preferencias</h1>
+
+            <div class="preferencias">
+                <article class="preferencia-card">
+                    <div class="preferencia-card__icono">
+                        <img src="Images/Icono.Deporte.png" alt="Icono Deporte">
+                    </div>
+                    <h3 class="preferencia-card__nombre">Deporte Elegido</h3>
+                    <span class="preferencia-card__valor">Ciclismo</span>
+                </article>
+
+                <article class="preferencia-card">
+                    <div class="preferencia-card__icono">
+                        <img src="Images/Nivel_Experiencia.png" alt="Nivel de Experiencia">
+                    </div>
+                    <h3 class="preferencia-card__nombre">Nivel de Experiencia</h3>
+                    <span class="preferencia-card__valor">Avanzado</span>
+                </article>
+
+                <article class="preferencia-card">
+                    <div class="preferencia-card__icono">
+                        <img src="Images/precio-alto.png" alt="Presupuesto">
+                    </div>
+                    <h3 class="preferencia-card__nombre">Presupuesto</h3>
+                    <span class="preferencia-card__valor">Alto</span>
+                </article>
+            </div>
+        </section>
+
+        <!-- Tabla de Recomendación -->
+        <section class="tabla-recomendacion">
+            <h2 class="tabla-recomendacion__titulo">Tabla de Recomendación</h2>
+
+            <div class="tabla-container">
+                <table class="tabla">
+                    <thead class="tabla__header">
+                        <tr>
+                            <th class="tabla__th">Categoría</th>
+                            <th class="tabla__th">Producto Recomendado</th>
+                            <th class="tabla__th">Valoración</th>
+                            <th class="tabla__th tabla__th--precio">Precio estimado</th>
+                        </tr>
+                    </thead>
+                    <tbody class="tabla__body">
+                        <tr class="tabla__row">
+                            <td class="tabla__td">
+                                <a href="#" class="tabla__link">Bicicleta</a>
+                            </td>
+                            <td class="tabla__td tabla__td--producto">Bicicleta de ruta Van Rysel EDR CF rojo</td>
+                            <td class="tabla__td tabla__td--rating">
+                                <div class="rating">
+                                    <span class="rating__star">★</span>
+                                    <span class="rating__star">★</span>
+                                    <span class="rating__star">★</span>
+                                    <span class="rating__star">★</span>
+                                    <span class="rating__star">★</span>
+                                </div>
+                            </td>
+                            <td class="tabla__td tabla__td--precio">$ 11.990.000 COP</td>
+                        </tr>
+                        <tr class="tabla__row">
+                            <td class="tabla__td">
+                                <a href="#" class="tabla__link">Equipamiento</a>
+                            </td>
+                            <td class="tabla__td tabla__td--producto">Maleta de hidratación ciclismo mtb EXPL 7L/2L
+                                rockrider - negro</td>
+                            <td class="tabla__td tabla__td--rating">
+                                <div class="rating">
+                                    <span class="rating__star">★</span>
+                                    <span class="rating__star">★</span>
+                                    <span class="rating__star">★</span>
+                                    <span class="rating__star">★</span>
+                                    <span class="rating__star rating__star--empty">★</span>
+                                </div>
+                            </td>
+                            <td class="tabla__td tabla__td--precio">$ 260.000 COP</td>
+                        </tr>
+                        <tr class="tabla__row">
+                            <td class="tabla__td">
+                                <a href="#" class="tabla__link">Accesorio</a>
+                            </td>
+                            <td class="tabla__td tabla__td--producto">Gafas Ciclismo Roadr 900 Perf Light Adulto Negro
+                                Pack Zeiss</td>
+                            <td class="tabla__td tabla__td--rating">
+                                <div class="rating">
+                                    <span class="rating__star">★</span>
+                                    <span class="rating__star">★</span>
+                                    <span class="rating__star">★</span>
+                                    <span class="rating__star rating__star--empty">★</span>
+                                    <span class="rating__star rating__star--empty">★</span>
+                                </div>
+                            </td>
+                            <td class="tabla__td tabla__td--precio">$ 703.000 COP</td>
+                        </tr>
+                        <tr class="tabla__row">
+                            <td class="tabla__td">
+                                <a href="#" class="tabla__link">Ropa</a>
+                            </td>
+                            <td class="tabla__td tabla__td--producto">Zapatillas ciclismo ROADR900 Van rysel - negro
+                            </td>
+                            <td class="tabla__td tabla__td--rating">
+                                <div class="rating">
+                                    <span class="rating__star">★</span>
+                                    <span class="rating__star">★</span>
+                                    <span class="rating__star">★</span>
+                                    <span class="rating__star">★</span>
+                                    <span class="rating__star rating__star--empty">★</span>
+                                </div>
+                            </td>
+                            <td class="tabla__td tabla__td--precio">$ 553.000 COP</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <button class="btn-ver-detalles">Ver Detalles del Producto</button>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <section class="footer__left">
+            <figure class="footer__logo">
+                <img src="Images/Logo2.0.png" alt="Logo Deportex Studio">
+            </figure>
+        </section>
+
+        <section class="footer__columns">
+            <div class="footer__columns">
+                <h4 class="footer__titulo">COMPRA</h4>
+                <a href="#" class="footer__link">Método de Pago</a>
+                <a href="#" class="footer__link">Métodos de entrega</a>
+                <a href="#" class="footer__link">Envíos Gratis</a>
+                <a href="#" class="footer__link">Guía de Tallas</a>
+                <a href="#" class="footer__link">Tarjeta Regalo</a>
+            </div>
+        </section>
+
+        <section class="footer__columns">
+            <div class="footer__columns">
+                <h4 class="footer__titulo">EXPERIENCIA</h4>
+                <a href="#" class="footer__link">Ventas Corporativas</a>
+                <a href="#" class="footer__link">Consejos Deportivos</a>
+                <a href="#" class="footer__link">Deportex Actividades</a>
+                <a href="#" class="footer__link">Nuestras Tiendas</a>
+            </div>
+        </section>
+
+        <section class="footer__columns">
+            <div class="footer__columns">
+                <h4 class="footer__titulo">Legal</h4>
+                <a href="#" class="footer__link">Políticas, Términos y condiciones</a>
+                <a href="#" class="footer__link">Avisos de Seguridad</a>
+                <a href="#" class="footer__link">Factura Electronica</a>
+                <a href="#" class="footer__link">SIC</a>
+            </div>
+        </section>
+    </footer>
+</body>
+
+</html>
