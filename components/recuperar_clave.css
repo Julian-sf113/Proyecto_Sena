@@ -1,0 +1,120 @@
+@import url("../Style.css");
+/* === Estilos generales === */
+body{
+    margin: 0;
+    font-family: var(--font-family);
+    background-color: var(--color-primario);
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+/* === Contenedor principal === */
+.restablecer{
+    width: 380px;
+    padding: 2rem;
+    border-radius: 12px;
+    display: grid;
+    gap: 1.3rem;
+    text-align: center;
+    justify-content: center;
+}
+
+/* === Logo === */
+.restablecer__encabezado{
+    display: flex;
+    justify-content: center;
+}
+
+.restablecer__logo{
+    width: 450px;
+}
+
+/* === Título === */
+.restablecer__titulo{
+    color: var( --color-texto);
+    font-size: 30px;
+    font-family: var(--font-family);
+    font-style: var(--font--style);
+    margin: 0;
+}
+
+/* === Descripción === */
+.restablecer__descripcion{
+    color:#c7c7c7;
+    font-size: 20px;
+    text-align: left;
+    margin-top: 20px;
+}
+
+/* === Formulario === */
+.formulario{
+    display: grid;
+    gap: 2rem;
+}
+
+/* Grupo de campos */
+.formulario__grupo{
+    display: grid;
+    gap: 3rem;
+    text-align: left;
+}
+
+/* Texto del label */
+.formulario__texto{
+    color: #c7c7c7;
+    font-size: 15px;
+}
+
+/* Input */
+.formulario__input{
+    width: 550px;
+    padding: 22px;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--color-fondo-formulario);
+    font-size: 1rem;
+}
+
+/* Botón */
+.formulario__boton{
+    background-color: var(--color-botton--primario);
+    color: var(--color-texto-alterno);
+    border: none;
+    padding: 18px;
+    border-radius: 6px;
+    font-size: 30px;
+    text-decoration: none;
+    cursor: pointer;
+    font-style: var(--font--style);
+}
+
+/* links */
+.formulario__registro{
+    color: var(--color-texto);
+    text-decoration: none;
+    padding-left: 10px;
+    font-family: var(--font-family);
+    font-size: 18px;
+}
+
+.formulario__link{
+    color: #007FFF;
+    text-decoration: none;
+    font-weight: 500;
+    padding-left: 10px;
+    font-family: var(--font-family);
+}
+
+.formulario__link:hover{
+    text-decoration: underline;
+}
+
+/* Footer */
+.restablecer__footer{
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    color: var(--color-texto);
+    padding-top: 55px;
+}
