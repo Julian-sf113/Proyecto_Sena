@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="components/login.css">
+    <title>Iniciar Sesión - Deportex Studio</title>
+</head>
+
+<body class="pagina">
+    <main class="login">
+        <header class="login__encabezado">
+            <img src="Images/Logo.png" alt="Logo Deportex Studio" class="login__logo">
+        </header>
+
+        <h1 class="login__titulo">Iniciar Sesión</h1>
+
+        <form class="formulario">
+
+            <label class="formulario__grupo">
+                <input type="email" class="formulario__input" placeholder="Correo Electronico" required>
+            </label>
+
+            <label class="formulario__grupo">
+                <input type="password" class="formulario__input" placeholder="Contraseña" required>
+            </label>
+
+            <a href="Principal.html" class="formulario__boton">Iniciar Sesión</a>
+
+            <p class="formulario__olvido">¿Olvidaste tu contraseña?</p>
+            <a href="recuperar_clave.html" class="formulario__link">Recuperar Contraseña</a>
+
+            <p class="formulario__registro">
+                ¿No tiene cuenta?<a href="registrarse.html"
+                    class="formulario__link formulario__link--registro">Registrate aquí</a>
+            </p>
+
+            <div class="formulario__admin">
+                <a href="Administrador/panel_del_administrador.html"
+                    class="formulario__boton formulario__boton--admin">Acceso Administrador</a>
+            </div>
+        </form>
+
+        <footer class="login__footer">
+            <span class="login__legal">Terminos y Condiciones</span>
+            <span class="login__legal">Privacidad de Politica</span>
+        </footer>
+    </main>
+</body>
+
+</html>

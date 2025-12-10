@@ -1,6 +1,6 @@
 @import url("../Style.css");
 
-body.pagina{
+body.pagina {
     /* Elimina el margen por defecto del navegador */
     margin: 0;
     /* Aplica la fuente definida en la variable CSS */
@@ -16,7 +16,7 @@ body.pagina{
 }
 
 /* === Contenedor principal del Login === */
-.login{
+.login {
     /* Color de fondo para la caja del login (puede ser igual al del body) */
     background-color: var(--color-primario);
     /* Ancho fijo para el contenedor */
@@ -36,20 +36,20 @@ body.pagina{
 }
 
 /* === Logo Contenedor ===*/
-.login__encabezado{
+.login__encabezado {
     /* Habilita Flexbox */
     display: flex;
     /* Centra horizontalmente el logo dentro del encabezado */
     justify-content: center;
 }
 
-.login__logo{
+.login__logo {
     /* Define el ancho de la imagen del logo */
     width: 430px;
 }
 
 /* === Título ===*/
-.login__titulo{
+.login__titulo {
     /* Color del texto del título */
     color: var(--color-texto);
     /* Tamaño de la fuente */
@@ -59,7 +59,7 @@ body.pagina{
 }
 
 /* === Formulario Contenedor ===*/
-.formulario{
+.formulario {
     /* Habilita CSS Grid */
     display: grid;
     /* Espacio vertical entre los grupos de input y el botón */
@@ -67,7 +67,7 @@ body.pagina{
 }
 
 /* Grupo de input (contenedor para inputs relacionados, ej. email y password)*/
-.formulario__grupo{
+.formulario__grupo {
     /* Habilita CSS Grid */
     display: grid;
     /* Espacio vertical grande entre los inputs dentro del grupo */
@@ -77,7 +77,7 @@ body.pagina{
 }
 
 /* Input (Campo de texto) */
-.formulario__input{
+.formulario__input {
     /* Define el ancho del input */
     width: 550px;
     /* Espaciado interno para hacerlo alto */
@@ -93,7 +93,7 @@ body.pagina{
 }
 
 /* Botón de acción */
-.formulario__boton{
+.formulario__boton {
     /* Color de fondo principal para el botón */
     background-color: var(--color-botton--primario);
     /* Color del texto del botón (típicamente blanco/claro) */
@@ -118,7 +118,7 @@ body.pagina{
 }
 
 /* Texto de "¿Olvidaste la Contraseña?" */
-.formulario__olvido{
+.formulario__olvido {
     /* Color del texto */
     color: var(--color-texto);
     /* Alineación central */
@@ -128,9 +128,9 @@ body.pagina{
 }
 
 /* Enlace dentro del texto (ej. "Haz click aquí") */
-.formulario__link{
+.formulario__link {
     /* Color azul para el enlace */
-    color:#4da3ff;
+    color: #007FFF;
     /* Tamaño de la fuente */
     font-size: 19px;
     /* Elimina el subrayado por defecto */
@@ -140,13 +140,13 @@ body.pagina{
 }
 
 /* Efecto al pasar el ratón sobre el enlace */
-.formulario__link:hover{
+.formulario__link:hover {
     /* Muestra el subrayado al pasar el ratón */
     text-decoration: underline;
 }
 
 /* Texto de "No tienes cuenta..." (o similar) */
-.formulario__registro{
+.formulario__registro {
     /* Tamaño de la fuente */
     font-size: 25px;
     /* Color del texto */
@@ -154,7 +154,7 @@ body.pagina{
 }
 
 /* Footer (Pie de página del login) */
-.login__footer{
+.login__footer {
     /* Habilita Flexbox */
     display: flex;
     /* Distribuye los elementos en los extremos (espacio entre ellos) */
@@ -165,4 +165,26 @@ body.pagina{
     padding-top: 50px;
     /* Color del texto */
     color: var(--color-texto);
+}
+
+/* === Acceso Administrador === */
+.formulario__admin {
+    /* Margen superior para separar del registro */
+    margin-top: 1rem;
+    /* Alineación central */
+    text-align: center;
+}
+
+/* Botón de administrador - estilo diferenciado */
+.formulario__boton--admin {
+    /* Fondo con gradiente morado para diferenciar del botón principal */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    /* Tamaño de fuente más pequeño */
+    font-size: 18px;
+    /* Padding ajustado */
+    padding: 12px 24px;
+    /* Transición suave para efectos hover */
+    transition: all 0.3s ease;
+    /* Display inline-block para respetar padding */
+    display: inline-block;
 }
