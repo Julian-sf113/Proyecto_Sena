@@ -1,0 +1,520 @@
+/* ===================================================
+   Roles y Permisos - Estilos CSS
+   Deportex Studio - Sistema Administrativo
+   =================================================== */
+
+@import url("../Style.css");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* === Reset y Base === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+    min-height: 100vh;
+}
+
+/* === Header === */
+.encabezado {
+    width: 100%;
+    background-color: var(--color-Principal);
+    color: var(--color-texto);
+}
+
+.encabezado__top {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo img {
+    height: 115px;
+    width: auto;
+}
+
+.encabezado__nav {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav__link {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.nav__link:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.nav__link--salir {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.nav__link--salir:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+/* === Main Panel === */
+.roles-panel {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+/* === Hero Section === */
+.roles-panel__hero {
+    background: linear-gradient(135deg, var(--color-Principal) 0%, #1a237e 100%);
+    border-radius: 20px;
+    padding: 40px;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.roles-panel__info {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.roles-panel__icono {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.roles-panel__icono svg {
+    width: 40px;
+    height: 40px;
+    color: white;
+}
+
+.roles-panel__bienvenida {
+    color: white;
+}
+
+.roles-panel__saludo {
+    font-size: 14px;
+    opacity: 0.85;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.roles-panel__titulo {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.roles-panel__fecha {
+    font-size: 13px;
+    opacity: 0.75;
+}
+
+/* === Grid de Tarjetas === */
+.roles-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+/* === Tarjetas Base === */
+.card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 2px solid transparent;
+}
+
+.card:hover {
+    border-color: var(--color-Principal);
+}
+
+.card--full {
+    grid-column: 1 / -1;
+}
+
+.card__header {
+    background: linear-gradient(135deg, var(--color-Principal) 0%, #1a237e 100%);
+    padding: 20px 25px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.card__icono {
+    width: 45px;
+    height: 45px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card__icono svg {
+    width: 24px;
+    height: 24px;
+    color: white;
+}
+
+.card__titulo {
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.card__contenido {
+    padding: 25px;
+}
+
+/* === Tablas === */
+.tabla-roles,
+.tabla-usuarios {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabla-roles th,
+.tabla-roles td,
+.tabla-usuarios th,
+.tabla-usuarios td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.tabla-roles thead,
+.tabla-usuarios thead {
+    background: #f8f9fa;
+}
+
+.tabla-roles th,
+.tabla-usuarios th {
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--color-Principal);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.tabla-roles tbody tr:hover,
+.tabla-usuarios tbody tr:hover {
+    background: #f8f9fa;
+}
+
+.tabla-roles__cantidad {
+    font-weight: 700;
+    color: var(--color-Principal);
+}
+
+/* === Badges de Rol === */
+.rol-badge {
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.rol-badge--admin {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.rol-badge--cliente {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+    color: #155724;
+}
+
+/* === Estados === */
+.estado {
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.estado--activo {
+    background: #d4edda;
+    color: #155724;
+}
+
+/* === Formularios === */
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 14px;
+    font-family: inherit;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--color-Principal);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 60px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    gap: 20px;
+    align-items: end;
+}
+
+.form-group--btn {
+    margin-bottom: 18px;
+}
+
+/* === Botones === */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.btn svg {
+    width: 18px;
+    height: 18px;
+}
+
+.btn--primario {
+    background: linear-gradient(135deg, var(--color-Principal) 0%, #1a237e 100%);
+    color: white;
+}
+
+.btn--primario:hover {
+    opacity: 0.9;
+}
+
+.btn--secundario {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.btn--secundario:hover {
+    opacity: 0.9;
+}
+
+/* === Lista de Permisos con Checkboxes === */
+.permisos-lista {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.permiso-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.permiso-item:hover {
+    background: #e9ecef;
+}
+
+.permiso-item input {
+    display: none;
+}
+
+.permiso-checkmark {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.permiso-item input:checked+.permiso-checkmark {
+    background: linear-gradient(135deg, var(--color-Principal) 0%, #1a237e 100%);
+    border-color: var(--color-Principal);
+}
+
+.permiso-item input:checked+.permiso-checkmark::after {
+    content: '✓';
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.permiso-texto {
+    color: #333;
+}
+
+/* === Permisos Actuales === */
+.permisos-actuales {
+    margin-bottom: 20px;
+}
+
+.permisos-actuales h4 {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.permisos-lista-actual {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.permiso-tag {
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    color: var(--color-Principal);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* === Usuarios Recientes === */
+.usuarios-recientes {
+    margin-top: 25px;
+    padding-top: 25px;
+    border-top: 1px solid #eee;
+}
+
+.usuarios-recientes h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-Principal);
+    margin-bottom: 15px;
+}
+
+/* === Botones de Acción en Tablas === */
+.btn-accion {
+    padding: 6px 14px;
+    border: none;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.btn-accion--editar {
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+    color: #856404;
+}
+
+.btn-accion--editar:hover {
+    opacity: 0.85;
+}
+
+/* === Footer === */
+.footer {
+    background: var(--color-Principal);
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer__logo img {
+    height: 115px;
+    width: auto;
+}
+
+.footer__copyright {
+    color: white;
+    font-size: 14px;
+}
+
+/* === Responsive === */
+@media screen and (max-width: 992px) {
+    .roles-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .roles-panel {
+        padding: 20px 15px;
+    }
+
+    .roles-panel__hero {
+        padding: 25px;
+    }
+
+    .roles-panel__info {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .roles-panel__titulo {
+        font-size: 24px;
+    }
+
+    .permisos-lista {
+        grid-template-columns: 1fr;
+    }
+
+    .encabezado__nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
