@@ -2,155 +2,242 @@
 
 /* ===== Layout general ===== */
 body {
+  /* Elimina el margen por defecto del navegador */
   margin: 0;
+  /* Asegura que el cuerpo ocupe al menos el 100% de la altura de la ventana */
   min-height: 100vh;
+  /* Habilita Flexbox para alinear el contenido */
   display: flex;
+  /* Coloca los elementos hijos verticalmente (columna) */
   flex-direction: column;
+  /* Centra horizontalmente el contenido dentro del body */
   align-items: center;
+  /* Establece el color de fondo primario (usando variable CSS) */
   background-color: var(--color-primario);
+  /* Establece la fuente predeterminada (usando variable CSS) */
   font-family: var(--font-family);
 }
 
 /* ===== Encabezado ===== */
 .encabezado {
+  /* Define el margen: 100px arriba, 0 a los lados, 40px abajo */
   margin: 100px 0 40px;
 }
 
 .encabezado__logo {
+  /* Define el ancho del logo */
   width: 450px;
+  /* Ajusta la altura automáticamente para mantener la proporción */
   height: auto;
 }
 
-/* ===== Título ===== */
+/* ===== Título (Subtítulo de la Tarjeta) ===== */
 .card__subtitulo {
+  /* Centra el texto */
   text-align: center;
+  /* Margen vertical de 25px */
   margin: 25px 0;
+  /* Tamaño de la fuente */
   font-size: 22px;
-  font-weight: 300;      /* antes tenías 300px */
+  /* Grosor de la fuente: delgado/ligero */
+  font-weight: 300;
+  /* Color del texto usando variable CSS */
   color: var(--color-texto);
 }
 
-/* ===== Formulario ===== */
+/* ===== Formulario Contenedor Principal ===== */
 .form {
+  /* Habilita CSS Grid para la disposición */
   display: grid;
+  /* Una sola columna que ocupa todo el espacio disponible */
   grid-template-columns: 1fr;
+  /* Espaciado de 40px entre las filas del grid */
   gap: 40px;
+  /* Ocupa el 100% del ancho disponible */
   width: 100%;
+  /* Limita el ancho máximo del formulario en pantallas grandes */
   max-width: 1100px;
 }
 
 /* Contenedor de las dos columnas (izquierda/derecha) */
 .form__container {
+  /* Habilita Flexbox */
   display: flex;
+  /* Distribuye las columnas con espacio entre ellas (una en cada extremo) */
   justify-content: space-between;
+  /* Espaciado de 50px entre las dos columnas */
   gap: 50px;
 }
 
 /* Cada columna del formulario */
 .form__column {
+  /* Habilita Flexbox */
   display: flex;
+  /* Apila los elementos internos verticalmente */
   flex-direction: column;
+  /* Espaciado de 12px entre los elementos apilados (inputs/labels) */
   gap: 12px;
 }
 
 /* ===== Sección de sliders (peso / altura) ===== */
 .form__ranges {
+  /* Habilita Flexbox */
   display: flex;
+  /* Apila los elementos verticalmente */
   flex-direction: column;
+  /* Espaciado de 10px entre los grupos de sliders */
   gap: 10px;
 }
 
 .form__ranges-container {
+  /* Habilita Flexbox */
   display: flex;
+  /* Apila los elementos verticalmente */
   flex-direction: column;
+  /* Espaciado de 10px */
   gap: 10px;
 }
 
 .form__range {
+  /* Ancho completo */
   width: 100%;
+  /* Limita el ancho máximo del control deslizante */
   max-width: 500px;
 }
 
-/* ===== Títulos de sección ===== */
+/* ===== Títulos de sección (Icono + Título) ===== */
 .form__section-header {
+  /* Habilita Flexbox para alinear el icono y el título */
   display: flex;
+  /* Centra verticalmente el icono y el título */
   align-items: center;
-  gap: 10px; /* Separación entre icono y título */
+  /* Separación de 10px entre icono y título */
+  gap: 10px;
+  /* Añade espacio debajo del encabezado */
+  padding-bottom: 55px;
+  /* Añade espacio encima del encabezado */
+  padding-top: 55px;
 }
 
 .form__icon {
+  /* Tamaño fijo para el icono */
   width: 150px;
   height: 150px;
 }
 
 .form__section-titulo {
+  /* Elimina márgenes predeterminados */
   margin: 0;
+  /* Tamaño de la fuente */
   font-size: 18px;
+  /* Color del texto usando variable CSS */
   color: var(--color-texto);
 }
 
 /* ===== Labels e inputs ===== */
 .form__label {
+  /* Tamaño de la fuente para la etiqueta */
   font-size: 14px;
+  /* Color del texto para la etiqueta */
   color: var(--color-texto);
 }
 
 .form__input {
+  /* Espaciado interno */
   padding: 10px;
+  /* Elimina el borde */
   border: none;
+  /* Esquinas redondeadas */
   border-radius: 6px;
+  /* Color de fondo del input usando variable secundaria */
   background-color: var(--color-secundario);
 }
 
-/* ===== Botones ===== */
+/* ===== Botones Contenedor de Acciones ===== */
 .form__actions {
+  /* Habilita Flexbox */
   display: flex;
+  /* Apila los botones verticalmente */
   flex-direction: column;
-  gap: 16px;
+  /* Espaciado de 16px entre los botones */
+  gap: 28px;
+  /* Ancho completo del contenedor */
   width: 100%;
+  /* Limita el ancho máximo del contenedor de botones */
   max-width: 500px;
+  /* Centra el contenedor horizontalmente (margin: auto) y añade margen superior */
   margin: 30px auto 0;
+  /* Centra el bloque de los botones */
+  align-items: center;
+  /* Añade espacio debajo del contenedor */
+  padding-bottom: 25px;
 }
 
+/* Estilos para el botón primario y secundario */
 .button--primary,
 .button--secundario {
+  /* Habilita Flexbox para centrar el contenido del botón */
   display: flex;
+  /* Ocupa el 88% del ancho de su contenedor */
   width: 88%;
+  /* Espaciado interno */
   padding: 14px;
+  /* Color de fondo principal (usando variable) */
   background-color: var(--color-botton--primario);
+  /* Color del texto (alterno, típicamente blanco) */
   color: var(--color-texto-alterno);
+  /* Sin borde */
   border: none;
+  /* Elimina el subrayado si es un enlace */
   text-decoration: none;
+  /* Esquinas redondeadas */
   border-radius: 10px;
+  /* Tamaño y grosor de la fuente */
   font-size: 18px;
   font-weight: 700;
+  /* Muestra el cursor como puntero al pasar por encima */
   cursor: pointer;
+  /* Transición suave para efectos de hover */
   transition: 0.2s ease-in-out;
+  /* Centra el texto horizontalmente */
   justify-content: center;
+  /* Centra el texto verticalmente */
   align-items: center;
+  /*Cambia la fuente */
+  font-family: var(--font-family);
+  /* Cambiamos el estilo*/
+  font-style: normal;
 }
 
+/* Efecto al pasar el ratón (hover) */
 .button--primary:hover,
 .button--secundario:hover {
+  /* Cambia el color de fondo a la versión 'hover' de la variable */
   background-color: var(--color-botton--primario-hover);
 }
 
-/* ===== Responsive ===== */
+/* ===== Responsive (Media Query para pantallas pequeñas) ===== */
 @media (max-width: 768px) {
+  /* Reduce el margen del encabezado en pantallas pequeñas */
   .encabezado {
     margin: 50px 0 20px;
   }
 
+  /* El contenedor de columnas cambia su disposición */
   .form__container {
+    /* Las columnas se apilan verticalmente */
     flex-direction: column;
+    /* Reduce el espaciado entre las columnas apiladas */
     gap: 30px;
   }
 
+  /* Reduce el tamaño del icono de sección */
   .form__icon {
     width: 100px;
     height: 100px;
   }
 
+  /* Asegura que el slider ocupe todo el ancho en móvil */
   .form__range {
     max-width: 100%;
   }
