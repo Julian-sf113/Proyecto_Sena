@@ -1,0 +1,639 @@
+@import url("../Style.css");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ==================== RESET & BASE ==================== */
+body {
+    /* Aplica la tipografía Poppins a toda la página */
+    font-family: 'Poppins', sans-serif;
+    /* Color de fondo gris claro para contraste con las tarjetas */
+    background-color: #f5f5f5;
+    /* Asegura que el body ocupe al menos el 100% de la altura de la ventana */
+    min-height: 100vh;
+}
+
+/* ==================== HEADER ==================== */
+.encabezado {
+    /* Ocupa todo el ancho disponible */
+    width: 100%;
+    /* Color de fondo azul principal usando variable CSS */
+    background-color: var(--color-Principal);
+    /* Color del texto usando variable CSS */
+    color: var(--color-texto);
+}
+
+.encabezado__top {
+    /* Limita el ancho máximo del contenido a 1400px */
+    max-width: 1400px;
+    /* Centra horizontalmente el contenedor */
+    margin: 0 auto;
+    /* Espaciado interno de 15px arriba/abajo y 30px izquierda/derecha */
+    padding: 15px 30px;
+    /* Utiliza Flexbox para la disposición horizontal */
+    display: flex;
+    /* Distribuye los elementos en los extremos con espacio entre ellos */
+    justify-content: space-between;
+    /* Centra verticalmente los elementos */
+    align-items: center;
+    /* Espacio de 20px entre los elementos */
+    gap: 20px;
+}
+
+.header__logo {
+    /* Elimina el margen por defecto */
+    margin: 0;
+}
+
+.header__logo img {
+    /* Altura fija de 122px para el logo */
+    height: 122px;
+    /* Ancho automático para mantener la proporción */
+    width: auto;
+}
+
+/* === Barra de búsqueda === */
+.contenido__barra-busqueda {
+    /* Utiliza Flexbox para alinear el input y el botón */
+    display: flex;
+    /* Se expande para ocupar el espacio disponible */
+    flex: 1;
+    /* Limita el ancho máximo a 400px */
+    max-width: 400px;
+    /* Posición relativa para el botón de búsqueda absoluto */
+    position: relative;
+}
+
+.contenido__barra-busqueda input {
+    /* Ocupa todo el ancho del contenedor */
+    width: 100%;
+    /* Espaciado interno: 12px arriba/abajo, 45px derecha (para el botón), 15px izquierda */
+    padding: 12px 45px 12px 15px;
+    /* Sin borde visible */
+    border: none;
+    /* Esquinas redondeadas de 6px */
+    border-radius: 6px;
+    /* Tamaño de fuente de 14px */
+    font-size: 14px;
+    /* Aplica la fuente Poppins */
+    font-family: 'Poppins', sans-serif;
+    /* Elimina el borde de enfoque predeterminado */
+    outline: none;
+}
+
+.contenido__barra-busqueda input::placeholder {
+    /* Color gris para el texto placeholder */
+    color: #999;
+}
+
+.contenido__boton-buscador {
+    /* Posicionamiento absoluto dentro del contenedor relativo */
+    position: absolute;
+    /* A 5px del borde derecho */
+    right: 5px;
+    /* Centrado verticalmente */
+    top: 50%;
+    /* Ajuste para centrar perfectamente */
+    transform: translateY(-50%);
+    /* Sin color de fondo */
+    background: none;
+    /* Sin borde visible */
+    border: none;
+    /* Cursor de mano al pasar encima */
+    cursor: pointer;
+    /* Espaciado interno de 8px */
+    padding: 8px;
+}
+
+.contenido__boton-buscador img {
+    /* Ancho del icono de lupa */
+    width: 18px;
+    /* Alto del icono de lupa */
+    height: 18px;
+    /* Opacidad reducida para efecto sutil */
+    opacity: 0.6;
+}
+
+/* === Iconos de navegación del header === */
+.encabezado__top--nav-encabezado {
+    /* Utiliza Flexbox para alinear los iconos */
+    display: flex;
+    /* Centra verticalmente los iconos */
+    align-items: center;
+    /* Espacio de 15px entre cada icono */
+    gap: 15px;
+}
+
+.nav-encabezado__icono--user,
+.nav-encabezado__icono--carrito,
+.nav-encabezado__icono--menu {
+    /* Sin color de fondo */
+    background: none;
+    /* Sin borde visible */
+    border: none;
+    /* Cursor de mano al pasar encima */
+    cursor: pointer;
+    /* Espaciado interno de 5px */
+    padding: 5px;
+    /* Utiliza Flexbox para centrar el contenido */
+    display: flex;
+    /* Centra verticalmente la imagen */
+    align-items: center;
+    /* Centra horizontalmente la imagen */
+    justify-content: center;
+}
+
+.nav-encabezado__icono--user img,
+.nav-encabezado__icono--carrito img,
+.nav-encabezado__icono--menu img {
+    /* Ancho del icono */
+    width: 28px;
+    /* Alto del icono */
+    height: 28px;
+    /* Invierte el color a blanco para contrastar con fondo azul */
+    filter: brightness(0) invert(1);
+    /* Transición suave de 0.2s para el efecto hover */
+    transition: transform 0.2s ease;
+}
+
+.nav-encabezado__icono--user:hover img,
+.nav-encabezado__icono--carrito:hover img,
+.nav-encabezado__icono--menu:hover img {
+    /* Agranda ligeramente el icono al pasar el ratón */
+    transform: scale(1.1);
+}
+
+/* ==================== CONTENEDOR DE NAVEGACIÓN ==================== */
+.nav-container {
+    /* Utiliza Flexbox para la disposición */
+    display: flex;
+    /* Centra horizontalmente los elementos de navegación */
+    justify-content: center;
+    /* Centra verticalmente los elementos */
+    align-items: center;
+    /* Mismo color de fondo que el header */
+    background-color: var(--color-Principal);
+    /* Espaciado lateral de 30px */
+    padding: 0 30px;
+    /* Pequeño espacio de 5px entre elementos */
+    gap: 5px;
+}
+
+/* ==================== NAVEGACIÓN PRINCIPAL ==================== */
+.nav {
+    /* Display inline-block para alinear horizontalmente */
+    display: inline-block;
+    /* Posición relativa para el submenú absoluto */
+    position: relative;
+}
+
+.nav__item {
+    /* Elimina las viñetas de la lista */
+    list-style: none;
+}
+
+.nav__link {
+    /* Texto blanco */
+    color: white;
+    /* Sin subrayado */
+    text-decoration: none;
+    /* Tamaño de fuente de 13px */
+    font-size: 13px;
+    /* Peso de fuente medio */
+    font-weight: 500;
+    /* Espaciado interno para hacer el área clickeable más grande */
+    padding: 10px 15px;
+    /* Display block para ocupar todo el espacio */
+    display: block;
+    /* Transición suave para el efecto hover */
+    transition: background-color 0.3s ease;
+}
+
+.nav__link:hover {
+    /* Fondo blanco semitransparente al pasar el ratón */
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* === Submenú desplegable === */
+.nav__submenu {
+    /* Oculto por defecto */
+    display: none;
+    /* Posicionamiento absoluto debajo del enlace padre */
+    position: absolute;
+    /* Justo debajo del elemento padre */
+    top: 100%;
+    /* Alineado a la izquierda del padre */
+    left: 0;
+    /* Fondo blanco para el submenú */
+    background-color: white;
+    /* Ancho mínimo de 180px */
+    min-width: 180px;
+    /* Sombra para efecto de elevación */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    /* Esquinas redondeadas de 8px */
+    border-radius: 8px;
+    /* Espaciado interno vertical de 10px */
+    padding: 10px 0;
+    /* Coloca el submenú por encima de otros elementos */
+    z-index: 1000;
+    /* Sin viñetas en la lista */
+    list-style: none;
+}
+
+.nav:hover .nav__submenu {
+    /* Muestra el submenú al pasar el ratón sobre el nav */
+    display: block;
+    /* Aplica la animación de aparición */
+    animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        /* Inicia invisible */
+        opacity: 0;
+        /* Inicia 10px más arriba */
+        transform: translateY(-10px);
+    }
+
+    to {
+        /* Termina completamente visible */
+        opacity: 1;
+        /* Termina en su posición final */
+        transform: translateY(0);
+    }
+}
+
+.nav__submenu-item {
+    /* Sin viñetas */
+    list-style: none;
+}
+
+.nav__submenu-link {
+    /* Color de texto oscuro para fondo blanco */
+    color: var(--color-texto-alterno);
+    /* Sin subrayado */
+    text-decoration: none;
+    /* Tamaño de fuente de 13px */
+    font-size: 13px;
+    /* Espaciado interno */
+    padding: 10px 20px;
+    /* Display block para ocupar todo el ancho */
+    display: block;
+    /* Transición suave para el hover */
+    transition: all 0.2s ease;
+}
+
+.nav__submenu-link:hover {
+    /* Fondo azul al pasar el ratón */
+    background-color: var(--color-Principal);
+    /* Texto blanco al pasar el ratón */
+    color: white;
+}
+
+/* ==================== PRODUCTOS GRID ==================== */
+.productos {
+    /* Limita el ancho máximo a 1400px */
+    max-width: 1400px;
+    /* Centra el contenedor y añade margen superior de 40px */
+    margin: 40px auto;
+    /* Espaciado lateral de 30px */
+    padding: 0 30px;
+    /* Utiliza CSS Grid para la disposición */
+    display: grid;
+    /* Crea 3 columnas de igual tamaño */
+    grid-template-columns: repeat(3, 1fr);
+    /* Espacio de 30px entre las tarjetas */
+    gap: 30px;
+}
+
+/* ==================== TARJETA DE PRODUCTO ==================== */
+.producto-card {
+    /* Fondo blanco/claro usando variable CSS */
+    background-color: var(--color-texto);
+    /* Esquinas redondeadas de 12px */
+    border-radius: 12px;
+    /* Espaciado interno de 20px */
+    padding: 20px;
+    /* Sombra sutil para efecto de elevación */
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+    /* Transición suave para el efecto hover */
+    transition: all 0.3s ease;
+    /* Flexbox para organizar el contenido verticalmente */
+    display: flex;
+    /* Dirección de columna (vertical) */
+    flex-direction: column;
+    /* Posición relativa para elementos posicionados */
+    position: relative;
+    /* Oculta contenido que sobresale */
+    overflow: hidden;
+    /* Centra horizontalmente el contenido */
+    align-items: center;
+}
+
+.producto-card:hover {
+    /* Eleva la tarjeta 5px hacia arriba */
+    transform: translateY(-5px);
+    /* Aumenta la sombra para efecto de elevación */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.producto-card__img {
+    /* Ocupa todo el ancho disponible */
+    width: 100%;
+    /* Altura fija de 180px */
+    height: 180px;
+    /* Contiene la imagen sin recortar */
+    object-fit: contain;
+    /* Margen inferior de 15px */
+    margin-bottom: 15px;
+    /* Transición suave para el efecto hover */
+    transition: transform 0.3s ease;
+}
+
+.producto-card:hover .producto-card__img {
+    /* Zoom suave de 5% en la imagen al hacer hover en la tarjeta */
+    transform: scale(1.05);
+}
+
+.producto-card__titulo {
+    /* Tamaño de fuente de 16px */
+    font-size: 16px;
+    /* Texto en negrita */
+    font-weight: 700;
+    /* Color de texto oscuro usando variable CSS */
+    color: var(--color-texto-alterno);
+    /* Margen inferior de 8px */
+    margin-bottom: 8px;
+    /* Texto en mayúsculas */
+    text-transform: uppercase;
+    /* Espaciado entre letras de 0.5px */
+    letter-spacing: 0.5px;
+}
+
+.producto-card__descripcion {
+    /* Tamaño de fuente de 13px */
+    font-size: 13px;
+    /* Color gris para el texto secundario */
+    color: #666;
+    /* Altura de línea de 1.5 para legibilidad */
+    line-height: 1.5;
+    /* Margen inferior de 12px */
+    margin-bottom: 12px;
+    /* Ocupa el espacio disponible */
+    flex-grow: 1;
+    /* Configuración para limitar a 2 líneas con ellipsis */
+    display: -webkit-box;
+    /* Limita a 2 líneas de texto */
+    -webkit-line-clamp: 2;
+    /* Versión estándar de line-clamp */
+    line-clamp: 2;
+    /* Orientación vertical del box */
+    -webkit-box-orient: vertical;
+    /* Oculta el texto que excede */
+    overflow: hidden;
+}
+
+.producto-card__rating {
+    /* Utiliza Flexbox para alinear las estrellas */
+    display: flex;
+    /* Centra verticalmente */
+    align-items: center;
+    /* Espacio de 5px entre elementos */
+    gap: 5px;
+    /* Margen inferior de 10px */
+    margin-bottom: 10px;
+}
+
+.producto-card__rating-img {
+    /* Ancho de las estrellas de 14px */
+    width: 14px;
+    /* Alto de las estrellas de 14px */
+    height: 14px;
+}
+
+.producto-card__rating-valor {
+    /* Tamaño de fuente de 12px */
+    font-size: 12px;
+    /* Color de texto oscuro */
+    color: #333;
+    /* Peso de fuente medio */
+    font-weight: 500;
+}
+
+.producto-card__precio {
+    /* Display inline-block para ajustarse al contenido */
+    display: inline-block;
+    /* Fondo verde neón usando variable CSS */
+    background-color: var(--color-botton--primario);
+    /* Color de texto oscuro */
+    color: var(--color-texto-alterno);
+    /* Tamaño de fuente de 12px */
+    font-size: 12px;
+    /* Texto semi-negrita */
+    font-weight: 600;
+    /* Espaciado interno: 6px arriba/abajo, 12px izquierda/derecha */
+    padding: 6px 12px;
+    /* Esquinas redondeadas de 4px */
+    border-radius: 4px;
+    /* Margen inferior de 15px */
+    margin-bottom: 15px;
+    /* Ancho ajustado al contenido */
+    width: fit-content;
+}
+
+.producto-card__btn {
+    /* Color de fondo azul principal */
+    background-color: var(--color-Principal);
+    /* Texto blanco */
+    color: white;
+    /* Sin borde */
+    border: none;
+    /* Espaciado interno: 10px arriba/abajo, 20px izquierda/derecha */
+    padding: 10px 20px;
+    /* Esquinas redondeadas de 6px */
+    border-radius: 6px;
+    /* Tamaño de fuente de 12px */
+    font-size: 12px;
+    /* Peso de fuente medio */
+    font-weight: 500;
+    /* Aplica la fuente Poppins */
+    font-family: 'Poppins', sans-serif;
+    /* Cursor de mano al pasar encima */
+    cursor: pointer;
+    /* Transición suave para el hover */
+    transition: all 0.3s ease;
+    /* Ancho ajustado al contenido */
+    width: fit-content;
+}
+
+.producto-card__btn:hover {
+    /* Color de fondo más oscuro al hover */
+    background-color: var(--color-primario);
+    /* Pequeño aumento de escala al hover */
+    transform: scale(1.02);
+}
+
+/* ==================== FOOTER ==================== */
+.footer {
+    /* Color de fondo azul principal */
+    background-color: var(--color-Principal);
+    /* Texto blanco */
+    color: white;
+    /* Espaciado interno: 50px arriba, 30px lados, 40px abajo */
+    padding: 50px 30px 40px;
+    /* Margen superior de 60px para separar del contenido */
+    margin-top: 60px;
+    /* Utiliza CSS Grid para la disposición */
+    display: grid;
+    /* Crea 4 columnas de igual tamaño */
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* Espacio de 40px entre las columnas */
+    gap: 40px;
+    /* Ocupa todo el ancho disponible */
+    max-width: 100%;
+}
+
+.footer__left {
+    /* Utiliza Flexbox */
+    display: flex;
+    /* Alinea el logo en la parte superior */
+    align-items: flex-start;
+}
+
+.footer__logo {
+    /* Sin margen */
+    margin: 0;
+}
+
+.footer__logo img {
+    /* Altura fija de 122px para el logo */
+    height: 122px;
+    /* Ancho automático para mantener proporción */
+    width: auto;
+}
+
+.footer__columns {
+    /* Utiliza Flexbox */
+    display: flex;
+    /* Organiza los enlaces en columna */
+    flex-direction: column;
+    /* Espacio de 10px entre los enlaces */
+    gap: 10px;
+}
+
+.footer__titulo {
+    /* Tamaño de fuente de 19px */
+    font-size: 19px;
+    /* Texto en negrita */
+    font-weight: 700;
+    /* Texto blanco */
+    color: white;
+    /* Margen inferior de 15px */
+    margin-bottom: 15px;
+    /* Texto en mayúsculas */
+    text-transform: uppercase;
+    /* Espaciado entre letras de 1px */
+    letter-spacing: 1px;
+}
+
+.footer__link {
+    /* Texto blanco con 85% de opacidad */
+    color: rgba(255, 255, 255, 0.85);
+    /* Sin subrayado */
+    text-decoration: none;
+    /* Tamaño de fuente de 16px */
+    font-size: 16px;
+    /* Transición suave para el hover */
+    transition: all 0.2s ease;
+    /* Display block para ocupar toda la línea */
+    display: block;
+}
+
+.footer__link:hover {
+    /* Texto blanco completo al hover */
+    color: white;
+    /* Desplazamiento de 5px a la derecha al hover */
+    padding-left: 5px;
+}
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+/* === Pantallas medianas (hasta 1200px) === */
+@media (max-width: 1200px) {
+    .productos {
+        /* Reduce a 2 columnas en pantallas medianas */
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer {
+        /* Reduce a 2 columnas en pantallas medianas */
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* === Tablets y móviles (hasta 768px) === */
+@media (max-width: 768px) {
+    .encabezado__top {
+        /* Permite que los elementos se envuelvan */
+        flex-wrap: wrap;
+        /* Reduce el gap a 15px */
+        gap: 15px;
+        /* Reduce el padding */
+        padding: 15px;
+    }
+
+    .contenido__barra-busqueda {
+        /* Mueve el buscador al final */
+        order: 3;
+        /* Ocupa todo el ancho */
+        max-width: 100%;
+        /* Ancho completo */
+        width: 100%;
+    }
+
+    .productos {
+        /* Una sola columna en móviles */
+        grid-template-columns: 1fr;
+        /* Reduce el padding lateral */
+        padding: 0 15px;
+    }
+
+    .footer {
+        /* Una sola columna en móviles */
+        grid-template-columns: 1fr;
+        /* Centra el texto */
+        text-align: center;
+    }
+
+    .footer__left {
+        /* Centra el logo */
+        justify-content: center;
+    }
+
+    .footer__columns {
+        /* Centra los enlaces */
+        align-items: center;
+    }
+
+    .nav__link {
+        /* Reduce el tamaño de fuente */
+        font-size: 12px;
+        /* Reduce el padding */
+        padding: 8px 10px;
+    }
+
+    .nav-container {
+        /* Permite que los elementos se envuelvan */
+        flex-wrap: wrap;
+    }
+}
+
+/* === Móviles pequeños (hasta 480px) === */
+@media (max-width: 480px) {
+    .producto-card__img {
+        /* Reduce la altura de las imágenes */
+        height: 150px;
+    }
+
+    .header__logo img {
+        /* Reduce el tamaño del logo */
+        height: 40px;
+    }
+}
