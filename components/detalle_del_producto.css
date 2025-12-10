@@ -3,667 +3,1007 @@
 
 /* ==================== RESET & BASE ==================== */
 * {
+    /* Elimina el margen por defecto */
     margin: 0;
+    /* Elimina el padding por defecto */
     padding: 0;
+    /* Incluye padding y borde en el ancho total */
     box-sizing: border-box;
 }
 
 body {
+    /* Aplica la tipografía Poppins */
     font-family: 'Poppins', sans-serif;
+    /* Fondo blanco limpio para destacar el producto */
     background-color: #ffffff;
+    /* Altura mínima de pantalla completa */
     min-height: 100vh;
 }
 
 /* ==================== HEADER ==================== */
 .encabezado {
+    /* Ocupa todo el ancho */
     width: 100%;
+    /* Fondo azul principal */
     background-color: var(--color-Principal);
+    /* Color del texto */
     color: var(--color-texto);
 }
 
 .encabezado__top {
+    /* Limita el ancho máximo */
     max-width: 1400px;
+    /* Centra horizontalmente */
     margin: 0 auto;
+    /* Espaciado interno */
     padding: 15px 30px;
+    /* Utiliza Flexbox */
     display: flex;
+    /* Distribuye en los extremos */
     justify-content: space-between;
+    /* Centra verticalmente */
     align-items: center;
+    /* Espacio entre elementos */
     gap: 20px;
 }
 
 .header__logo {
+    /* Sin margen */
     margin: 0;
 }
 
 .header__logo img {
+    /* Altura fija del logo */
     height: 122px;
+    /* Ancho automático */
     width: auto;
 }
 
-/* Barra de búsqueda */
+/* === Barra de búsqueda === */
 .contenido__barra-busqueda {
+    /* Utiliza Flexbox */
     display: flex;
+    /* Se expande para ocupar espacio */
     flex: 1;
+    /* Limita el ancho máximo */
     max-width: 400px;
+    /* Posición relativa para el botón */
     position: relative;
 }
 
 .contenido__barra-busqueda input {
+    /* Ocupa todo el ancho */
     width: 100%;
+    /* Espaciado interno con espacio para botón */
     padding: 12px 45px 12px 15px;
+    /* Sin borde */
     border: none;
+    /* Esquinas redondeadas */
     border-radius: 6px;
+    /* Tamaño de fuente */
     font-size: 14px;
+    /* Fuente Poppins */
     font-family: 'Poppins', sans-serif;
+    /* Sin borde de enfoque */
     outline: none;
 }
 
 .contenido__barra-busqueda input::placeholder {
+    /* Color gris para placeholder */
     color: #999;
 }
 
 .contenido__boton-buscador {
+    /* Posicionamiento absoluto */
     position: absolute;
+    /* A 5px del borde derecho */
     right: 5px;
+    /* Centrado verticalmente */
     top: 50%;
+    /* Ajuste para centrar */
     transform: translateY(-50%);
+    /* Sin fondo */
     background: none;
+    /* Sin borde */
     border: none;
+    /* Cursor de mano */
     cursor: pointer;
+    /* Espaciado interno */
     padding: 8px;
 }
 
 .contenido__boton-buscador img {
+    /* Ancho del icono */
     width: 18px;
+    /* Alto del icono */
     height: 18px;
+    /* Opacidad reducida */
     opacity: 0.6;
 }
 
-/* Iconos de navegación del header */
+/* === Iconos de navegación del header === */
 .encabezado__top--nav-encabezado {
+    /* Utiliza Flexbox */
     display: flex;
+    /* Centra verticalmente */
     align-items: center;
+    /* Espacio entre iconos */
     gap: 15px;
 }
 
 .nav-encabezado__icono--user,
 .nav-encabezado__icono--carrito,
 .nav-encabezado__icono--menu {
+    /* Sin fondo */
     background: none;
+    /* Sin borde */
     border: none;
+    /* Cursor de mano */
     cursor: pointer;
+    /* Espaciado interno */
     padding: 5px;
+    /* Flexbox para centrar */
     display: flex;
+    /* Centra verticalmente */
     align-items: center;
+    /* Centra horizontalmente */
     justify-content: center;
 }
 
 .nav-encabezado__icono--user img,
 .nav-encabezado__icono--carrito img,
 .nav-encabezado__icono--menu img {
+    /* Ancho del icono */
     width: 28px;
+    /* Alto del icono */
     height: 28px;
+    /* Invierte el color a blanco */
     filter: brightness(0) invert(1);
+    /* Transición suave */
     transition: transform 0.2s ease;
 }
 
 .nav-encabezado__icono--user:hover img,
 .nav-encabezado__icono--carrito:hover img,
 .nav-encabezado__icono--menu:hover img {
+    /* Agranda el icono al hover */
     transform: scale(1.1);
 }
 
 /* ==================== CONTENEDOR DE NAVEGACIÓN ==================== */
 .nav-container {
+    /* Utiliza Flexbox */
     display: flex;
+    /* Centra horizontalmente */
     justify-content: center;
+    /* Centra verticalmente */
     align-items: center;
+    /* Fondo azul principal */
     background-color: var(--color-Principal);
+    /* Espaciado lateral */
     padding: 0 30px;
+    /* Espacio entre elementos */
     gap: 5px;
 }
 
 /* ==================== NAVEGACIÓN PRINCIPAL ==================== */
 .nav {
+    /* Display inline-block */
     display: inline-block;
+    /* Posición relativa para submenú */
     position: relative;
 }
 
 .nav__item {
+    /* Sin viñetas */
     list-style: none;
 }
 
 .nav__link {
+    /* Texto blanco */
     color: white;
+    /* Sin subrayado */
     text-decoration: none;
+    /* Tamaño de fuente */
     font-size: 13px;
+    /* Peso de fuente medio */
     font-weight: 500;
+    /* Espaciado interno */
     padding: 10px 15px;
+    /* Display block */
     display: block;
+    /* Transición suave */
     transition: background-color 0.3s ease;
 }
 
 .nav__link:hover {
+    /* Fondo semitransparente al hover */
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* Submenú */
+/* === Submenú === */
 .nav__submenu {
+    /* Oculto por defecto */
     display: none;
+    /* Posicionamiento absoluto */
     position: absolute;
+    /* Debajo del padre */
     top: 100%;
+    /* Alineado a la izquierda */
     left: 0;
+    /* Fondo blanco */
     background-color: white;
+    /* Ancho mínimo */
     min-width: 180px;
+    /* Sombra de elevación */
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    /* Esquinas redondeadas */
     border-radius: 8px;
+    /* Espaciado interno */
     padding: 10px 0;
+    /* Por encima de otros elementos */
     z-index: 1000;
+    /* Sin viñetas */
     list-style: none;
 }
 
 .nav:hover .nav__submenu {
+    /* Muestra al hover */
     display: block;
+    /* Animación de aparición */
     animation: fadeIn 0.2s ease;
 }
 
 @keyframes fadeIn {
     from {
+        /* Inicia invisible */
         opacity: 0;
+        /* Inicia arriba */
         transform: translateY(-10px);
     }
 
     to {
+        /* Termina visible */
         opacity: 1;
+        /* Termina en posición */
         transform: translateY(0);
     }
 }
 
 .nav__submenu-item {
+    /* Sin viñetas */
     list-style: none;
 }
 
 .nav__submenu-link {
+    /* Color oscuro */
     color: var(--color-texto-alterno);
+    /* Sin subrayado */
     text-decoration: none;
+    /* Tamaño de fuente */
     font-size: 13px;
+    /* Espaciado interno */
     padding: 10px 20px;
+    /* Display block */
     display: block;
+    /* Transición suave */
     transition: all 0.2s ease;
 }
 
 .nav__submenu-link:hover {
+    /* Fondo azul al hover */
     background-color: var(--color-Principal);
+    /* Texto blanco */
     color: white;
 }
 
 /* ==================== DETALLE DEL PRODUCTO ==================== */
 .producto-detalle {
+    /* Limita el ancho máximo */
     max-width: 1200px;
+    /* Centra el contenedor */
     margin: 0 auto;
+    /* Espaciado interno generoso */
     padding: 40px 30px;
 }
 
 .producto-detalle__contenido {
+    /* Utiliza CSS Grid */
     display: grid;
+    /* 2 columnas iguales: galería e info */
     grid-template-columns: 1fr 1fr;
+    /* Espacio grande entre columnas */
     gap: 50px;
+    /* Alinea el contenido arriba */
     align-items: start;
 }
 
 /* ==================== GALERÍA DE IMÁGENES ==================== */
 .producto-galeria {
+    /* Utiliza Flexbox */
     display: flex;
+    /* Organiza en columna */
     flex-direction: column;
+    /* Espacio entre elementos */
     gap: 15px;
 }
 
 .producto-galeria__principal {
+    /* Ocupa todo el ancho */
     width: 100%;
+    /* Proporción cuadrada */
     aspect-ratio: 1;
+    /* Fondo gris claro */
     background-color: #f8f9fa;
+    /* Esquinas redondeadas */
     border-radius: 12px;
+    /* Oculta lo que sobresale */
     overflow: hidden;
+    /* Flexbox para centrar imagen */
     display: flex;
+    /* Centra verticalmente */
     align-items: center;
+    /* Centra horizontalmente */
     justify-content: center;
 }
 
 .producto-galeria__principal img {
+    /* Ocupa todo el ancho */
     width: 100%;
+    /* Ocupa todo el alto */
     height: 100%;
+    /* Contiene sin recortar */
     object-fit: contain;
+    /* Transición suave para zoom */
     transition: transform 0.3s ease;
 }
 
 .producto-galeria__principal:hover img {
+    /* Zoom de 5% al hover */
     transform: scale(1.05);
 }
 
 .producto-galeria__miniaturas {
+    /* Grid de 4 miniaturas */
     display: grid;
+    /* 4 columnas iguales */
     grid-template-columns: repeat(4, 1fr);
+    /* Espacio entre miniaturas */
     gap: 10px;
 }
 
 .miniatura {
+    /* Proporción cuadrada */
     aspect-ratio: 1;
+    /* Fondo gris claro */
     background-color: #f8f9fa;
+    /* Borde transparente inicial */
     border: 2px solid transparent;
+    /* Esquinas redondeadas */
     border-radius: 8px;
+    /* Cursor de mano */
     cursor: pointer;
+    /* Oculta lo que sobresale */
     overflow: hidden;
+    /* Espaciado interno */
     padding: 5px;
+    /* Transición suave */
     transition: all 0.2s ease;
 }
 
 .miniatura:hover,
 .miniatura.activa {
+    /* Borde azul al hover o activa */
     border-color: var(--color-Principal);
 }
 
 .miniatura img {
+    /* Ocupa todo el ancho */
     width: 100%;
+    /* Ocupa todo el alto */
     height: 100%;
+    /* Contiene sin recortar */
     object-fit: contain;
 }
 
 .miniatura--guia {
+    /* Más espaciado interno */
     padding: 8px;
+    /* Fondo blanco */
     background-color: #ffffff;
+    /* Borde gris sutil */
     border: 1px solid #e0e0e0;
 }
 
 .miniatura__guia-tallas {
+    /* Ocupa toda la altura */
     height: 100%;
+    /* Flexbox para organizar */
     display: flex;
+    /* Columna vertical */
     flex-direction: column;
+    /* Distribuye el espacio */
     justify-content: space-between;
+    /* Texto a la izquierda */
     text-align: left;
 }
 
 .miniatura__guia-tallas h4 {
+    /* Tamaño de fuente muy pequeño */
     font-size: 9px;
+    /* Texto semi-negrita */
     font-weight: 600;
+    /* Color oscuro */
     color: var(--color-texto-alterno);
+    /* Margen inferior */
     margin-bottom: 4px;
+    /* Altura de línea compacta */
     line-height: 1.2;
 }
 
 .miniatura__guia-tallas p {
+    /* Tamaño muy pequeño */
     font-size: 6px;
+    /* Color gris */
     color: #666;
+    /* Altura de línea */
     line-height: 1.3;
+    /* Margen inferior */
     margin-bottom: 5px;
 }
 
 .miniatura__guia-tallas img {
+    /* Altura proporcional */
     height: 40%;
+    /* Ancho automático */
     width: auto;
+    /* Contiene la imagen */
     object-fit: contain;
 }
 
 /* ==================== INFORMACIÓN DEL PRODUCTO ==================== */
 .producto-info {
+    /* Utiliza Flexbox */
     display: flex;
+    /* Columna vertical */
     flex-direction: column;
+    /* Espacio entre elementos */
     gap: 15px;
 }
 
 .producto-info__marca {
+    /* Tamaño grande */
     font-size: 28px;
+    /* Peso normal */
     font-weight: 400;
+    /* Color azul principal */
     color: var(--color-Principal);
+    /* Estilo cursiva */
     font-style: italic;
 }
 
 .producto-info__nombre {
+    /* Tamaño de fuente */
     font-size: 22px;
+    /* Texto en negrita */
     font-weight: 700;
+    /* Color oscuro */
     color: var(--color-texto-alterno);
+    /* Altura de línea */
     line-height: 1.3;
 }
 
 .producto-info__rating {
+    /* Utiliza Flexbox */
     display: flex;
+    /* Centra verticalmente */
     align-items: center;
+    /* Espacio entre elementos */
     gap: 10px;
 }
 
 .rating {
+    /* Flexbox para estrellas */
     display: flex;
+    /* Pequeño espacio */
     gap: 2px;
 }
 
 .rating__star {
+    /* Color dorado */
     color: #FFD700;
+    /* Tamaño de fuente */
     font-size: 18px;
 }
 
 .rating__star--empty {
+    /* Color gris para vacías */
     color: #ddd;
 }
 
 .rating__valor {
+    /* Tamaño de fuente */
     font-size: 14px;
+    /* Color gris */
     color: #666;
+    /* Peso medio */
     font-weight: 500;
 }
 
 .producto-info__descripcion-corta {
+    /* Tamaño de fuente */
     font-size: 14px;
+    /* Color gris */
     color: #666;
+    /* Altura de línea */
     line-height: 1.5;
 }
 
 .producto-info__descripcion {
+    /* Tamaño de fuente */
     font-size: 14px;
+    /* Color un poco más oscuro */
     color: #444;
+    /* Altura de línea */
     line-height: 1.6;
+    /* Espaciado vertical */
     padding: 15px 0;
+    /* Borde superior sutil */
     border-top: 1px solid #f0f0f0;
 }
 
 .producto-info__precio {
+    /* Utiliza Flexbox */
     display: flex;
+    /* Columna vertical */
     flex-direction: column;
+    /* Pequeño espacio */
     gap: 5px;
 }
 
 .precio__cantidad {
+    /* Tamaño grande */
     font-size: 22px;
+    /* Texto en negrita */
     font-weight: 700;
+    /* Texto negro */
     color: #000000;
+    /* Fondo verde neón */
     background-color: #79FC41;
+    /* Espaciado interno */
     padding: 8px 20px;
+    /* Esquinas redondeadas */
     border-radius: 8px;
+    /* Display inline-block */
     display: inline-block;
+    /* Ancho ajustado al contenido */
     width: fit-content;
 }
 
 .precio__iva {
+    /* Tamaño pequeño */
     font-size: 12px;
+    /* Color gris */
     color: #666;
 }
 
 /* ==================== SELECTOR DE COLOR ==================== */
 .producto-info__color {
+    /* Utiliza Flexbox */
     display: flex;
+    /* Centra verticalmente */
     align-items: center;
+    /* Espacio entre elementos */
     gap: 15px;
+    /* Espaciado vertical */
     padding: 15px 0;
+    /* Borde superior sutil */
     border-top: 1px solid #f0f0f0;
 }
 
 .color__label {
+    /* Tamaño de fuente */
     font-size: 14px;
+    /* Peso medio */
     font-weight: 500;
+    /* Color oscuro */
     color: var(--color-texto-alterno);
 }
 
 .color__valor {
+    /* Tamaño de fuente */
     font-size: 14px;
+    /* Color gris */
     color: #666;
 }
 
 .color__muestra {
+    /* Utiliza Flexbox */
     display: flex;
+    /* Espacio entre colores */
     gap: 8px;
 }
 
 .color__opcion {
+    /* Tamaño del círculo de color */
     width: 35px;
+    /* Alto del círculo */
     height: 35px;
+    /* Forma circular */
     border-radius: 50%;
+    /* Borde transparente inicial */
     border: 2px solid transparent;
+    /* Cursor de mano */
     cursor: pointer;
+    /* Transición suave */
     transition: all 0.2s ease;
+    /* Posición relativa para pseudoelemento */
     position: relative;
 }
 
 .color__opcion:hover {
+    /* Agranda al hover */
     transform: scale(1.1);
 }
 
 .color__opcion--activo {
+    /* Borde oscuro cuando está activo */
     border-color: var(--color-texto-alterno);
 }
 
 .color__opcion--activo::after {
+    /* Crea un pseudoelemento */
     content: '';
+    /* Posicionamiento absoluto */
     position: absolute;
+    /* Centrado verticalmente */
     top: 50%;
+    /* Centrado horizontalmente */
     left: 50%;
+    /* Ajuste para centrar */
     transform: translate(-50%, -50%);
+    /* Ancho del círculo exterior */
     width: 45px;
+    /* Alto del círculo exterior */
     height: 45px;
+    /* Borde azul */
     border: 2px solid var(--color-Principal);
+    /* Forma circular */
     border-radius: 50%;
 }
 
 /* ==================== SELECTOR DE TALLA ==================== */
 .producto-info__talla {
+    /* Utiliza Flexbox */
     display: flex;
+    /* Columna vertical */
     flex-direction: column;
+    /* Espacio entre elementos */
     gap: 12px;
+    /* Espaciado vertical */
     padding: 15px 0;
 }
 
 .talla__header {
+    /* Utiliza Flexbox */
     display: flex;
+    /* Distribuye en los extremos */
     justify-content: space-between;
+    /* Centra verticalmente */
     align-items: center;
 }
 
 .talla__label {
+    /* Tamaño de fuente */
     font-size: 14px;
+    /* Peso medio */
     font-weight: 500;
+    /* Color oscuro */
     color: var(--color-texto-alterno);
 }
 
 .talla__guia {
+    /* Tamaño pequeño */
     font-size: 12px;
+    /* Color azul principal */
     color: var(--color-Principal);
+    /* Subrayado */
     text-decoration: underline;
+    /* Transición suave */
     transition: color 0.2s ease;
 }
 
 .talla__guia:hover {
+    /* Color más oscuro al hover */
     color: var(--color-primario);
 }
 
 .talla__opciones {
+    /* Utiliza Flexbox */
     display: flex;
+    /* Espacio entre tallas */
     gap: 10px;
 }
 
 .talla__opcion {
+    /* Ancho del botón de talla */
     width: 45px;
+    /* Alto del botón */
     height: 45px;
+    /* Borde gris */
     border: 1px solid #ddd;
+    /* Esquinas redondeadas */
     border-radius: 8px;
+    /* Fondo blanco */
     background-color: white;
+    /* Tamaño de fuente */
     font-size: 13px;
+    /* Peso medio */
     font-weight: 500;
+    /* Color oscuro */
     color: var(--color-texto-alterno);
+    /* Cursor de mano */
     cursor: pointer;
+    /* Fuente Poppins */
     font-family: 'Poppins', sans-serif;
+    /* Transición suave */
     transition: all 0.2s ease;
 }
 
 .talla__opcion:hover {
+    /* Borde azul al hover */
     border-color: var(--color-Principal);
+    /* Texto azul al hover */
     color: var(--color-Principal);
 }
 
 .talla__opcion--activo {
+    /* Fondo azul cuando está activo */
     background-color: var(--color-Principal);
+    /* Borde azul */
     border-color: var(--color-Principal);
+    /* Texto blanco */
     color: white;
 }
 
 /* ==================== BOTÓN AGREGAR AL CARRITO ==================== */
 .producto-info__btn-agregar {
+    /* Fondo azul principal */
     background-color: var(--color-Principal);
+    /* Texto blanco */
     color: white;
+    /* Sin borde */
     border: none;
+    /* Espaciado interno generoso */
     padding: 16px 35px;
+    /* Esquinas redondeadas */
     border-radius: 8px;
+    /* Tamaño de fuente */
     font-size: 15px;
+    /* Texto semi-negrita */
     font-weight: 600;
+    /* Fuente Poppins */
     font-family: 'Poppins', sans-serif;
+    /* Cursor de mano */
     cursor: pointer;
+    /* Transición suave */
     transition: all 0.3s ease;
+    /* Margen superior */
     margin-top: 10px;
 }
 
 .producto-info__btn-agregar:hover {
+    /* Color más oscuro al hover */
     background-color: var(--color-primario);
+    /* Eleva ligeramente */
     transform: translateY(-2px);
+    /* Sombra de elevación */
     box-shadow: 0 6px 20px rgba(0, 123, 255, 0.35);
 }
 
 /* ==================== FOOTER ==================== */
 .footer {
+    /* Fondo azul principal */
     background-color: var(--color-Principal);
+    /* Texto blanco */
     color: white;
+    /* Espaciado interno */
     padding: 50px 30px 40px;
+    /* Margen superior */
     margin-top: 60px;
+    /* Utiliza CSS Grid */
     display: grid;
+    /* 4 columnas iguales */
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* Espacio entre columnas */
     gap: 40px;
+    /* Ancho completo */
     max-width: 100%;
 }
 
 .footer__left {
+    /* Utiliza Flexbox */
     display: flex;
+    /* Alinea arriba */
     align-items: flex-start;
 }
 
 .footer__logo {
+    /* Sin margen */
     margin: 0;
 }
 
 .footer__logo img {
+    /* Altura fija */
     height: 122px;
+    /* Ancho automático */
     width: auto;
 }
 
 .footer__columns {
+    /* Utiliza Flexbox */
     display: flex;
+    /* Columna vertical */
     flex-direction: column;
+    /* Espacio entre enlaces */
     gap: 10px;
 }
 
 .footer__titulo {
+    /* Tamaño de fuente */
     font-size: 19px;
+    /* Texto en negrita */
     font-weight: 700;
+    /* Texto blanco */
     color: white;
+    /* Margen inferior */
     margin-bottom: 15px;
+    /* Mayúsculas */
     text-transform: uppercase;
+    /* Espaciado entre letras */
     letter-spacing: 1px;
 }
 
 .footer__link {
+    /* Blanco con 85% opacidad */
     color: rgba(255, 255, 255, 0.85);
+    /* Sin subrayado */
     text-decoration: none;
+    /* Tamaño de fuente */
     font-size: 16px;
+    /* Transición suave */
     transition: all 0.2s ease;
+    /* Display block */
     display: block;
 }
 
 .footer__link:hover {
+    /* Blanco completo */
     color: white;
+    /* Desplazamiento a la derecha */
     padding-left: 5px;
 }
 
 /* ==================== RESPONSIVE DESIGN ==================== */
+/* === Tablets (hasta 1024px) === */
 @media (max-width: 1024px) {
     .producto-detalle__contenido {
+        /* Una sola columna */
         grid-template-columns: 1fr;
+        /* Reduce el gap */
         gap: 30px;
     }
 
     .producto-galeria__principal {
+        /* Limita la altura máxima */
         max-height: 450px;
     }
 }
 
+/* === Móviles (hasta 768px) === */
 @media (max-width: 768px) {
     .encabezado__top {
+        /* Permite envolver elementos */
         flex-wrap: wrap;
+        /* Reduce el gap */
         gap: 15px;
+        /* Reduce el padding */
         padding: 15px;
     }
 
     .contenido__barra-busqueda {
+        /* Mueve al final */
         order: 3;
+        /* Ancho completo */
         max-width: 100%;
+        /* Ancho 100% */
         width: 100%;
     }
 
     .producto-detalle {
+        /* Reduce el padding */
         padding: 20px 15px;
     }
 
     .producto-galeria__miniaturas {
+        /* Mantiene 4 columnas */
         grid-template-columns: repeat(4, 1fr);
+        /* Reduce el gap */
         gap: 8px;
     }
 
     .producto-info__marca {
+        /* Reduce el tamaño */
         font-size: 22px;
     }
 
     .producto-info__nombre {
+        /* Reduce el tamaño */
         font-size: 18px;
     }
 
     .talla__opciones {
+        /* Permite envolver */
         flex-wrap: wrap;
     }
 
     .footer {
+        /* 2 columnas */
         grid-template-columns: 1fr 1fr;
+        /* Texto a la izquierda */
         text-align: left;
     }
 }
 
+/* === Móviles pequeños (hasta 480px) === */
 @media (max-width: 480px) {
     .header__logo img {
+        /* Reduce el logo */
         height: 40px;
     }
 
     .nav-container {
+        /* Permite envolver */
         flex-wrap: wrap;
     }
 
     .nav__link {
+        /* Reduce tamaño */
         font-size: 12px;
+        /* Reduce padding */
         padding: 8px 10px;
     }
 
     .producto-info__precio .precio__cantidad {
+        /* Reduce tamaño */
         font-size: 18px;
+        /* Reduce padding */
         padding: 6px 15px;
     }
 
     .talla__opcion {
+        /* Reduce tamaño */
         width: 40px;
+        /* Reduce altura */
         height: 40px;
+        /* Reduce fuente */
         font-size: 12px;
     }
 
     .footer {
+        /* Una columna */
         grid-template-columns: 1fr;
+        /* Centra texto */
         text-align: center;
     }
 
     .footer__left {
+        /* Centra el logo */
         justify-content: center;
     }
 
     .footer__columns {
+        /* Centra enlaces */
         align-items: center;
     }
 }
