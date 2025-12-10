@@ -1,0 +1,108 @@
+@import url("../Style.css");
+
+/* === Estilos generales ===*/
+body{
+    margin: 0;
+    font-family: var(--font-family);
+    background-color: var(--color-primario);
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+/* === Contenedor principal ===*/
+.registro{
+    width: 380px;
+    padding: 2rem;
+    border-radius: 12px;
+    display: grid;
+    gap: 1.3rem;
+    text-align: center;
+    justify-content: center;
+}
+
+/* === logo === */
+.registro__encabezado{
+    display: flex;
+    justify-content: center;
+}
+
+.registro__logo{
+    width: 450px;
+}
+
+/* === Titulo ===*/
+.registro__titulo{
+    color: var(--color-texto);
+    font-size: 35px;
+    font-style: var(--font-style);
+    margin: 0;
+}
+
+/* === Formulario ===*/
+.formulario{
+    display: grid;
+    gap:  2rem;
+}
+
+/* Grupo de inputs */
+.formulario__grupo{
+    display: grid;
+    gap: 3rem;
+    text-align: left;
+}
+/* Texto del label*/
+.formulario__texto{
+    color: #c7c7c7;
+    font-size: 15px; 
+}
+
+/* Input */
+.formulario__input{
+    width: 550px;
+    padding: 22px;
+    border: none;
+    border-radius: 6px;
+    background-color: var( --color-fondo-formulario);
+    font-size: 1rem;
+}
+
+/* Botón */
+.formulario__boton{
+    background-color: var(--color-botton--primario);
+    color: var(--color-);
+    border: none;
+    border-radius: 8px;
+    padding: 22px;
+    font-size: 30px;
+    cursor: pointer;
+    text-decoration: none;
+    font-style: normal;
+}
+
+/* Links */
+.formulario__link--registro{
+    color: #007FFF;
+    text-decoration: none;
+    font-weight: 500;
+    padding-left: 10px;
+    font-family: var(--font-family);
+}
+
+.formulario__link--registro:hover{
+    text-decoration: underline;
+}
+
+.formulario__registro{
+    font-size: 18px;
+    color: var(--color-texto);
+}
+
+/* Footer */
+.registro__footer{
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    color: var(--color-texto);
+    padding-top: 25px;
+}
