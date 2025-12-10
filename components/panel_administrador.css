@@ -1,0 +1,368 @@
+/* ===================================================
+   Panel del Administrador - Estilos CSS
+   Deportex Studio - Sistema Administrativo
+   =================================================== */
+
+@import url("../Style.css");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* === Reset y Base === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+    min-height: 100vh;
+}
+
+/* === Header === */
+.encabezado {
+    width: 100%;
+    background-color: var(--color-Principal);
+    color: var(--color-texto);
+}
+
+.encabezado__top {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo img {
+    height: 115px;
+    width: auto;
+}
+
+.encabezado__nav {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav__link {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.nav__link--salir {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.nav__link--salir:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+/* === Main Panel === */
+.admin-panel {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+/* === Hero Section === */
+.admin-panel__hero {
+    background: linear-gradient(135deg, var(--color-Principal) 0%, #1a237e 100%);
+    border-radius: 20px;
+    padding: 40px;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.admin-panel__info {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.admin-panel__icono {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.admin-panel__icono svg {
+    width: 40px;
+    height: 40px;
+    color: white;
+}
+
+.admin-panel__bienvenida {
+    color: white;
+}
+
+.admin-panel__saludo {
+    font-size: 14px;
+    opacity: 0.85;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.admin-panel__titulo {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.admin-panel__fecha {
+    font-size: 13px;
+    opacity: 0.75;
+}
+
+/* === Títulos de Sección === */
+.seccion__titulo {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--color-Principal);
+    margin-bottom: 25px;
+    position: relative;
+    padding-left: 15px;
+}
+
+.seccion__titulo::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5px;
+    height: 28px;
+    background: linear-gradient(180deg, var(--color-Principal) 0%, #1a237e 100%);
+    border-radius: 3px;
+}
+
+/* === Grid de Estadísticas === */
+.estadisticas {
+    margin-bottom: 50px;
+}
+
+.estadisticas__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+/* === Tarjetas de Estadísticas === */
+.stat-card {
+    background: white;
+    border-radius: 16px;
+    padding: 25px;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 2px solid transparent;
+}
+
+.stat-card:hover {
+    border-color: var(--color-Principal);
+}
+
+.stat-card__icono {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.stat-card--ventas .stat-card__icono {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.stat-card--productos .stat-card__icono {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.stat-card--stock .stat-card__icono {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.stat-card--usuarios .stat-card__icono {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+}
+
+.stat-card--vistas .stat-card__icono {
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+}
+
+.stat-card__icono svg {
+    width: 28px;
+    height: 28px;
+    color: white;
+}
+
+.stat-card__contenido {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.stat-card__valor {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--color-texto-alterno);
+}
+
+.stat-card__label {
+    font-size: 13px;
+    color: #666;
+}
+
+.stat-card__cambio {
+    font-size: 12px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    display: inline-block;
+    width: fit-content;
+    margin-top: 5px;
+}
+
+.stat-card__cambio--positivo {
+    background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+    color: #155724;
+}
+
+.stat-card__cambio--alerta {
+    background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+    color: #856404;
+}
+
+/* === Tabla de Productos Populares === */
+.productos-populares {
+    margin-bottom: 40px;
+}
+
+.tabla-container {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.tabla-productos {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabla-productos th,
+.tabla-productos td {
+    padding: 15px 20px;
+    text-align: left;
+}
+
+.tabla-productos thead {
+    background: var(--color-Principal);
+    color: white;
+}
+
+.tabla-productos th {
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.tabla-productos tbody tr {
+    border-bottom: 1px solid #eee;
+}
+
+.tabla-productos tbody tr:last-child {
+    border-bottom: none;
+}
+
+.tabla-productos tbody tr:hover {
+    background: #f8f9fa;
+}
+
+.tabla-productos__rank {
+    font-weight: 700;
+    color: var(--color-Principal);
+    font-size: 16px;
+}
+
+.tabla-productos__nombre {
+    font-weight: 500;
+    color: var(--color-texto-alterno);
+}
+
+.tabla-productos__vistas {
+    font-weight: 600;
+    color: var(--color-Principal);
+}
+
+.tabla-productos__ventas {
+    font-weight: 600;
+    color: #155724;
+}
+
+/* === Footer === */
+.footer {
+    background: var(--color-Principal);
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer__logo img {
+    height: 115px;
+    width: auto;
+}
+
+.footer__copyright {
+    color: white;
+    font-size: 14px;
+}
+
+/* === Responsive === */
+@media screen and (max-width: 768px) {
+    .admin-panel {
+        padding: 20px 15px;
+    }
+
+    .admin-panel__hero {
+        padding: 25px;
+    }
+
+    .admin-panel__info {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .admin-panel__titulo {
+        font-size: 24px;
+    }
+
+    .estadisticas__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tabla-productos th,
+    .tabla-productos td {
+        padding: 12px 15px;
+        font-size: 13px;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
