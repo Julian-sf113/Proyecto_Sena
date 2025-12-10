@@ -2,8 +2,7 @@
 *{
    margin: 0; /* Elimina el margen por defecto de todos los elementos */
    padding: 0; /* Elimina el padding (relleno) por defecto de todos los elementos */
-   box-sizing: border-box; /* Establece el modelo de caja a 'border-box'. Esto significa que el padding y el borde
-       se incluyen dentro del ancho y alto total del elemento, facilitando el diseño. */
+   box-sizing: border-box; /* Establece el modelo de caja a 'border-box'. Esto significa que el padding y el borde se incluyen dentro del ancho y alto total del elemento, facilitando el diseño. */
 }
 /*:root define variables CSS globales (propiedades personalizadas) */
 :root{
@@ -15,6 +14,9 @@
     --color-botton--secundario-hover: #79FC41;/* Color de fondo del botón secundario/terciario al pasar el ratón (hover): un verde neón */
     --font-family: "Poppins", sans-serif; /* Familia de la fuente: Poppins (y sans-serif como respaldo) */
     --font-style: normal; /* Estilo de la fuente: normal */
+    --color-fondo-formulario:#e9e9e9;
     --color-texto: #FAFAFA; /* Color de texto claro: casi blanco */
     --color-texto-alterno: #021f4a; /* Color de texto alternativo/oscuro: el mismo que el color primario */
+    --color-Principal: #007bff; /* Color principal para elementos destacados: un azul brillante */
+    --color-Principal-secundario: #000000; /* Color secundario para elementos destacados*/
 }
