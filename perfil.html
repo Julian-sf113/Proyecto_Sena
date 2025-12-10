@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="components/Perfil.css">
+    <title>Mi Perfil - Deportex Studio</title>
+</head>
+
+<body>
+    <header class="encabezado">
+        <section class="encabezado__top">
+            <figure class="header__logo">
+                <img src="Images/Logo2.0.png" alt="Logo Deportex Studio">
+            </figure>
+
+            <form class="contenido__barra-busqueda">
+                <input type="text" placeholder="Buscar productos..." class="contenido__barra-busqueda">
+                <button class="contenido__boton-buscador" type="submit"><img src="Images/lupa.png"
+                        alt="lupa del buscador" class=".contenido__barra-busqueda "></button>
+            </form>
+
+            <nav class="encabezado__top--nav-encabezado">
+                <button class="nav-encabezado__icono--user"><img src="Images/avatar.png" alt="Avatar Usuario"></button>
+                <a href="carrito_de_compras.html" class="nav-encabezado__icono--carrito"><img
+                        src="Images/carrito-de-compras.png" alt="Carrito de compras"></a>
+            </nav>
+        </section>
+
+        <section class="nav-container">
+            <nav class="nav">
+                <li class="nav__item"><a class="nav__link" href="Principal.html">Inicio</a></li>
+            </nav>
+
+            <nav class="nav">
+                <li class="nav__item"><a class="nav__link" href="#">Deportes</a></li>
+                <ul class="nav__submenu">
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Baloncesto</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Fútbol</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Voleibol</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Ciclismo</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Natación</a></li>
+                </ul>
+            </nav>
+
+            <nav class="nav">
+                <li class="nav__item"><a class="nav__link" href="#">Hombre</a></li>
+                <ul class="nav__submenu">
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Ropa</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Calzado</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Accesorios</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Novedades</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Colección</a></li>
+                </ul>
+            </nav>
+
+            <nav class="nav">
+                <li class="nav__item"><a class="nav__link" href="#">Mujer</a></li>
+                <ul class="nav__submenu">
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Ropa</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Calzado</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Accesorios</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Novedades</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Coleccion</a></li>
+                </ul>
+            </nav>
+
+            <nav class="nav">
+                <li class="nav__item"><a class="nav__link" href="#">Junior</a></li>
+                <ul class="nav__submenu">
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Ropa</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Calzado</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Accesorios</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Novedades</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Coleccion</a></li>
+                </ul>
+            </nav>
+        </section>
+    </header>
+
+    <!-- Contenido Principal del Perfil -->
+    <main class="perfil">
+        <!-- Hero del Perfil -->
+        <section class="perfil__hero">
+            <div class="perfil__avatar-container">
+                <div class="perfil__avatar">
+                    <img src="Images/usuario.png" alt="Avatar del Usuario">
+                </div>
+                <button class="perfil__cambiar-foto">Cambiar foto</button>
+            </div>
+            <div class="perfil__info-basica">
+                <h1 class="perfil__nombre">Pedro Bernal</h1>
+                <span class="perfil__email-hero">pedrobernal@email.com</span>
+                <span class="perfil__miembro">Miembro desde Julio 2025</span>
+            </div>
+        </section>
+
+        <!-- Navegación del Perfil -->
+        <nav class="perfil__nav">
+            <a href="#datos-personales" class="perfil__nav-item perfil__nav-item--activo">Datos Personales</a>
+            <a href="#seguridad" class="perfil__nav-item">Seguridad</a>
+            <a href="#preferencias" class="perfil__nav-item">Preferencias</a>
+        </nav>
+
+        <!-- Sección: Datos Personales -->
+        <section id="datos-personales" class="perfil__seccion">
+            <h2 class="seccion__titulo">Datos Personales</h2>
+            <div class="perfil__formulario">
+                <!-- Campo Nombre -->
+                <div class="campo-grupo">
+                    <label class="campo__label" for="nombre">Nombre Completo</label>
+                    <div class="campo__input-wrapper">
+                        <input type="text" id="nombre" class="campo__input" value="Pedro Bernal" readonly>
+                        <button class="campo__btn-editar" data-field="nombre">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z" />
+                            </svg>
+                            Editar
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Campo Correo -->
+                <div class="campo-grupo">
+                    <label class="campo__label" for="correo">Correo Electrónico</label>
+                    <div class="campo__input-wrapper">
+                        <input type="email" id="correo" class="campo__input" value="pedrobernal@email.com" readonly>
+                        <button class="campo__btn-editar" data-field="correo">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z" />
+                            </svg>
+                            Editar
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Campo Teléfono -->
+                <div class="campo-grupo">
+                    <label class="campo__label" for="telefono">Teléfono</label>
+                    <div class="campo__input-wrapper">
+                        <input type="tel" id="telefono" class="campo__input" value="+57 300 123 4567" readonly>
+                        <button class="campo__btn-editar" data-field="telefono">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z" />
+                            </svg>
+                            Editar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección: Seguridad (Contraseña) -->
+        <section id="seguridad" class="perfil__seccion">
+            <h2 class="seccion__titulo">Seguridad</h2>
+            <div class="perfil__formulario">
+                <!-- Campo Contraseña -->
+                <div class="campo-grupo">
+                    <label class="campo__label" for="contrasena">Contraseña Actual</label>
+                    <div class="campo__input-wrapper">
+                        <input type="password" id="contrasena" class="campo__input" value="••••••••••" readonly>
+                        <button class="campo__btn-editar campo__btn-editar--seguridad" data-field="contrasena">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM12 17c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1s3.1 1.39 3.1 3.1v2z" />
+                            </svg>
+                            Cambiar Contraseña
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Información de Seguridad -->
+                <div class="seguridad__info">
+                    <div class="seguridad__item">
+                        <div class="seguridad__icono seguridad__icono--ok">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                            </svg>
+                        </div>
+                        <div class="seguridad__texto">
+                            <span class="seguridad__label">Último cambio de contraseña</span>
+                            <span class="seguridad__valor">Hace 3 meses</span>
+                        </div>
+                    </div>
+                    <div class="seguridad__item">
+                        <div class="seguridad__icono seguridad__icono--ok">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                            </svg>
+                        </div>
+                        <div class="seguridad__texto">
+                            <span class="seguridad__label">Verificación de correo</span>
+                            <span class="seguridad__valor">Verificado</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección: Preferencias -->
+        <section id="preferencias" class="perfil__seccion">
+            <h2 class="seccion__titulo">Mis Preferencias</h2>
+            <div class="preferencias__grid">
+                <!-- Deportes Favoritos -->
+                <article class="preferencia-card">
+                    <div class="preferencia-card__header">
+                        <div class="preferencia-card__icono">
+                            <img src="Images/Icono.Deporte.png" alt="Deporte">
+                        </div>
+                        <h3 class="preferencia-card__titulo">Deportes Favoritos</h3>
+                    </div>
+                    <div class="preferencia-card__contenido">
+                        <div class="preferencia-card__tags">
+                            <span class="tag tag--activo">Ciclismo</span>
+                            <span class="tag tag--activo">Baloncesto</span>
+                            <span class="tag tag--activo">Natación</span>
+                        </div>
+                    </div>
+                    <button class="preferencia-card__btn">Editar Preferencias</button>
+                </article>
+
+                <!-- Nivel de Experiencia -->
+                <article class="preferencia-card">
+                    <div class="preferencia-card__header">
+                        <div class="preferencia-card__icono">
+                            <img src="Images/Nivel_Experiencia.png" alt="Nivel">
+                        </div>
+                        <h3 class="preferencia-card__titulo">Nivel de Experiencia</h3>
+                    </div>
+                    <div class="preferencia-card__contenido">
+                        <div class="nivel-selector">
+                            <span class="nivel-opcion">Principiante</span>
+                            <span class="nivel-opcion">Intermedio</span>
+                            <span class="nivel-opcion nivel-opcion--activo">Avanzado</span>
+                        </div>
+                    </div>
+                    <button class="preferencia-card__btn">Cambiar Nivel</button>
+                </article>
+
+                <!-- Rango de Presupuesto -->
+                <article class="preferencia-card">
+                    <div class="preferencia-card__header">
+                        <div class="preferencia-card__icono">
+                            <img src="Images/precio-alto.png" alt="Presupuesto">
+                        </div>
+                        <h3 class="preferencia-card__titulo">Rango de Presupuesto</h3>
+                    </div>
+                    <div class="preferencia-card__contenido">
+                        <div class="presupuesto-display">
+                            <span class="presupuesto-valor">$100.000 - $500.000</span>
+                        </div>
+                    </div>
+                    <button class="preferencia-card__btn">Ajustar Presupuesto</button>
+                </article>
+
+                <!-- Notificaciones -->
+                <article class="preferencia-card">
+                    <div class="preferencia-card__header">
+                        <div class="preferencia-card__icono preferencia-card__icono--svg">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z" />
+                            </svg>
+                        </div>
+                        <h3 class="preferencia-card__titulo">Notificaciones</h3>
+                    </div>
+                    <div class="preferencia-card__contenido">
+                        <div class="notificaciones-opciones">
+                            <label class="toggle-opcion">
+                                <input type="checkbox" checked>
+                                <span class="toggle-slider"></span>
+                                <span class="toggle-label">Ofertas y promociones</span>
+                            </label>
+                            <label class="toggle-opcion">
+                                <input type="checkbox" checked>
+                                <span class="toggle-slider"></span>
+                                <span class="toggle-label">Nuevos productos</span>
+                            </label>
+                            <label class="toggle-opcion">
+                                <input type="checkbox">
+                                <span class="toggle-slider"></span>
+                                <span class="toggle-label">Newsletter semanal</span>
+                            </label>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Botón Guardar Cambios -->
+        <div class="perfil__acciones">
+            <button class="btn-guardar">Guardar Todos los Cambios</button>
+            <a href="panel_de_control.html" class="btn-volver">Volver al Panel</a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <section class="footer__left">
+            <figure class="footer__logo">
+                <img src="Images/Logo2.0.png" alt="Logo Deportex Studio">
+            </figure>
+        </section>
+
+        <section class="footer__columns">
+            <div class="footer__columns">
+                <h4 class="footer__titulo">COMPRA</h4>
+                <a href="#" class="footer__link">Método de Pago</a>
+                <a href="#" class="footer__link">Métodos de entrega</a>
+                <a href="#" class="footer__link">Envíos Gratis</a>
+                <a href="#" class="footer__link">Guía de Tallas</a>
+                <a href="#" class="footer__link">Tarjeta Regalo</a>
+            </div>
+        </section>
+
+        <section class="footer__columns">
+            <div class="footer__columns">
+                <h4 class="footer__titulo">EXPERIENCIA</h4>
+                <a href="#" class="footer__link">Ventas Corporativas</a>
+                <a href="#" class="footer__link">Consejos Deportivos</a>
+                <a href="#" class="footer__link">Deportex Actividades</a>
+                <a href="#" class="footer__link">Nuestras Tiendas</a>
+            </div>
+        </section>
+
+        <section class="footer__columns">
+            <div class="footer__columns">
+                <h4 class="footer__titulo">Legal</h4>
+                <a href="#" class="footer__link">Políticas, Términos y condiciones</a>
+                <a href="#" class="footer__link">Avisos de Seguridad</a>
+                <a href="#" class="footer__link">Factura Electronica</a>
+                <a href="#" class="footer__link">SIC</a>
+            </div>
+        </section>
+    </footer>
+</body>
+
+</html>

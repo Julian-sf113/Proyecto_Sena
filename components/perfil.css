@@ -1,0 +1,1200 @@
+@import url("../Style.css");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ==================== RESET & BASE ==================== */
+* {
+    /* Elimina el margen por defecto */
+    margin: 0;
+    /* Elimina el padding por defecto */
+    padding: 0;
+    /* Incluye padding y borde en el ancho total */
+    box-sizing: border-box;
+}
+
+body {
+    /* Aplica la tipografía Poppins */
+    font-family: 'Poppins', sans-serif;
+    /* Degradado diagonal de fondo gris */
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+    /* Altura mínima de pantalla completa */
+    min-height: 100vh;
+}
+
+/* ==================== HEADER ==================== */
+.encabezado {
+    /* Ocupa todo el ancho */
+    width: 100%;
+    /* Fondo azul principal */
+    background-color: var(--color-Principal);
+    /* Color del texto */
+    color: var(--color-texto);
+}
+
+.encabezado__top {
+    /* Limita el ancho máximo */
+    max-width: 1400px;
+    /* Centra horizontalmente */
+    margin: 0 auto;
+    /* Espaciado interno */
+    padding: 15px 30px;
+    /* Utiliza Flexbox */
+    display: flex;
+    /* Distribuye en los extremos */
+    justify-content: space-between;
+    /* Centra verticalmente */
+    align-items: center;
+    /* Espacio entre elementos */
+    gap: 20px;
+}
+
+.header__logo {
+    /* Sin margen */
+    margin: 0;
+}
+
+.header__logo img {
+    /* Altura fija del logo */
+    height: 122px;
+    /* Ancho automático */
+    width: auto;
+}
+
+/* === Barra de búsqueda === */
+.contenido__barra-busqueda {
+    /* Utiliza Flexbox */
+    display: flex;
+    /* Se expande para ocupar espacio */
+    flex: 1;
+    /* Limita el ancho máximo */
+    max-width: 400px;
+    /* Posición relativa para el botón */
+    position: relative;
+}
+
+.contenido__barra-busqueda input {
+    /* Ocupa todo el ancho */
+    width: 100%;
+    /* Espaciado interno con espacio para botón */
+    padding: 12px 45px 12px 15px;
+    /* Sin borde */
+    border: none;
+    /* Esquinas redondeadas */
+    border-radius: 6px;
+    /* Tamaño de fuente */
+    font-size: 14px;
+    /* Fuente Poppins */
+    font-family: 'Poppins', sans-serif;
+    /* Sin borde de enfoque */
+    outline: none;
+}
+
+.contenido__barra-busqueda input::placeholder {
+    /* Color gris para placeholder */
+    color: #999;
+}
+
+.contenido__boton-buscador {
+    /* Posicionamiento absoluto */
+    position: absolute;
+    /* A 5px del borde derecho */
+    right: 5px;
+    /* Centrado verticalmente */
+    top: 50%;
+    /* Ajuste para centrar */
+    transform: translateY(-50%);
+    /* Sin fondo */
+    background: none;
+    /* Sin borde */
+    border: none;
+    /* Cursor de mano */
+    cursor: pointer;
+    /* Espaciado interno */
+    padding: 8px;
+}
+
+.contenido__boton-buscador img {
+    /* Ancho del icono */
+    width: 18px;
+    /* Alto del icono */
+    height: 18px;
+    /* Opacidad reducida */
+    opacity: 0.6;
+}
+
+/* === Iconos de navegación del header === */
+.encabezado__top--nav-encabezado {
+    /* Utiliza Flexbox */
+    display: flex;
+    /* Centra verticalmente */
+    align-items: center;
+    /* Espacio entre iconos */
+    gap: 15px;
+}
+
+.nav-encabezado__icono--user,
+.nav-encabezado__icono--carrito {
+    /* Sin fondo */
+    background: none;
+    /* Sin borde */
+    border: none;
+    /* Cursor de mano */
+    cursor: pointer;
+    /* Espaciado interno */
+    padding: 5px;
+    /* Flexbox para centrar */
+    display: flex;
+    /* Centra verticalmente */
+    align-items: center;
+    /* Centra horizontalmente */
+    justify-content: center;
+}
+
+.nav-encabezado__icono--user img,
+.nav-encabezado__icono--carrito img {
+    /* Ancho del icono */
+    width: 28px;
+    /* Alto del icono */
+    height: 28px;
+    /* Invierte el color a blanco */
+    filter: brightness(0) invert(1);
+}
+
+.nav-encabezado__icono--user:hover img,
+.nav-encabezado__icono--carrito:hover img {
+    /* Reduce opacidad al hover */
+    opacity: 0.8;
+}
+
+/* ==================== NAVEGACIÓN ==================== */
+.nav-container {
+    /* Utiliza Flexbox */
+    display: flex;
+    /* Centra horizontalmente */
+    justify-content: center;
+    /* Centra verticalmente */
+    align-items: center;
+    /* Fondo azul principal */
+    background-color: var(--color-Principal);
+    /* Espaciado lateral */
+    padding: 0 30px;
+    /* Espacio entre elementos */
+    gap: 5px;
+}
+
+.nav {
+    /* Display inline-block */
+    display: inline-block;
+    /* Posición relativa para submenú */
+    position: relative;
+}
+
+.nav__item {
+    /* Sin viñetas */
+    list-style: none;
+}
+
+.nav__link {
+    /* Texto blanco */
+    color: white;
+    /* Sin subrayado */
+    text-decoration: none;
+    /* Tamaño de fuente */
+    font-size: 13px;
+    /* Peso medio */
+    font-weight: 500;
+    /* Espaciado interno */
+    padding: 10px 15px;
+    /* Display block */
+    display: block;
+}
+
+.nav__link:hover {
+    /* Fondo semitransparente al hover */
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav__submenu {
+    /* Oculto por defecto */
+    display: none;
+    /* Posicionamiento absoluto */
+    position: absolute;
+    /* Debajo del padre */
+    top: 100%;
+    /* Alineado a la izquierda */
+    left: 0;
+    /* Fondo blanco */
+    background-color: white;
+    /* Ancho mínimo */
+    min-width: 180px;
+    /* Sombra de elevación */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    /* Esquinas redondeadas */
+    border-radius: 8px;
+    /* Espaciado interno */
+    padding: 10px 0;
+    /* Por encima de otros elementos */
+    z-index: 1000;
+    /* Sin viñetas */
+    list-style: none;
+}
+
+.nav:hover .nav__submenu {
+    /* Muestra al hover */
+    display: block;
+}
+
+.nav__submenu-item {
+    /* Sin viñetas */
+    list-style: none;
+}
+
+.nav__submenu-link {
+    /* Color oscuro */
+    color: var(--color-texto-alterno);
+    /* Sin subrayado */
+    text-decoration: none;
+    /* Tamaño de fuente */
+    font-size: 13px;
+    /* Espaciado interno */
+    padding: 10px 20px;
+    /* Display block */
+    display: block;
+}
+
+.nav__submenu-link:hover {
+    /* Fondo azul al hover */
+    background-color: var(--color-Principal);
+    /* Texto blanco */
+    color: white;
+}
+
+/* ==================== PERFIL MAIN ==================== */
+.perfil {
+    /* Limita el ancho máximo */
+    max-width: 1000px;
+    /* Centra el contenedor */
+    margin: 0 auto;
+    /* Espaciado interno */
+    padding: 30px 20px;
+}
+
+/* ==================== HERO DEL PERFIL ==================== */
+.perfil__hero {
+    /* Degradado azul diagonal */
+    background: linear-gradient(135deg, var(--color-Principal) 0%, #1a237e 100%);
+    /* Esquinas muy redondeadas */
+    border-radius: 20px;
+    /* Espaciado interno generoso */
+    padding: 40px;
+    /* Margen inferior */
+    margin-bottom: 30px;
+    /* Utiliza Flexbox */
+    display: flex;
+    /* Centra verticalmente */
+    align-items: center;
+    /* Espacio entre avatar e info */
+    gap: 30px;
+    /* Sombra pronunciada */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.perfil__avatar-container {
+    /* Texto centrado */
+    text-align: center;
+}
+
+.perfil__avatar {
+    /* Ancho del avatar */
+    width: 120px;
+    /* Alto del avatar */
+    height: 120px;
+    /* Forma circular */
+    border-radius: 50%;
+    /* Degradado de fondo blanco */
+    background: linear-gradient(135deg, #fff 0%, #e0e0e0 100%);
+    /* Flexbox para centrar imagen */
+    display: flex;
+    /* Centra verticalmente */
+    align-items: center;
+    /* Centra horizontalmente */
+    justify-content: center;
+    /* Sombra de elevación */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    /* Borde blanco semitransparente */
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    /* Oculta contenido que sobresale */
+    overflow: hidden;
+    /* Margen inferior */
+    margin-bottom: 15px;
+}
+
+.perfil__avatar img {
+    /* 70% del contenedor */
+    width: 70%;
+    /* 70% del contenedor */
+    height: 70%;
+    /* Contiene la imagen */
+    object-fit: contain;
+}
+
+.perfil__cambiar-foto {
+    /* Fondo blanco semitransparente */
+    background: rgba(255, 255, 255, 0.2);
+    /* Borde blanco semitransparente */
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    /* Texto blanco */
+    color: white;
+    /* Espaciado interno */
+    padding: 8px 16px;
+    /* Esquinas redondeadas */
+    border-radius: 20px;
+    /* Tamaño de fuente pequeño */
+    font-size: 12px;
+    /* Fuente Poppins */
+    font-family: 'Poppins', sans-serif;
+    /* Cursor de mano */
+    cursor: pointer;
+}
+
+.perfil__cambiar-foto:hover {
+    /* Fondo más visible al hover */
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.perfil__info-basica {
+    /* Texto blanco */
+    color: white;
+}
+
+.perfil__nombre {
+    /* Tamaño grande */
+    font-size: 32px;
+    /* Texto en negrita */
+    font-weight: 700;
+    /* Margen inferior */
+    margin-bottom: 8px;
+}
+
+.perfil__email-hero {
+    /* Display block para nueva línea */
+    display: block;
+    /* Tamaño de fuente */
+    font-size: 14px;
+    /* Opacidad reducida */
+    opacity: 0.85;
+    /* Margen inferior */
+    margin-bottom: 5px;
+}
+
+.perfil__miembro {
+    /* Tamaño pequeño */
+    font-size: 13px;
+    /* Muy transparente */
+    opacity: 0.7;
+}
+
+/* ==================== NAVEGACIÓN DEL PERFIL ==================== */
+.perfil__nav {
+    /* Utiliza Flexbox */
+    display: flex;
+    /* Espacio entre pestañas */
+    gap: 10px;
+    /* Margen inferior */
+    margin-bottom: 30px;
+    /* Fondo blanco */
+    background: white;
+    /* Espaciado interno */
+    padding: 8px;
+    /* Esquinas redondeadas */
+    border-radius: 12px;
+    /* Sombra sutil */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.perfil__nav-item {
+    /* Ocupa espacio igual */
+    flex: 1;
+    /* Texto centrado */
+    text-align: center;
+    /* Espaciado interno */
+    padding: 12px 20px;
+    /* Sin subrayado */
+    text-decoration: none;
+    /* Color gris */
+    color: #666;
+    /* Tamaño de fuente */
+    font-size: 14px;
+    /* Peso medio */
+    font-weight: 500;
+    /* Esquinas redondeadas */
+    border-radius: 8px;
+}
+
+.perfil__nav-item:hover {
+    /* Degradado gris al hover */
+    background: linear-gradient(135deg, #f0f0f0 0%, #e8e8e8 100%);
+}
+
+.perfil__nav-item--activo {
+    /* Degradado azul cuando está activo */
+    background: linear-gradient(135deg, var(--color-Principal) 0%, #1a237e 100%);
+    /* Texto blanco */
+    color: white;
+}
+
+/* ==================== SECCIONES ==================== */
+.perfil__seccion {
+    /* Fondo blanco */
+    background: white;
+    /* Esquinas redondeadas */
+    border-radius: 16px;
+    /* Espaciado interno generoso */
+    padding: 30px;
+    /* Margen inferior */
+    margin-bottom: 25px;
+    /* Sombra de elevación */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.seccion__titulo {
+    /* Tamaño de fuente */
+    font-size: 20px;
+    /* Texto en negrita */
+    font-weight: 700;
+    /* Color azul principal */
+    color: var(--color-Principal);
+    /* Margen inferior */
+    margin-bottom: 25px;
+    /* Espaciado izquierdo para línea decorativa */
+    padding-left: 15px;
+    /* Posición relativa para pseudoelemento */
+    position: relative;
+}
+
+.seccion__titulo::before {
+    /* Crea la línea decorativa */
+    content: '';
+    /* Posicionamiento absoluto */
+    position: absolute;
+    /* Alineado a la izquierda */
+    left: 0;
+    /* Centrado verticalmente */
+    top: 50%;
+    /* Ajuste para centrar */
+    transform: translateY(-50%);
+    /* Ancho de la línea */
+    width: 4px;
+    /* Alto de la línea */
+    height: 24px;
+    /* Degradado azul */
+    background: linear-gradient(180deg, var(--color-Principal) 0%, #1a237e 100%);
+    /* Esquinas redondeadas */
+    border-radius: 2px;
+}
+
+/* ==================== FORMULARIO DE DATOS ==================== */
+.perfil__formulario {
+    /* Utiliza Flexbox */
+    display: flex;
+    /* Columna vertical */
+    flex-direction: column;
+    /* Espacio entre campos */
+    gap: 20px;
+}
+
+.campo-grupo {
+    /* Utiliza Flexbox */
+    display: flex;
+    /* Columna vertical */
+    flex-direction: column;
+    /* Espacio entre label e input */
+    gap: 8px;
+}
+
+.campo__label {
+    /* Tamaño pequeño */
+    font-size: 13px;
+    /* Texto semi-negrita */
+    font-weight: 600;
+    /* Color gris oscuro */
+    color: #555;
+}
+
+.campo__input-wrapper {
+    /* Utiliza Flexbox */
+    display: flex;
+    /* Espacio entre input y botón */
+    gap: 15px;
+    /* Centra verticalmente */
+    align-items: center;
+}
+
+.campo__input {
+    /* Ocupa el espacio disponible */
+    flex: 1;
+    /* Espaciado interno */
+    padding: 14px 18px;
+    /* Borde gris claro */
+    border: 2px solid #e8e8e8;
+    /* Esquinas redondeadas */
+    border-radius: 10px;
+    /* Tamaño de fuente */
+    font-size: 15px;
+    /* Fuente Poppins */
+    font-family: 'Poppins', sans-serif;
+    /* Color de texto */
+    color: #333;
+    /* Fondo gris muy claro */
+    background: #fafafa;
+}
+
+.campo__input:focus {
+    /* Sin borde de enfoque predeterminado */
+    outline: none;
+    /* Borde azul al enfocar */
+    border-color: var(--color-Principal);
+    /* Fondo blanco */
+    background: white;
+}
+
+.campo__input[readonly] {
+    /* Fondo gris para solo lectura */
+    background: #f5f5f5;
+    /* Cursor predeterminado */
+    cursor: default;
+}
+
+.campo__btn-editar {
+    /* Utiliza Flexbox */
+    display: flex;
+    /* Centra verticalmente */
+    align-items: center;
+    /* Espacio entre icono y texto */
+    gap: 8px;
+    /* Espaciado interno */
+    padding: 12px 20px;
+    /* Degradado gris de fondo */
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    /* Borde gris */
+    border: 2px solid #e0e0e0;
+    /* Esquinas redondeadas */
+    border-radius: 10px;
+    /* Tamaño de fuente */
+    font-size: 13px;
+    /* Peso medio */
+    font-weight: 500;
+    /* Color gris oscuro */
+    color: #555;
+    /* Fuente Poppins */
+    font-family: 'Poppins', sans-serif;
+    /* Cursor de mano */
+    cursor: pointer;
+    /* Evita que el texto se divida */
+    white-space: nowrap;
+}
+
+.campo__btn-editar:hover {
+    /* Degradado azul al hover */
+    background: linear-gradient(135deg, var(--color-Principal) 0%, #1a237e 100%);
+    /* Texto blanco */
+    color: white;
+    /* Borde azul */
+    border-color: var(--color-Principal);
+}
+
+.campo__btn-editar svg {
+    /* Ancho del icono */
+    width: 16px;
+    /* Alto del icono */
+    height: 16px;
+}
+
+.campo__btn-editar--seguridad {
+    /* Degradado amarillo para seguridad */
+    background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+    /* Borde dorado */
+    border-color: #f0c674;
+    /* Texto marrón */
+    color: #856404;
+}
+
+.campo__btn-editar--seguridad:hover {
+    /* Degradado rosa al hover */
+    background: linear-gradient(135deg, #f5576c 0%, #f093fb 100%);
+    /* Borde rosa */
+    border-color: #f5576c;
+    /* Texto blanco */
+    color: white;
+}
+
+/* ==================== SEGURIDAD INFO ==================== */
+.seguridad__info {
+    /* Margen superior */
+    margin-top: 25px;
+    /* Utiliza Flexbox */
+    display: flex;
+    /* Espacio entre items */
+    gap: 20px;
+    /* Permite envolver */
+    flex-wrap: wrap;
+}
+
+.seguridad__item {
+    /* Utiliza Flexbox */
+    display: flex;
+    /* Centra verticalmente */
+    align-items: center;
+    /* Espacio entre icono y texto */
+    gap: 12px;
+    /* Espaciado interno */
+    padding: 15px 20px;
+    /* Degradado verde de fondo */
+    background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+    /* Esquinas redondeadas */
+    border-radius: 12px;
+    /* Ocupa espacio disponible */
+    flex: 1;
+    /* Ancho mínimo */
+    min-width: 200px;
+}
+
+.seguridad__icono {
+    /* Ancho del contenedor del icono */
+    width: 40px;
+    /* Alto del contenedor */
+    height: 40px;
+    /* Forma circular */
+    border-radius: 50%;
+    /* Flexbox para centrar */
+    display: flex;
+    /* Centra verticalmente */
+    align-items: center;
+    /* Centra horizontalmente */
+    justify-content: center;
+}
+
+.seguridad__icono--ok {
+    /* Fondo verde */
+    background: #28a745;
+    /* Icono blanco */
+    color: white;
+}
+
+.seguridad__icono svg {
+    /* Ancho del icono */
+    width: 22px;
+    /* Alto del icono */
+    height: 22px;
+}
+
+.seguridad__texto {
+    /* Utiliza Flexbox */
+    display: flex;
+    /* Columna vertical */
+    flex-direction: column;
+}
+
+.seguridad__label {
+    /* Tamaño pequeño */
+    font-size: 12px;
+    /* Color verde oscuro */
+    color: #155724;
+    /* Opacidad reducida */
+    opacity: 0.8;
+}
+
+.seguridad__valor {
+    /* Tamaño de fuente */
+    font-size: 14px;
+    /* Texto semi-negrita */
+    font-weight: 600;
+    /* Color verde oscuro */
+    color: #155724;
+}
+
+/* ==================== PREFERENCIAS GRID ==================== */
+.preferencias__grid {
+    /* Utiliza CSS Grid */
+    display: grid;
+    /* Columnas automáticas de mínimo 300px */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* Espacio entre tarjetas */
+    gap: 20px;
+}
+
+.preferencia-card {
+    /* Degradado gris de fondo */
+    background: linear-gradient(135deg, #fafafa 0%, #f0f0f0 100%);
+    /* Esquinas redondeadas */
+    border-radius: 16px;
+    /* Espaciado interno */
+    padding: 25px;
+    /* Borde gris */
+    border: 2px solid #e8e8e8;
+}
+
+.preferencia-card:hover {
+    /* Borde azul al hover */
+    border-color: var(--color-Principal);
+}
+
+.preferencia-card__header {
+    /* Utiliza Flexbox */
+    display: flex;
+    /* Centra verticalmente */
+    align-items: center;
+    /* Espacio entre elementos */
+    gap: 15px;
+    /* Margen inferior */
+    margin-bottom: 20px;
+}
+
+.preferencia-card__icono {
+    /* Ancho del contenedor */
+    width: 50px;
+    /* Alto del contenedor */
+    height: 50px;
+    /* Flexbox para centrar */
+    display: flex;
+    /* Centra verticalmente */
+    align-items: center;
+    /* Centra horizontalmente */
+    justify-content: center;
+}
+
+.preferencia-card__icono img {
+    /* Ancho máximo */
+    max-width: 100%;
+    /* Alto máximo */
+    max-height: 100%;
+    /* Contiene la imagen */
+    object-fit: contain;
+}
+
+.preferencia-card__icono--svg {
+    /* Degradado azul de fondo */
+    background: linear-gradient(135deg, var(--color-Principal) 0%, #1a237e 100%);
+    /* Esquinas redondeadas */
+    border-radius: 12px;
+    /* Icono blanco */
+    color: white;
+}
+
+.preferencia-card__icono--svg svg {
+    /* Ancho del icono */
+    width: 28px;
+    /* Alto del icono */
+    height: 28px;
+}
+
+.preferencia-card__titulo {
+    /* Tamaño de fuente */
+    font-size: 16px;
+    /* Texto semi-negrita */
+    font-weight: 600;
+    /* Color oscuro */
+    color: #333;
+}
+
+.preferencia-card__contenido {
+    /* Margen inferior */
+    margin-bottom: 20px;
+}
+
+.preferencia-card__tags {
+    /* Utiliza Flexbox */
+    display: flex;
+    /* Permite envolver */
+    flex-wrap: wrap;
+    /* Espacio entre tags */
+    gap: 8px;
+}
+
+.tag {
+    /* Espaciado interno */
+    padding: 8px 16px;
+    /* Esquinas muy redondeadas */
+    border-radius: 20px;
+    /* Tamaño de fuente */
+    font-size: 13px;
+    /* Peso medio */
+    font-weight: 500;
+    /* Degradado gris de fondo */
+    background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%);
+    /* Color gris */
+    color: #666;
+}
+
+.tag--activo {
+    /* Degradado azul cuando está activo */
+    background: linear-gradient(135deg, var(--color-Principal) 0%, #1a237e 100%);
+    /* Texto blanco */
+    color: white;
+}
+
+/* === Selector de nivel === */
+.nivel-selector {
+    /* Utiliza Flexbox */
+    display: flex;
+    /* Espacio entre opciones */
+    gap: 10px;
+    /* Permite envolver */
+    flex-wrap: wrap;
+}
+
+.nivel-opcion {
+    /* Espaciado interno */
+    padding: 10px 18px;
+    /* Esquinas muy redondeadas */
+    border-radius: 25px;
+    /* Tamaño de fuente */
+    font-size: 13px;
+    /* Peso medio */
+    font-weight: 500;
+    /* Degradado gris de fondo */
+    background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%);
+    /* Color gris */
+    color: #666;
+    /* Cursor de mano */
+    cursor: pointer;
+}
+
+.nivel-opcion:hover {
+    /* Degradado más oscuro al hover */
+    background: linear-gradient(135deg, #d0d0d0 0%, #c0c0c0 100%);
+}
+
+.nivel-opcion--activo {
+    /* Degradado verde cuando está activo */
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    /* Texto blanco */
+    color: white;
+}
+
+/* === Display de presupuesto === */
+.presupuesto-display {
+    /* Texto centrado */
+    text-align: center;
+    /* Espaciado interno */
+    padding: 15px;
+    /* Degradado azul claro de fondo */
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    /* Esquinas redondeadas */
+    border-radius: 12px;
+}
+
+.presupuesto-valor {
+    /* Tamaño de fuente */
+    font-size: 18px;
+    /* Texto en negrita */
+    font-weight: 700;
+    /* Color azul */
+    color: #1565c0;
+}
+
+/* ==================== TOGGLES DE NOTIFICACIONES ==================== */
+.notificaciones-opciones {
+    /* Utiliza Flexbox */
+    display: flex;
+    /* Columna vertical */
+    flex-direction: column;
+    /* Espacio entre opciones */
+    gap: 12px;
+}
+
+.toggle-opcion {
+    /* Utiliza Flexbox */
+    display: flex;
+    /* Centra verticalmente */
+    align-items: center;
+    /* Espacio entre toggle y label */
+    gap: 12px;
+    /* Cursor de mano */
+    cursor: pointer;
+}
+
+.toggle-opcion input {
+    /* Oculta el input real */
+    display: none;
+}
+
+.toggle-slider {
+    /* Ancho del slider */
+    width: 44px;
+    /* Alto del slider */
+    height: 24px;
+    /* Degradado gris de fondo */
+    background: linear-gradient(135deg, #ccc 0%, #bbb 100%);
+    /* Esquinas muy redondeadas */
+    border-radius: 12px;
+    /* Posición relativa para el círculo */
+    position: relative;
+    /* Evita que se encoja */
+    flex-shrink: 0;
+}
+
+.toggle-slider::before {
+    /* Crea el círculo */
+    content: '';
+    /* Posicionamiento absoluto */
+    position: absolute;
+    /* A 2px del borde superior */
+    top: 2px;
+    /* A 2px del borde izquierdo */
+    left: 2px;
+    /* Ancho del círculo */
+    width: 20px;
+    /* Alto del círculo */
+    height: 20px;
+    /* Fondo blanco */
+    background: white;
+    /* Forma circular */
+    border-radius: 50%;
+    /* Sombra sutil */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.toggle-opcion input:checked+.toggle-slider {
+    /* Degradado azul cuando está activo */
+    background: linear-gradient(135deg, var(--color-Principal) 0%, #1a237e 100%);
+}
+
+.toggle-opcion input:checked+.toggle-slider::before {
+    /* Mueve el círculo a la derecha */
+    left: 22px;
+}
+
+.toggle-label {
+    /* Tamaño de fuente */
+    font-size: 14px;
+    /* Color gris oscuro */
+    color: #555;
+}
+
+.preferencia-card__btn {
+    /* Ocupa todo el ancho */
+    width: 100%;
+    /* Espaciado interno */
+    padding: 12px;
+    /* Sin fondo */
+    background: transparent;
+    /* Borde azul */
+    border: 2px solid var(--color-Principal);
+    /* Texto azul */
+    color: var(--color-Principal);
+    /* Esquinas redondeadas */
+    border-radius: 10px;
+    /* Tamaño de fuente */
+    font-size: 13px;
+    /* Texto semi-negrita */
+    font-weight: 600;
+    /* Fuente Poppins */
+    font-family: 'Poppins', sans-serif;
+    /* Cursor de mano */
+    cursor: pointer;
+}
+
+.preferencia-card__btn:hover {
+    /* Degradado azul de fondo al hover */
+    background: linear-gradient(135deg, var(--color-Principal) 0%, #1a237e 100%);
+    /* Texto blanco */
+    color: white;
+}
+
+/* ==================== BOTONES DE ACCIÓN ==================== */
+.perfil__acciones {
+    /* Utiliza Flexbox */
+    display: flex;
+    /* Espacio entre botones */
+    gap: 15px;
+    /* Centra los botones */
+    justify-content: center;
+    /* Margen superior */
+    margin-top: 30px;
+    /* Permite envolver */
+    flex-wrap: wrap;
+}
+
+.btn-guardar {
+    /* Espaciado interno generoso */
+    padding: 15px 40px;
+    /* Degradado azul de fondo */
+    background: linear-gradient(135deg, var(--color-Principal) 0%, #1a237e 100%);
+    /* Texto blanco */
+    color: white;
+    /* Sin borde */
+    border: none;
+    /* Esquinas muy redondeadas */
+    border-radius: 30px;
+    /* Tamaño de fuente */
+    font-size: 15px;
+    /* Texto semi-negrita */
+    font-weight: 600;
+    /* Fuente Poppins */
+    font-family: 'Poppins', sans-serif;
+    /* Cursor de mano */
+    cursor: pointer;
+    /* Sombra de elevación */
+    box-shadow: 0 5px 20px rgba(0, 123, 255, 0.3);
+}
+
+.btn-guardar:hover {
+    /* Invierte el degradado al hover */
+    background: linear-gradient(135deg, #1a237e 0%, var(--color-Principal) 100%);
+}
+
+.btn-volver {
+    /* Espaciado interno generoso */
+    padding: 15px 40px;
+    /* Sin fondo */
+    background: transparent;
+    /* Borde gris */
+    border: 2px solid #666;
+    /* Texto gris */
+    color: #666;
+    /* Esquinas muy redondeadas */
+    border-radius: 30px;
+    /* Tamaño de fuente */
+    font-size: 15px;
+    /* Texto semi-negrita */
+    font-weight: 600;
+    /* Sin subrayado */
+    text-decoration: none;
+    /* Fuente Poppins */
+    font-family: 'Poppins', sans-serif;
+}
+
+.btn-volver:hover {
+    /* Fondo gris al hover */
+    background: #666;
+    /* Texto blanco */
+    color: white;
+}
+
+/* ==================== FOOTER ==================== */
+.footer {
+    /* Margen superior */
+    margin-top: 50px;
+    /* Espaciado interno */
+    padding: 40px 30px;
+    /* Fondo azul principal */
+    background: var(--color-Principal);
+    /* Utiliza Flexbox */
+    display: flex;
+    /* Distribuye el espacio */
+    justify-content: space-around;
+    /* Permite envolver */
+    flex-wrap: wrap;
+    /* Espacio entre columnas */
+    gap: 30px;
+}
+
+.footer__left {
+    /* Utiliza Flexbox */
+    display: flex;
+    /* Centra verticalmente */
+    align-items: center;
+}
+
+.footer__logo {
+    /* Sin margen */
+    margin: 0;
+}
+
+.footer__logo img {
+    /* Altura fija */
+    height: 100px;
+    /* Ancho automático */
+    width: auto;
+}
+
+.footer__columns {
+    /* Utiliza Flexbox */
+    display: flex;
+    /* Columna vertical */
+    flex-direction: column;
+    /* Espacio entre enlaces */
+    gap: 10px;
+}
+
+.footer__titulo {
+    /* Texto blanco */
+    color: white;
+    /* Tamaño de fuente */
+    font-size: 14px;
+    /* Texto en negrita */
+    font-weight: 700;
+    /* Margen inferior */
+    margin-bottom: 10px;
+}
+
+.footer__link {
+    /* Blanco con opacidad */
+    color: rgba(255, 255, 255, 0.7);
+    /* Sin subrayado */
+    text-decoration: none;
+    /* Tamaño de fuente */
+    font-size: 13px;
+}
+
+.footer__link:hover {
+    /* Blanco completo al hover */
+    color: white;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 768px) {
+    .perfil__hero {
+        /* Cambia a columna */
+        flex-direction: column;
+        /* Centra el texto */
+        text-align: center;
+        /* Reduce el padding */
+        padding: 30px 20px;
+    }
+
+    .perfil__nombre {
+        /* Reduce el tamaño */
+        font-size: 24px;
+    }
+
+    .perfil__nav {
+        /* Cambia a columna */
+        flex-direction: column;
+    }
+
+    .campo__input-wrapper {
+        /* Cambia a columna */
+        flex-direction: column;
+    }
+
+    .campo__btn-editar {
+        /* Ocupa todo el ancho */
+        width: 100%;
+        /* Centra el contenido */
+        justify-content: center;
+    }
+
+    .seguridad__info {
+        /* Cambia a columna */
+        flex-direction: column;
+    }
+
+    .preferencias__grid {
+        /* Una sola columna */
+        grid-template-columns: 1fr;
+    }
+
+    .perfil__acciones {
+        /* Cambia a columna */
+        flex-direction: column;
+    }
+
+    .btn-guardar,
+    .btn-volver {
+        /* Ocupa todo el ancho */
+        width: 100%;
+        /* Centra el texto */
+        text-align: center;
+    }
+}
