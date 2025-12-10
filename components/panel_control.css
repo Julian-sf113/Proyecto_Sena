@@ -3,988 +3,1485 @@
 
 /* ==================== RESET & BASE ==================== */
 * {
+    /* Elimina el margen por defecto */
     margin: 0;
+    /* Elimina el padding por defecto */
     padding: 0;
+    /* Incluye padding y borde en el ancho total */
     box-sizing: border-box;
 }
 
 body {
+    /* Aplica la tipografía Poppins */
     font-family: 'Poppins', sans-serif;
+    /* Degradado diagonal de fondo gris */
     background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+    /* Altura mínima de pantalla completa */
     min-height: 100vh;
 }
 
 /* ==================== HEADER ==================== */
 .encabezado {
+    /* Ocupa todo el ancho */
     width: 100%;
+    /* Fondo azul principal */
     background-color: var(--color-Principal);
+    /* Color del texto */
     color: var(--color-texto);
 }
 
 .encabezado__top {
+    /* Limita el ancho máximo */
     max-width: 1400px;
+    /* Centra horizontalmente */
     margin: 0 auto;
+    /* Espaciado interno */
     padding: 15px 30px;
+    /* Utiliza Flexbox */
     display: flex;
+    /* Distribuye en los extremos */
     justify-content: space-between;
+    /* Centra verticalmente */
     align-items: center;
+    /* Espacio entre elementos */
     gap: 20px;
 }
 
 .header__logo {
+    /* Sin margen */
     margin: 0;
 }
 
 .header__logo img {
+    /* Altura fija del logo */
     height: 122px;
+    /* Ancho automático */
     width: auto;
 }
 
-/* Barra de búsqueda */
+/* === Barra de búsqueda === */
 .contenido__barra-busqueda {
+    /* Utiliza Flexbox */
     display: flex;
+    /* Se expande para ocupar espacio */
     flex: 1;
+    /* Limita el ancho máximo */
     max-width: 400px;
+    /* Posición relativa para el botón */
     position: relative;
 }
 
 .contenido__barra-busqueda input {
+    /* Ocupa todo el ancho */
     width: 100%;
+    /* Espaciado interno con espacio para botón */
     padding: 12px 45px 12px 15px;
+    /* Sin borde */
     border: none;
+    /* Esquinas redondeadas */
     border-radius: 6px;
+    /* Tamaño de fuente */
     font-size: 14px;
+    /* Fuente Poppins */
     font-family: 'Poppins', sans-serif;
+    /* Sin borde de enfoque */
     outline: none;
 }
 
 .contenido__barra-busqueda input::placeholder {
+    /* Color gris para placeholder */
     color: #999;
 }
 
 .contenido__boton-buscador {
+    /* Posicionamiento absoluto */
     position: absolute;
+    /* A 5px del borde derecho */
     right: 5px;
+    /* Centrado verticalmente */
     top: 50%;
+    /* Ajuste para centrar */
     transform: translateY(-50%);
+    /* Sin fondo */
     background: none;
+    /* Sin borde */
     border: none;
+    /* Cursor de mano */
     cursor: pointer;
+    /* Espaciado interno */
     padding: 8px;
 }
 
 .contenido__boton-buscador img {
+    /* Ancho del icono */
     width: 18px;
+    /* Alto del icono */
     height: 18px;
+    /* Opacidad reducida */
     opacity: 0.6;
 }
 
-/* Iconos de navegación del header */
+/* === Iconos de navegación del header === */
 .encabezado__top--nav-encabezado {
+    /* Utiliza Flexbox */
     display: flex;
+    /* Centra verticalmente */
     align-items: center;
+    /* Espacio entre iconos */
     gap: 15px;
 }
 
 .nav-encabezado__icono--user,
 .nav-encabezado__icono--carrito,
 .nav-encabezado__icono--menu {
+    /* Sin fondo */
     background: none;
+    /* Sin borde */
     border: none;
+    /* Cursor de mano */
     cursor: pointer;
+    /* Espaciado interno */
     padding: 5px;
+    /* Flexbox para centrar */
     display: flex;
+    /* Centra verticalmente */
     align-items: center;
+    /* Centra horizontalmente */
     justify-content: center;
 }
 
 .nav-encabezado__icono--user img,
 .nav-encabezado__icono--carrito img,
 .nav-encabezado__icono--menu img {
+    /* Ancho del icono */
     width: 28px;
+    /* Alto del icono */
     height: 28px;
+    /* Invierte el color a blanco */
     filter: brightness(0) invert(1);
+    /* Transición suave */
     transition: transform 0.2s ease;
 }
 
 .nav-encabezado__icono--user:hover img,
 .nav-encabezado__icono--carrito:hover img,
 .nav-encabezado__icono--menu:hover img {
+    /* Agranda el icono al hover */
     transform: scale(1.1);
 }
 
 /* ==================== CONTENEDOR DE NAVEGACIÓN ==================== */
 .nav-container {
+    /* Utiliza Flexbox */
     display: flex;
+    /* Centra horizontalmente */
     justify-content: center;
+    /* Centra verticalmente */
     align-items: center;
+    /* Fondo azul principal */
     background-color: var(--color-Principal);
+    /* Espaciado lateral */
     padding: 0 30px;
+    /* Espacio entre elementos */
     gap: 5px;
 }
 
 /* ==================== NAVEGACIÓN PRINCIPAL ==================== */
 .nav {
+    /* Display inline-block */
     display: inline-block;
+    /* Posición relativa para submenú */
     position: relative;
 }
 
 .nav__item {
+    /* Sin viñetas */
     list-style: none;
 }
 
 .nav__link {
+    /* Texto blanco */
     color: white;
+    /* Sin subrayado */
     text-decoration: none;
+    /* Tamaño de fuente */
     font-size: 13px;
+    /* Peso medio */
     font-weight: 500;
+    /* Espaciado interno */
     padding: 10px 15px;
+    /* Display block */
     display: block;
+    /* Transición suave */
     transition: background-color 0.3s ease;
 }
 
 .nav__link:hover {
+    /* Fondo semitransparente al hover */
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* Submenú */
+/* === Submenú === */
 .nav__submenu {
+    /* Oculto por defecto */
     display: none;
+    /* Posicionamiento absoluto */
     position: absolute;
+    /* Debajo del padre */
     top: 100%;
+    /* Alineado a la izquierda */
     left: 0;
+    /* Fondo blanco */
     background-color: white;
+    /* Ancho mínimo */
     min-width: 180px;
+    /* Sombra de elevación */
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    /* Esquinas redondeadas */
     border-radius: 8px;
+    /* Espaciado interno */
     padding: 10px 0;
+    /* Por encima de otros elementos */
     z-index: 1000;
+    /* Sin viñetas */
     list-style: none;
 }
 
 .nav:hover .nav__submenu {
+    /* Muestra al hover */
     display: block;
+    /* Animación de aparición */
     animation: fadeIn 0.2s ease;
 }
 
 @keyframes fadeIn {
     from {
+        /* Inicia invisible */
         opacity: 0;
+        /* Inicia arriba */
         transform: translateY(-10px);
     }
 
     to {
+        /* Termina visible */
         opacity: 1;
+        /* Termina en posición */
         transform: translateY(0);
     }
 }
 
 .nav__submenu-item {
+    /* Sin viñetas */
     list-style: none;
 }
 
 .nav__submenu-link {
+    /* Color oscuro */
     color: var(--color-texto-alterno);
+    /* Sin subrayado */
     text-decoration: none;
+    /* Tamaño de fuente */
     font-size: 13px;
+    /* Espaciado interno */
     padding: 10px 20px;
+    /* Display block */
     display: block;
+    /* Transición suave */
     transition: all 0.2s ease;
 }
 
 .nav__submenu-link:hover {
+    /* Fondo azul al hover */
     background-color: var(--color-Principal);
+    /* Texto blanco */
     color: white;
 }
 
 /* ==================== PANEL MAIN ==================== */
 .panel {
+    /* Limita el ancho máximo */
     max-width: 1200px;
+    /* Centra el contenedor */
     margin: 0 auto;
+    /* Espaciado interno */
     padding: 30px 20px;
 }
 
 /* ==================== HERO DEL PANEL ==================== */
 .panel__hero {
+    /* Degradado azul diagonal */
     background: linear-gradient(135deg, var(--color-Principal) 0%, #1a237e 100%);
+    /* Esquinas muy redondeadas */
     border-radius: 20px;
+    /* Espaciado interno generoso */
     padding: 40px;
+    /* Margen inferior */
     margin-bottom: 40px;
+    /* Sombra pronunciada */
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
 }
 
 .panel__usuario-info {
+    /* Utiliza Flexbox */
     display: flex;
+    /* Centra verticalmente */
     align-items: center;
+    /* Espacio entre avatar y texto */
     gap: 25px;
 }
 
 .panel__avatar {
+    /* Ancho del avatar */
     width: 100px;
+    /* Alto del avatar */
     height: 100px;
+    /* Forma circular */
     border-radius: 50%;
+    /* Degradado de fondo blanco */
     background: linear-gradient(135deg, #fff 0%, #e0e0e0 100%);
+    /* Flexbox para centrar imagen */
     display: flex;
+    /* Centra verticalmente */
     align-items: center;
+    /* Centra horizontalmente */
     justify-content: center;
+    /* Sombra de elevación */
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    /* Borde blanco semitransparente */
     border: 4px solid rgba(255, 255, 255, 0.3);
+    /* Oculta contenido que sobresale */
     overflow: hidden;
 }
 
 .panel__avatar img {
+    /* 70% del contenedor */
     width: 70%;
+    /* 70% del contenedor */
     height: 70%;
+    /* Contiene la imagen */
     object-fit: contain;
 }
 
 .panel__bienvenida {
+    /* Texto blanco */
     color: white;
 }
 
 .panel__saludo {
+    /* Tamaño de fuente */
     font-size: 14px;
+    /* Opacidad reducida */
     opacity: 0.85;
+    /* Nueva línea */
     display: block;
+    /* Margen inferior */
     margin-bottom: 5px;
 }
 
 .panel__nombre-usuario {
+    /* Tamaño grande */
     font-size: 32px;
+    /* Texto en negrita */
     font-weight: 700;
+    /* Margen inferior */
     margin-bottom: 5px;
+    /* Sombra de texto sutil */
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .panel__miembro {
+    /* Tamaño pequeño */
     font-size: 13px;
+    /* Muy transparente */
     opacity: 0.75;
 }
 
 /* ==================== TÍTULOS DE SECCIÓN ==================== */
 .seccion__titulo {
+    /* Tamaño de fuente */
     font-size: 24px;
+    /* Texto en negrita */
     font-weight: 700;
+    /* Color azul principal */
     color: var(--color-Principal);
+    /* Margen inferior */
     margin-bottom: 25px;
+    /* Posición relativa para línea decorativa */
     position: relative;
+    /* Espaciado izquierdo */
     padding-left: 15px;
 }
 
 .seccion__titulo::before {
+    /* Crea la línea decorativa */
     content: '';
+    /* Posicionamiento absoluto */
     position: absolute;
+    /* Alineado a la izquierda */
     left: 0;
+    /* Centrado verticalmente */
     top: 50%;
+    /* Ajuste para centrar */
     transform: translateY(-50%);
+    /* Ancho de la línea */
     width: 5px;
+    /* Alto de la línea */
     height: 28px;
+    /* Degradado azul */
     background: linear-gradient(180deg, var(--color-Principal) 0%, #1a237e 100%);
+    /* Esquinas redondeadas */
     border-radius: 3px;
 }
 
 /* ==================== ATAJOS RÁPIDOS ==================== */
 .atajos {
+    /* Margen inferior para separar secciones */
     margin-bottom: 50px;
 }
 
 .atajos__grid {
+    /* Utiliza CSS Grid */
     display: grid;
+    /* Columnas automáticas de mínimo 150px */
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    /* Espacio entre tarjetas */
     gap: 20px;
 }
 
 .atajo-card {
+    /* Fondo blanco */
     background: white;
+    /* Esquinas muy redondeadas */
     border-radius: 16px;
+    /* Espaciado interno */
     padding: 25px 20px;
+    /* Texto centrado */
     text-align: center;
+    /* Sin subrayado (es un enlace) */
     text-decoration: none;
+    /* Transición suave para hover */
     transition: all 0.3s ease;
+    /* Sombra de elevación */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    /* Borde transparente inicial */
     border: 2px solid transparent;
 }
 
 .atajo-card:hover {
+    /* Eleva la tarjeta 8px */
     transform: translateY(-8px);
+    /* Aumenta la sombra */
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    /* Muestra el borde azul */
     border-color: var(--color-Principal);
 }
 
 .atajo-card__icono {
+    /* Ancho del contenedor del icono */
     width: 55px;
+    /* Alto del contenedor */
     height: 55px;
+    /* Forma circular */
     border-radius: 50%;
+    /* Flexbox para centrar */
     display: flex;
+    /* Centra verticalmente */
     align-items: center;
+    /* Centra horizontalmente */
     justify-content: center;
+    /* Centra el icono y añade margen inferior */
     margin: 0 auto 15px;
+    /* Transición para el hover */
     transition: transform 0.3s ease;
 }
 
 .atajo-card:hover .atajo-card__icono {
+    /* Agranda el icono al hover sobre la tarjeta */
     transform: scale(1.1);
 }
 
 .atajo-card__icono svg {
+    /* Ancho del icono SVG */
     width: 28px;
+    /* Alto del icono SVG */
     height: 28px;
+    /* Color blanco */
     color: white;
 }
 
 .atajo-card__icono--perfil {
+    /* Degradado púrpura para icono de perfil */
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
 .atajo-card__icono--carrito {
+    /* Degradado rosa para icono de carrito */
     background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
 }
 
 .atajo-card__icono--pedidos {
+    /* Degradado azul/cyan para icono de pedidos */
     background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
 }
 
 .atajo-card__icono--favoritos {
+    /* Degradado rosa/amarillo para favoritos */
     background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
 }
 
 .atajo-card__icono--recomendaciones {
+    /* Degradado suave para recomendaciones */
     background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
 }
 
 .atajo-card__icono--recomendaciones svg {
+    /* Icono oscuro para fondo claro */
     color: #333;
 }
 
 .atajo-card__icono--config {
+    /* Degradado suave para configuración */
     background: linear-gradient(135deg, #d299c2 0%, #fef9d7 100%);
 }
 
 .atajo-card__icono--config svg {
+    /* Icono oscuro para fondo claro */
     color: #333;
 }
 
 .atajo-card__texto {
+    /* Tamaño de fuente */
     font-size: 14px;
+    /* Texto semi-negrita */
     font-weight: 600;
+    /* Color oscuro */
     color: var(--color-texto-alterno);
 }
 
 /* ==================== ÚLTIMAS COMPRAS ==================== */
 .compras {
+    /* Margen inferior para separar secciones */
     margin-bottom: 50px;
 }
 
 .compras__grid {
+    /* Utiliza CSS Grid */
     display: grid;
+    /* Columnas automáticas de mínimo 320px */
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    /* Espacio entre tarjetas */
     gap: 25px;
+    /* Margen inferior */
     margin-bottom: 25px;
 }
 
 .compra-card {
+    /* Fondo blanco */
     background: white;
+    /* Esquinas muy redondeadas */
     border-radius: 16px;
+    /* Oculta contenido que sobresale */
     overflow: hidden;
+    /* Flexbox horizontal */
     display: flex;
+    /* Sombra de elevación */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    /* Transición suave */
     transition: all 0.3s ease;
 }
 
 .compra-card:hover {
+    /* Eleva la tarjeta */
     transform: translateY(-5px);
+    /* Aumenta la sombra */
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
 }
 
 .compra-card__imagen {
+    /* Ancho fijo de la imagen */
     width: 120px;
+    /* Altura mínima */
     min-height: 140px;
+    /* Fondo gris claro */
     background: #f8f9fa;
+    /* Flexbox para centrar */
     display: flex;
+    /* Centra verticalmente */
     align-items: center;
+    /* Centra horizontalmente */
     justify-content: center;
+    /* Espaciado interno */
     padding: 15px;
 }
 
 .compra-card__imagen img {
+    /* Ancho máximo */
     max-width: 100%;
+    /* Alto máximo */
     max-height: 100px;
+    /* Contiene la imagen */
     object-fit: contain;
 }
 
 .compra-card__info {
+    /* Ocupa el espacio restante */
     flex: 1;
+    /* Espaciado interno */
     padding: 20px;
+    /* Flexbox vertical */
     display: flex;
+    /* Columna vertical */
     flex-direction: column;
+    /* Centra verticalmente el contenido */
     justify-content: center;
 }
 
 .compra-card__titulo {
+    /* Tamaño de fuente */
     font-size: 16px;
+    /* Texto en negrita */
     font-weight: 700;
+    /* Color azul principal */
     color: var(--color-Principal);
+    /* Margen inferior */
     margin-bottom: 5px;
 }
 
 .compra-card__descripcion {
+    /* Tamaño de fuente */
     font-size: 13px;
+    /* Color gris */
     color: #666;
+    /* Margen inferior */
     margin-bottom: 12px;
+    /* Altura de línea */
     line-height: 1.4;
 }
 
 .compra-card__detalles {
+    /* Utiliza Flexbox */
     display: flex;
+    /* Distribuye en los extremos */
     justify-content: space-between;
+    /* Centra verticalmente */
     align-items: center;
+    /* Margen inferior */
     margin-bottom: 10px;
 }
 
 .compra-card__fecha {
+    /* Tamaño pequeño */
     font-size: 12px;
+    /* Color gris claro */
     color: #999;
 }
 
 .compra-card__precio {
+    /* Tamaño de fuente */
     font-size: 15px;
+    /* Texto en negrita */
     font-weight: 700;
+    /* Color oscuro */
     color: var(--color-texto-alterno);
 }
 
 .compra-card__estado {
+    /* Display inline-block */
     display: inline-block;
+    /* Espaciado interno */
     padding: 5px 12px;
+    /* Esquinas muy redondeadas */
     border-radius: 20px;
+    /* Tamaño pequeño */
     font-size: 11px;
+    /* Texto semi-negrita */
     font-weight: 600;
+    /* Ancho ajustado al contenido */
     width: fit-content;
 }
 
 .compra-card__estado--entregado {
+    /* Degradado verde para entregado */
     background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+    /* Texto verde oscuro */
     color: #155724;
 }
 
 .compra-card__estado--enviado {
+    /* Degradado amarillo para enviado */
     background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+    /* Texto marrón */
     color: #856404;
 }
 
 .compra-card__estado--pendiente {
+    /* Degradado azul claro para pendiente */
     background: linear-gradient(135deg, #cce5ff 0%, #b8daff 100%);
+    /* Texto azul oscuro */
     color: #004085;
 }
 
 /* ==================== RECOMENDACIONES ==================== */
 .recomendaciones-panel {
+    /* Margen inferior para separar secciones */
     margin-bottom: 50px;
 }
 
 .recomendaciones__grid {
+    /* Utiliza CSS Grid */
     display: grid;
+    /* Columnas automáticas de mínimo 250px */
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* Espacio entre tarjetas */
     gap: 25px;
+    /* Margen inferior */
     margin-bottom: 25px;
 }
 
 .producto-recomendado {
+    /* Fondo blanco */
     background: white;
+    /* Esquinas muy redondeadas */
     border-radius: 16px;
+    /* Oculta contenido que sobresale */
     overflow: hidden;
+    /* Sombra de elevación */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    /* Transición suave */
     transition: all 0.3s ease;
+    /* Posición relativa para badge */
     position: relative;
 }
 
 .producto-recomendado:hover {
+    /* Eleva la tarjeta */
     transform: translateY(-8px);
+    /* Aumenta la sombra */
     box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
 }
 
 .producto-recomendado__badge {
+    /* Posicionamiento absoluto */
     position: absolute;
+    /* A 15px del borde superior */
     top: 15px;
+    /* A 15px del borde izquierdo */
     left: 15px;
+    /* Degradado azul de fondo */
     background: linear-gradient(135deg, var(--color-Principal) 0%, #1a237e 100%);
+    /* Texto blanco */
     color: white;
+    /* Espaciado interno */
     padding: 5px 12px;
+    /* Esquinas muy redondeadas */
     border-radius: 20px;
+    /* Tamaño pequeño */
     font-size: 11px;
+    /* Texto semi-negrita */
     font-weight: 600;
+    /* Por encima de la imagen */
     z-index: 10;
 }
 
 .producto-recomendado__badge--oferta {
+    /* Degradado rosa para ofertas */
     background: linear-gradient(135deg, #f5576c 0%, #f093fb 100%);
 }
 
 .producto-recomendado__imagen {
+    /* Altura fija */
     height: 180px;
+    /* Degradado gris de fondo */
     background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    /* Flexbox para centrar */
     display: flex;
+    /* Centra verticalmente */
     align-items: center;
+    /* Centra horizontalmente */
     justify-content: center;
+    /* Espaciado interno */
     padding: 20px;
 }
 
 .producto-recomendado__imagen img {
+    /* Ancho máximo */
     max-width: 100%;
+    /* Alto máximo */
     max-height: 140px;
+    /* Contiene la imagen */
     object-fit: contain;
+    /* Transición para zoom */
     transition: transform 0.3s ease;
 }
 
 .producto-recomendado:hover .producto-recomendado__imagen img {
+    /* Zoom de 10% al hover */
     transform: scale(1.1);
 }
 
 .producto-recomendado__info {
+    /* Espaciado interno */
     padding: 20px;
 }
 
 .producto-recomendado__titulo {
+    /* Tamaño de fuente */
     font-size: 14px;
+    /* Texto en negrita */
     font-weight: 700;
+    /* Color azul principal */
     color: var(--color-Principal);
+    /* Margen inferior */
     margin-bottom: 5px;
 }
 
 .producto-recomendado__descripcion {
+    /* Tamaño de fuente */
     font-size: 13px;
+    /* Color gris */
     color: #666;
+    /* Margen inferior */
     margin-bottom: 12px;
+    /* Altura de línea */
     line-height: 1.4;
 }
 
 .producto-recomendado__rating {
+    /* Utiliza Flexbox */
     display: flex;
+    /* Centra verticalmente */
     align-items: center;
+    /* Pequeño espacio */
     gap: 3px;
+    /* Margen inferior */
     margin-bottom: 10px;
 }
 
 .rating__star {
+    /* Color dorado */
     color: #FFD700;
+    /* Tamaño de fuente */
     font-size: 14px;
 }
 
 .rating__star--empty {
+    /* Color gris para vacías */
     color: #ddd;
 }
 
 .rating__valor {
+    /* Tamaño de fuente */
     font-size: 13px;
+    /* Texto semi-negrita */
     font-weight: 600;
+    /* Color gris */
     color: #666;
+    /* Pequeño margen izquierdo */
     margin-left: 5px;
 }
 
 .producto-recomendado__precio {
+    /* Tamaño de fuente */
     font-size: 18px;
+    /* Texto en negrita */
     font-weight: 700;
+    /* Color oscuro */
     color: var(--color-texto-alterno);
 }
 
 .producto-recomendado__btn {
+    /* Ocupa todo el ancho */
     width: 100%;
+    /* Espaciado interno */
     padding: 14px;
+    /* Degradado azul de fondo */
     background: linear-gradient(135deg, var(--color-Principal) 0%, #1a237e 100%);
+    /* Texto blanco */
     color: white;
+    /* Sin borde */
     border: none;
+    /* Tamaño de fuente */
     font-size: 14px;
+    /* Texto semi-negrita */
     font-weight: 600;
+    /* Fuente Poppins */
     font-family: 'Poppins', sans-serif;
+    /* Cursor de mano */
     cursor: pointer;
+    /* Transición suave */
     transition: all 0.3s ease;
 }
 
 .producto-recomendado__btn:hover {
+    /* Invierte el degradado al hover */
     background: linear-gradient(135deg, #1a237e 0%, var(--color-Principal) 100%);
 }
 
 /* ==================== PREFERENCIAS ==================== */
 .preferencias-usuario {
+    /* Margen inferior para separar secciones */
     margin-bottom: 50px;
 }
 
 .preferencias__contenido {
+    /* Utiliza CSS Grid */
     display: grid;
+    /* 2 columnas: lista (2fr) y resumen (1fr) */
     grid-template-columns: 2fr 1fr;
+    /* Espacio entre columnas */
     gap: 30px;
 }
 
 .preferencias__lista {
+    /* Utiliza Flexbox */
     display: flex;
+    /* Columna vertical */
     flex-direction: column;
+    /* Espacio entre items */
     gap: 15px;
 }
 
 .preferencia-item {
+    /* Fondo blanco */
     background: white;
+    /* Esquinas muy redondeadas */
     border-radius: 16px;
+    /* Espaciado interno generoso */
     padding: 25px;
+    /* Flexbox horizontal */
     display: flex;
+    /* Centra verticalmente */
     align-items: center;
+    /* Espacio entre elementos */
     gap: 20px;
+    /* Sombra de elevación */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    /* Transición suave */
     transition: all 0.3s ease;
 }
 
 .preferencia-item:hover {
+    /* Desplaza a la derecha al hover */
     transform: translateX(5px);
+    /* Aumenta la sombra */
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 }
 
 .preferencia-item__icono {
+    /* Ancho del contenedor */
     width: 55px;
+    /* Alto del contenedor */
     height: 55px;
+    /* Flexbox para centrar */
     display: flex;
+    /* Centra verticalmente */
     align-items: center;
+    /* Centra horizontalmente */
     justify-content: center;
+    /* No se encoge */
     flex-shrink: 0;
 }
 
 .preferencia-item__icono img {
+    /* Ancho máximo */
     max-width: 100%;
+    /* Alto máximo */
     max-height: 100%;
+    /* Contiene la imagen */
     object-fit: contain;
 }
 
 .preferencia-item__info {
+    /* Ocupa el espacio restante */
     flex: 1;
 }
 
 .preferencia-item__titulo {
+    /* Tamaño de fuente */
     font-size: 15px;
+    /* Texto semi-negrita */
     font-weight: 600;
+    /* Color oscuro */
     color: var(--color-texto-alterno);
+    /* Margen inferior */
     margin-bottom: 10px;
 }
 
 .preferencia-item__tags {
+    /* Utiliza Flexbox */
     display: flex;
+    /* Permite envolver */
     flex-wrap: wrap;
+    /* Espacio entre tags */
     gap: 8px;
 }
 
 .tag {
+    /* Degradado gris de fondo */
     background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    /* Color gris */
     color: #666;
+    /* Espaciado interno */
     padding: 6px 14px;
+    /* Esquinas muy redondeadas */
     border-radius: 20px;
+    /* Tamaño pequeño */
     font-size: 12px;
+    /* Peso medio */
     font-weight: 500;
+    /* Transición suave */
     transition: all 0.2s ease;
 }
 
 .tag:hover {
+    /* Degradado azul al hover */
     background: linear-gradient(135deg, var(--color-Principal) 0%, #1a237e 100%);
+    /* Texto blanco */
     color: white;
 }
 
 .tag--activo {
+    /* Degradado azul cuando está activo */
     background: linear-gradient(135deg, var(--color-Principal) 0%, #1a237e 100%);
+    /* Texto blanco */
     color: white;
 }
 
 .preferencia-item__editar {
+    /* Sin fondo */
     background: transparent;
+    /* Borde azul */
     border: 2px solid var(--color-Principal);
+    /* Texto azul */
     color: var(--color-Principal);
+    /* Espaciado interno */
     padding: 8px 20px;
+    /* Esquinas muy redondeadas */
     border-radius: 25px;
+    /* Tamaño de fuente */
     font-size: 13px;
+    /* Texto semi-negrita */
     font-weight: 600;
+    /* Fuente Poppins */
     font-family: 'Poppins', sans-serif;
+    /* Cursor de mano */
     cursor: pointer;
+    /* Transición suave */
     transition: all 0.3s ease;
 }
 
 .preferencia-item__editar:hover {
+    /* Fondo azul al hover */
     background: var(--color-Principal);
+    /* Texto blanco */
     color: white;
 }
 
-/* Resumen Card */
+/* === Tarjeta de resumen === */
 .resumen-card {
+    /* Degradado azul de fondo */
     background: linear-gradient(135deg, var(--color-Principal) 0%, #1a237e 100%);
+    /* Esquinas muy redondeadas */
     border-radius: 20px;
+    /* Espaciado interno generoso */
     padding: 30px;
+    /* Texto blanco */
     color: white;
+    /* Sombra pronunciada */
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    /* Altura ajustada al contenido */
     height: fit-content;
 }
 
 .resumen-card__titulo {
+    /* Tamaño de fuente */
     font-size: 18px;
+    /* Texto semi-negrita */
     font-weight: 600;
+    /* Margen inferior */
     margin-bottom: 25px;
+    /* Texto centrado */
     text-align: center;
 }
 
 .resumen-card__stats {
+    /* Utiliza Flexbox */
     display: flex;
+    /* Distribuye el espacio */
     justify-content: space-around;
+    /* Margen inferior */
     margin-bottom: 25px;
+    /* Espaciado inferior */
     padding-bottom: 25px;
+    /* Borde inferior semitransparente */
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .stat {
+    /* Texto centrado */
     text-align: center;
 }
 
 .stat__numero {
+    /* Nueva línea */
     display: block;
+    /* Tamaño grande */
     font-size: 32px;
+    /* Texto en negrita */
     font-weight: 700;
+    /* Margen inferior */
     margin-bottom: 5px;
 }
 
 .stat__label {
+    /* Tamaño pequeño */
     font-size: 12px;
+    /* Opacidad reducida */
     opacity: 0.8;
 }
 
 .resumen-card__puntos {
+    /* Utiliza Flexbox */
     display: flex;
+    /* Centra verticalmente */
     align-items: center;
+    /* Centra horizontalmente */
     justify-content: center;
+    /* Espacio entre elementos */
     gap: 15px;
+    /* Fondo blanco semitransparente */
     background: rgba(255, 255, 255, 0.15);
+    /* Esquinas redondeadas */
     border-radius: 12px;
+    /* Espaciado interno */
     padding: 20px;
 }
 
 .puntos__icono {
+    /* Tamaño grande para emoji */
     font-size: 35px;
 }
 
 .puntos__info {
+    /* Texto a la izquierda */
     text-align: left;
 }
 
 .puntos__cantidad {
+    /* Nueva línea */
     display: block;
+    /* Tamaño grande */
     font-size: 24px;
+    /* Texto en negrita */
     font-weight: 700;
 }
 
 .puntos__label {
+    /* Tamaño pequeño */
     font-size: 12px;
+    /* Opacidad reducida */
     opacity: 0.8;
 }
 
 /* ==================== BOTÓN VER MÁS ==================== */
 .btn-ver-mas {
+    /* Display block para centrar */
     display: block;
+    /* Ancho ajustado al contenido */
     width: fit-content;
+    /* Centra el botón */
     margin: 0 auto;
+    /* Sin fondo */
     background: transparent;
+    /* Borde azul */
     border: 2px solid var(--color-Principal);
+    /* Texto azul */
     color: var(--color-Principal);
+    /* Espaciado interno */
     padding: 12px 35px;
+    /* Esquinas muy redondeadas */
     border-radius: 30px;
+    /* Tamaño de fuente */
     font-size: 14px;
+    /* Texto semi-negrita */
     font-weight: 600;
+    /* Sin subrayado */
     text-decoration: none;
+    /* Transición suave */
     transition: all 0.3s ease;
+    /* Fuente Poppins */
     font-family: 'Poppins', sans-serif;
 }
 
 .btn-ver-mas:hover {
+    /* Fondo azul al hover */
     background: var(--color-Principal);
+    /* Texto blanco */
     color: white;
+    /* Pequeño aumento de escala */
     transform: scale(1.02);
+    /* Sombra de elevación */
     box-shadow: 0 5px 20px rgba(0, 123, 255, 0.3);
 }
 
 /* ==================== FOOTER ==================== */
 .footer {
+    /* Fondo azul principal */
     background-color: var(--color-Principal);
+    /* Texto blanco */
     color: white;
+    /* Espaciado interno */
     padding: 50px 30px 40px;
+    /* Margen superior */
     margin-top: 60px;
+    /* Utiliza CSS Grid */
     display: grid;
+    /* 4 columnas iguales */
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* Espacio entre columnas */
     gap: 40px;
+    /* Ancho completo */
     max-width: 100%;
 }
 
 .footer__left {
+    /* Utiliza Flexbox */
     display: flex;
+    /* Alinea arriba */
     align-items: flex-start;
 }
 
 .footer__logo {
+    /* Sin margen */
     margin: 0;
 }
 
 .footer__logo img {
+    /* Altura fija */
     height: 122px;
+    /* Ancho automático */
     width: auto;
 }
 
 .footer__columns {
+    /* Utiliza Flexbox */
     display: flex;
+    /* Columna vertical */
     flex-direction: column;
+    /* Espacio entre enlaces */
     gap: 10px;
 }
 
 .footer__titulo {
+    /* Tamaño de fuente */
     font-size: 19px;
+    /* Texto en negrita */
     font-weight: 700;
+    /* Texto blanco */
     color: white;
+    /* Margen inferior */
     margin-bottom: 15px;
+    /* Mayúsculas */
     text-transform: uppercase;
+    /* Espaciado entre letras */
     letter-spacing: 1px;
 }
 
 .footer__link {
+    /* Blanco con 85% opacidad */
     color: rgba(255, 255, 255, 0.85);
+    /* Sin subrayado */
     text-decoration: none;
+    /* Tamaño de fuente */
     font-size: 16px;
+    /* Transición suave */
     transition: all 0.2s ease;
+    /* Display block */
     display: block;
 }
 
 .footer__link:hover {
+    /* Blanco completo */
     color: white;
+    /* Desplazamiento a la derecha */
     padding-left: 5px;
 }
 
 /* ==================== RESPONSIVE DESIGN ==================== */
+/* === Pantallas medianas (hasta 1200px) === */
 @media (max-width: 1200px) {
     .footer {
+        /* Reduce a 2 columnas */
         grid-template-columns: 1fr 1fr;
     }
 
     .preferencias__contenido {
+        /* Una sola columna */
         grid-template-columns: 1fr;
     }
 }
 
+/* === Tablets y móviles (hasta 768px) === */
 @media (max-width: 768px) {
     .encabezado__top {
+        /* Permite envolver elementos */
         flex-wrap: wrap;
+        /* Reduce el gap */
         gap: 15px;
+        /* Reduce el padding */
         padding: 15px;
     }
 
     .contenido__barra-busqueda {
+        /* Mueve al final */
         order: 3;
+        /* Ancho completo */
         max-width: 100%;
+        /* Ancho 100% */
         width: 100%;
     }
 
     .panel__hero {
+        /* Reduce el padding */
         padding: 30px 20px;
     }
 
     .panel__usuario-info {
+        /* Cambia a columna */
         flex-direction: column;
+        /* Centra el texto */
         text-align: center;
     }
 
     .panel__nombre-usuario {
+        /* Reduce el tamaño */
         font-size: 24px;
     }
 
     .atajos__grid {
+        /* 2 columnas en móviles */
         grid-template-columns: repeat(2, 1fr);
     }
 
     .compras__grid {
+        /* Una columna */
         grid-template-columns: 1fr;
     }
 
     .compra-card {
+        /* Cambia a columna */
         flex-direction: column;
     }
 
     .compra-card__imagen {
+        /* Ocupa todo el ancho */
         width: 100%;
+        /* Altura fija */
         height: 150px;
     }
 
     .recomendaciones__grid {
+        /* 2 columnas */
         grid-template-columns: repeat(2, 1fr);
     }
 
     .preferencias__contenido {
+        /* Una columna */
         grid-template-columns: 1fr;
     }
 
     .preferencia-item {
+        /* Permite envolver */
         flex-wrap: wrap;
     }
 
     .preferencia-item__editar {
+        /* Ocupa todo el ancho */
         width: 100%;
+        /* Margen superior */
         margin-top: 10px;
     }
 
     .footer {
+        /* Una columna */
         grid-template-columns: 1fr;
+        /* Centra el texto */
         text-align: center;
     }
 
     .footer__left {
+        /* Centra el logo */
         justify-content: center;
     }
 
     .footer__columns {
+        /* Centra los enlaces */
         align-items: center;
     }
 
     .nav__link {
+        /* Reduce tamaño */
         font-size: 12px;
+        /* Reduce padding */
         padding: 8px 10px;
     }
 
     .nav-container {
+        /* Permite envolver */
         flex-wrap: wrap;
     }
 }
 
+/* === Móviles pequeños (hasta 480px) === */
 @media (max-width: 480px) {
     .header__logo img {
+        /* Reduce el logo */
         height: 60px;
     }
 
     .panel {
+        /* Reduce el padding */
         padding: 15px;
     }
 
     .panel__avatar {
+        /* Reduce el avatar */
         width: 80px;
+        /* Reduce la altura */
         height: 80px;
     }
 
     .seccion__titulo {
+        /* Reduce el tamaño */
         font-size: 20px;
     }
 
     .atajos__grid {
+        /* Mantiene 2 columnas */
         grid-template-columns: repeat(2, 1fr);
+        /* Reduce el gap */
         gap: 12px;
     }
 
     .atajo-card {
+        /* Reduce el padding */
         padding: 20px 15px;
     }
 
     .atajo-card__icono {
+        /* Reduce el icono */
         width: 45px;
+        /* Reduce la altura */
         height: 45px;
     }
 
     .atajo-card__texto {
+        /* Reduce el tamaño */
         font-size: 12px;
     }
 
     .recomendaciones__grid {
+        /* Una columna */
         grid-template-columns: 1fr;
     }
 }
