@@ -1,6 +1,7 @@
 @import url("../Style.css");
+
 /* === Estilos generales === */
-body{
+body {
     margin: 0;
     font-family: var(--font-family);
     background-color: var(--color-primario);
@@ -10,7 +11,7 @@ body{
 }
 
 /* === Contenedor principal === */
-.restablecer{
+.restablecer {
     width: 380px;
     padding: 2rem;
     border-radius: 12px;
@@ -21,18 +22,18 @@ body{
 }
 
 /* === Logo === */
-.restablecer__encabezado{
+.restablecer__encabezado {
     display: flex;
     justify-content: center;
 }
 
-.restablecer__logo{
+.restablecer__logo {
     width: 450px;
 }
 
 /* === Título === */
-.restablecer__titulo{
-    color: var( --color-texto);
+.restablecer__titulo {
+    color: var(--color-texto);
     font-size: 30px;
     font-family: var(--font-family);
     font-style: var(--font--style);
@@ -40,34 +41,34 @@ body{
 }
 
 /* === Descripción === */
-.restablecer__descripcion{
-    color:#c7c7c7;
+.restablecer__descripcion {
+    color: #c7c7c7;
     font-size: 20px;
     text-align: left;
     margin-top: 20px;
 }
 
 /* === Formulario === */
-.formulario{
+.formulario {
     display: grid;
     gap: 2rem;
 }
 
 /* Grupo de campos */
-.formulario__grupo{
+.formulario__grupo {
     display: grid;
     gap: 3rem;
     text-align: left;
 }
 
 /* Texto del label */
-.formulario__texto{
+.formulario__texto {
     color: #c7c7c7;
     font-size: 15px;
 }
 
 /* Input */
-.formulario__input{
+.formulario__input {
     width: 550px;
     padding: 22px;
     border: none;
@@ -77,7 +78,7 @@ body{
 }
 
 /* Botón */
-.formulario__boton{
+.formulario__boton {
     background-color: var(--color-botton--primario);
     color: var(--color-texto-alterno);
     border: none;
@@ -90,7 +91,7 @@ body{
 }
 
 /* links */
-.formulario__registro{
+.formulario__registro {
     color: var(--color-texto);
     text-decoration: none;
     padding-left: 10px;
@@ -98,7 +99,7 @@ body{
     font-size: 18px;
 }
 
-.formulario__link{
+.formulario__link {
     color: #007FFF;
     text-decoration: none;
     font-weight: 500;
@@ -106,15 +107,203 @@ body{
     font-family: var(--font-family);
 }
 
-.formulario__link:hover{
+.formulario__link:hover {
     text-decoration: underline;
 }
 
 /* Footer */
-.restablecer__footer{
+.restablecer__footer {
     display: flex;
     justify-content: space-between;
     font-size: 18px;
     color: var(--color-texto);
     padding-top: 55px;
+}
+
+/* ==================== MEDIA QUERIES ==================== */
+
+/* === Desktop (max-width: 1240px) === */
+/* Ajustes para pantallas de computadores de mesa con resolución reducida */
+@media (max-width: 1240px) {
+    .restablecer {
+        /* Reduce el ancho del contenedor principal */
+        width: 350px;
+    }
+
+    .restablecer__logo {
+        /* Reduce el ancho del logo */
+        width: 400px;
+    }
+
+    .formulario__input {
+        /* Reduce el ancho del campo de entrada */
+        width: 480px;
+    }
+
+    .formulario__boton {
+        /* Reduce el tamaño de fuente del botón */
+        font-size: 26px;
+    }
+
+    .restablecer__titulo {
+        /* Reduce el tamaño del título */
+        font-size: 26px;
+    }
+
+    .restablecer__descripcion {
+        /* Reduce el tamaño de la descripción */
+        font-size: 18px;
+    }
+}
+
+/* === Tablets (max-width: 700px) === */
+/* Ajustes para tabletas y dispositivos de tamaño mediano */
+@media (max-width: 700px) {
+    .restablecer {
+        /* Reduce el ancho del contenedor para tablets */
+        width: 320px;
+        /* Reduce el espaciado interno */
+        padding: 1.5rem;
+    }
+
+    .restablecer__logo {
+        /* Reduce significativamente el logo */
+        width: 280px;
+    }
+
+    .restablecer__titulo {
+        /* Reduce el tamaño del título para tablet */
+        font-size: 22px;
+    }
+
+    .restablecer__descripcion {
+        /* Reduce el tamaño de la descripción */
+        font-size: 16px;
+        /* Reduce el margen superior */
+        margin-top: 15px;
+    }
+
+    .formulario__input {
+        /* Ajusta el input al ancho del contenedor */
+        width: 100%;
+        /* Reduce el padding interno */
+        padding: 18px;
+    }
+
+    .formulario__grupo {
+        /* Reduce el espacio entre campos */
+        gap: 2rem;
+    }
+
+    .formulario__boton {
+        /* Reduce el tamaño de fuente del botón */
+        font-size: 22px;
+        /* Reduce el padding del botón */
+        padding: 14px;
+    }
+
+    .formulario__texto {
+        /* Reduce el tamaño de las etiquetas */
+        font-size: 13px;
+    }
+
+    .formulario__registro {
+        /* Reduce el tamaño del texto */
+        font-size: 16px;
+    }
+
+    .restablecer__footer {
+        /* Cambia a disposición vertical */
+        flex-direction: column;
+        /* Centra los elementos */
+        align-items: center;
+        /* Agrega espacio entre elementos */
+        gap: 10px;
+        /* Reduce el padding superior */
+        padding-top: 30px;
+        /* Reduce el tamaño de fuente */
+        font-size: 16px;
+    }
+}
+
+/* === Móviles (max-width: 406px) === */
+/* Ajustes para teléfonos móviles y pantallas pequeñas */
+@media (max-width: 406px) {
+    .restablecer {
+        /* Reduce al mínimo el ancho */
+        width: 280px;
+        /* Reduce el espaciado interno */
+        padding: 1rem;
+        /* Reduce el espacio entre elementos */
+        gap: 1rem;
+    }
+
+    .restablecer__logo {
+        /* Reduce el logo para móviles */
+        width: 220px;
+    }
+
+    .restablecer__titulo {
+        /* Reduce el título para móviles */
+        font-size: 18px;
+    }
+
+    .restablecer__descripcion {
+        /* Reduce el tamaño de la descripción */
+        font-size: 14px;
+        /* Reduce el margen superior */
+        margin-top: 10px;
+    }
+
+    .formulario__input {
+        /* Usa todo el ancho disponible */
+        width: 100%;
+        /* Reduce significativamente el padding */
+        padding: 14px;
+        /* Reduce el tamaño de fuente */
+        font-size: 0.9rem;
+    }
+
+    .formulario__grupo {
+        /* Reduce el espacio entre campos */
+        gap: 1.5rem;
+    }
+
+    .formulario {
+        /* Reduce el espacio general del formulario */
+        gap: 1.5rem;
+    }
+
+    .formulario__boton {
+        /* Reduce el tamaño de fuente */
+        font-size: 18px;
+        /* Reduce el padding */
+        padding: 12px;
+    }
+
+    .formulario__texto {
+        /* Reduce el tamaño de etiquetas */
+        font-size: 12px;
+    }
+
+    .formulario__link {
+        /* Reduce el padding izquierdo */
+        padding-left: 5px;
+        /* Reduce el tamaño de fuente */
+        font-size: 14px;
+    }
+
+    .formulario__registro {
+        /* Reduce el tamaño del texto */
+        font-size: 14px;
+        /* Reduce el padding izquierdo */
+        padding-left: 5px;
+    }
+
+    .restablecer__footer {
+        /* Reduce aún más el tamaño de fuente */
+        font-size: 14px;
+        /* Reduce el padding superior */
+        padding-top: 20px;
+    }
 }
