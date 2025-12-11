@@ -1,7 +1,7 @@
 @import url("../Style.css");
 
 /* === Estilos generales ===*/
-body{
+body {
     margin: 0;
     font-family: var(--font-family);
     background-color: var(--color-primario);
@@ -11,7 +11,7 @@ body{
 }
 
 /* === Contenedor principal ===*/
-.registro{
+.registro {
     width: 380px;
     padding: 2rem;
     border-radius: 12px;
@@ -22,17 +22,17 @@ body{
 }
 
 /* === logo === */
-.registro__encabezado{
+.registro__encabezado {
     display: flex;
     justify-content: center;
 }
 
-.registro__logo{
+.registro__logo {
     width: 450px;
 }
 
 /* === Titulo ===*/
-.registro__titulo{
+.registro__titulo {
     color: var(--color-texto);
     font-size: 35px;
     font-style: var(--font-style);
@@ -40,35 +40,36 @@ body{
 }
 
 /* === Formulario ===*/
-.formulario{
+.formulario {
     display: grid;
-    gap:  2rem;
+    gap: 2rem;
 }
 
 /* Grupo de inputs */
-.formulario__grupo{
+.formulario__grupo {
     display: grid;
     gap: 3rem;
     text-align: left;
 }
+
 /* Texto del label*/
-.formulario__texto{
+.formulario__texto {
     color: #c7c7c7;
-    font-size: 15px; 
+    font-size: 15px;
 }
 
 /* Input */
-.formulario__input{
+.formulario__input {
     width: 550px;
     padding: 22px;
     border: none;
     border-radius: 6px;
-    background-color: var( --color-fondo-formulario);
+    background-color: var(--color-fondo-formulario);
     font-size: 1rem;
 }
 
 /* Botón */
-.formulario__boton{
+.formulario__boton {
     background-color: var(--color-botton--primario);
     color: var(--color-);
     border: none;
@@ -81,7 +82,7 @@ body{
 }
 
 /* Links */
-.formulario__link--registro{
+.formulario__link--registro {
     color: #007FFF;
     text-decoration: none;
     font-weight: 500;
@@ -89,20 +90,187 @@ body{
     font-family: var(--font-family);
 }
 
-.formulario__link--registro:hover{
+.formulario__link--registro:hover {
     text-decoration: underline;
 }
 
-.formulario__registro{
+.formulario__registro {
     font-size: 18px;
     color: var(--color-texto);
 }
 
 /* Footer */
-.registro__footer{
+.registro__footer {
     display: flex;
     justify-content: space-between;
     font-size: 18px;
     color: var(--color-texto);
     padding-top: 25px;
+}
+
+/* ==================== MEDIA QUERIES ==================== */
+
+/* === Desktop (max-width: 1240px) === */
+/* Ajustes para pantallas de computadores de mesa con resolución reducida */
+@media (max-width: 1240px) {
+    .registro {
+        /* Reduce el ancho del contenedor principal */
+        width: 350px;
+    }
+
+    .registro__logo {
+        /* Reduce el ancho del logo para pantallas más pequeñas */
+        width: 400px;
+    }
+
+    .formulario__input {
+        /* Reduce el ancho del campo de entrada */
+        width: 480px;
+    }
+
+    .formulario__boton {
+        /* Reduce el tamaño de fuente del botón */
+        font-size: 26px;
+    }
+
+    .registro__titulo {
+        /* Reduce el tamaño del título */
+        font-size: 30px;
+    }
+}
+
+/* === Tablets (max-width: 700px) === */
+/* Ajustes para tabletas y dispositivos de tamaño mediano */
+@media (max-width: 700px) {
+    .registro {
+        /* Reduce el ancho del contenedor para tablets */
+        width: 320px;
+        /* Reduce el espaciado interno */
+        padding: 1.5rem;
+    }
+
+    .registro__logo {
+        /* Reduce significativamente el logo */
+        width: 280px;
+    }
+
+    .registro__titulo {
+        /* Reduce el tamaño del título para tablet */
+        font-size: 24px;
+    }
+
+    .formulario__input {
+        /* Ajusta el input al ancho del contenedor */
+        width: 100%;
+        /* Reduce el padding interno */
+        padding: 18px;
+    }
+
+    .formulario__grupo {
+        /* Reduce el espacio entre campos */
+        gap: 2rem;
+    }
+
+    .formulario__boton {
+        /* Reduce el tamaño de fuente del botón */
+        font-size: 22px;
+        /* Reduce el padding del botón */
+        padding: 18px;
+    }
+
+    .formulario__texto {
+        /* Reduce el tamaño de las etiquetas */
+        font-size: 13px;
+    }
+
+    .formulario__registro {
+        /* Reduce el tamaño del texto de registro */
+        font-size: 16px;
+    }
+
+    .registro__footer {
+        /* Cambia a disposición vertical */
+        flex-direction: column;
+        /* Centra los elementos */
+        align-items: center;
+        /* Agrega espacio entre elementos */
+        gap: 10px;
+        /* Reduce el padding superior */
+        padding-top: 15px;
+        /* Reduce el tamaño de fuente */
+        font-size: 16px;
+    }
+}
+
+/* === Móviles (max-width: 406px) === */
+/* Ajustes para teléfonos móviles y pantallas pequeñas */
+@media (max-width: 406px) {
+    .registro {
+        /* Reduce al mínimo el ancho */
+        width: 280px;
+        /* Reduce el espaciado interno */
+        padding: 1rem;
+        /* Reduce el espacio entre elementos */
+        gap: 1rem;
+    }
+
+    .registro__logo {
+        /* Reduce el logo para móviles */
+        width: 220px;
+    }
+
+    .registro__titulo {
+        /* Reduce el título para móviles */
+        font-size: 20px;
+    }
+
+    .formulario__input {
+        /* Usa todo el ancho disponible */
+        width: 100%;
+        /* Reduce significativamente el padding */
+        padding: 14px;
+        /* Reduce el tamaño de fuente */
+        font-size: 0.9rem;
+    }
+
+    .formulario__grupo {
+        /* Reduce el espacio entre campos */
+        gap: 1.5rem;
+    }
+
+    .formulario {
+        /* Reduce el espacio general del formulario */
+        gap: 1.5rem;
+    }
+
+    .formulario__boton {
+        /* Reduce el tamaño de fuente */
+        font-size: 18px;
+        /* Reduce el padding */
+        padding: 14px;
+    }
+
+    .formulario__texto {
+        /* Reduce el tamaño de etiquetas */
+        font-size: 12px;
+    }
+
+    .formulario__link--registro {
+        /* Reduce el padding izquierdo */
+        padding-left: 5px;
+        /* Reduce el tamaño de fuente */
+        font-size: 14px;
+    }
+
+    .formulario__registro {
+        /* Reduce el tamaño del texto */
+        font-size: 14px;
+    }
+
+    .registro__footer {
+        /* Reduce aún más el tamaño de fuente */
+        font-size: 14px;
+        /* Reduce el padding superior */
+        padding-top: 10px;
+    }
 }
