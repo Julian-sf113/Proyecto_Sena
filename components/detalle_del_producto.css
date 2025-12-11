@@ -790,6 +790,12 @@ body {
     transition: all 0.3s ease;
     /* Margen superior */
     margin-top: 10px;
+    /* Sin subrayado para el enlace */
+    text-decoration: none;
+    /* Centra el texto */
+    text-align: center;
+    /* Display block para ocupar el ancho */
+    display: inline-block;
 }
 
 .producto-info__btn-agregar:hover {
