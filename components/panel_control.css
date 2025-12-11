@@ -170,6 +170,42 @@ body {
     transform: scale(1.1);
 }
 
+/* === Icono de Salir === */
+.nav-encabezado__icono--salir {
+    /* Sin fondo */
+    background: none;
+    /* Sin borde */
+    border: none;
+    /* Cursor de mano */
+    cursor: pointer;
+    /* Espaciado interno */
+    padding: 5px;
+    /* Flexbox para centrar */
+    display: flex;
+    /* Centra verticalmente */
+    align-items: center;
+    /* Centra horizontalmente */
+    justify-content: center;
+    /* Color del icono */
+    color: white;
+    /* Transición suave */
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.nav-encabezado__icono--salir svg {
+    /* Ancho del icono SVG */
+    width: 28px;
+    /* Alto del icono SVG */
+    height: 28px;
+}
+
+.nav-encabezado__icono--salir:hover {
+    /* Agranda el icono al hover */
+    transform: scale(1.1);
+    /* Color de salida al hover */
+    color: #ff6b6b;
+}
+
 /* ==================== CONTENEDOR DE NAVEGACIÓN ==================== */
 .nav-container {
     /* Utiliza Flexbox */
@@ -478,9 +514,9 @@ body {
 
 .atajo-card__icono {
     /* Ancho del contenedor del icono */
-    width: 55px;
+    width: 40px;
     /* Alto del contenedor */
-    height: 55px;
+    height: 40px;
     /* Forma circular */
     border-radius: 50%;
     /* Flexbox para centrar */
@@ -502,11 +538,20 @@ body {
 
 .atajo-card__icono svg {
     /* Ancho del icono SVG */
-    width: 28px;
+    width: 20px;
     /* Alto del icono SVG */
-    height: 28px;
+    height: 20px;
     /* Color blanco */
     color: white;
+}
+
+.atajo-card__icono img {
+    /* Ancho del icono de imagen */
+    width: 20px;
+    /* Alto del icono de imagen */
+    height: 20px;
+    /* Contiene la imagen */
+    object-fit: contain;
 }
 
 .atajo-card__icono--perfil {
@@ -969,9 +1014,9 @@ body {
 
 .preferencia-item__icono {
     /* Ancho del contenedor */
-    width: 55px;
+    width: 40px;
     /* Alto del contenedor */
-    height: 55px;
+    height: 40px;
     /* Flexbox para centrar */
     display: flex;
     /* Centra verticalmente */
@@ -983,10 +1028,10 @@ body {
 }
 
 .preferencia-item__icono img {
-    /* Ancho máximo */
-    max-width: 100%;
-    /* Alto máximo */
-    max-height: 100%;
+    /* Ancho del icono de imagen */
+    width: 24px;
+    /* Alto del icono de imagen */
+    height: 24px;
     /* Contiene la imagen */
     object-fit: contain;
 }
@@ -1307,69 +1352,146 @@ body {
     padding-left: 5px;
 }
 
-/* ==================== RESPONSIVE DESIGN ==================== */
-/* === Pantallas medianas (hasta 1200px) === */
-@media (max-width: 1200px) {
+/* ==================== MEDIA QUERIES ==================== */
+
+/* === Desktop (max-width: 1240px) === */
+/* Ajustes para pantallas de computadores de mesa con resolución reducida */
+@media (max-width: 1240px) {
+    .encabezado__top {
+        /* Reduce el ancho máximo para pantallas más pequeñas */
+        max-width: 100%;
+        /* Reduce el espaciado lateral */
+        padding: 15px 20px;
+    }
+
+    .panel {
+        /* Reduce el padding del panel */
+        padding: 25px;
+        /* Reduce el margen */
+        margin: 30px auto;
+    }
+
     .footer {
         /* Reduce a 2 columnas */
         grid-template-columns: 1fr 1fr;
+        /* Reduce el espaciado entre columnas */
+        gap: 30px;
     }
 
     .preferencias__contenido {
-        /* Una sola columna */
+        /* Cambia a una sola columna */
         grid-template-columns: 1fr;
+    }
+
+    .header__logo img {
+        /* Reduce el tamaño del logo */
+        height: 100px;
+    }
+
+    .footer__logo img {
+        /* Reduce el logo del footer */
+        height: 100px;
+    }
+
+    .recomendaciones__grid {
+        /* Reduce el tamaño mínimo de las columnas */
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+
+    .compras__grid {
+        /* Reduce el tamaño mínimo de las columnas */
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     }
 }
 
-/* === Tablets y móviles (hasta 768px) === */
-@media (max-width: 768px) {
+/* === Tablets (max-width: 700px) === */
+/* Ajustes para tabletas y dispositivos de tamaño mediano */
+@media (max-width: 700px) {
     .encabezado__top {
-        /* Permite envolver elementos */
+        /* Permite que los elementos se envuelvan */
         flex-wrap: wrap;
-        /* Reduce el gap */
+        /* Reduce el espaciado entre elementos */
         gap: 15px;
-        /* Reduce el padding */
+        /* Reduce el espaciado lateral */
         padding: 15px;
     }
 
     .contenido__barra-busqueda {
-        /* Mueve al final */
+        /* Mueve el buscador al final del orden */
         order: 3;
-        /* Ancho completo */
+        /* Ocupa todo el ancho disponible */
         max-width: 100%;
-        /* Ancho 100% */
+        /* Asegura el ancho completo */
         width: 100%;
     }
 
+    .header__logo img {
+        /* Reduce el logo para tablets */
+        height: 80px;
+    }
+
+    .panel {
+        /* Reduce el padding del panel */
+        padding: 20px;
+        /* Reduce el margen */
+        margin: 20px auto;
+    }
+
     .panel__hero {
-        /* Reduce el padding */
+        /* Reduce el padding del hero */
         padding: 30px 20px;
     }
 
     .panel__usuario-info {
-        /* Cambia a columna */
+        /* Cambia a disposición vertical */
         flex-direction: column;
         /* Centra el texto */
         text-align: center;
     }
 
     .panel__nombre-usuario {
-        /* Reduce el tamaño */
+        /* Reduce el tamaño del nombre */
         font-size: 24px;
     }
 
+    .panel__avatar {
+        /* Reduce el tamaño del avatar */
+        width: 80px;
+        /* Mantiene la proporción */
+        height: 80px;
+    }
+
     .atajos__grid {
-        /* 2 columnas en móviles */
+        /* 2 columnas para tablets */
         grid-template-columns: repeat(2, 1fr);
+        /* Reduce el espaciado */
+        gap: 15px;
+    }
+
+    .atajo-card {
+        /* Reduce el padding */
+        padding: 20px 15px;
+    }
+
+    .atajo-card__icono {
+        /* Reduce el tamaño del icono */
+        width: 45px;
+        /* Mantiene la proporción */
+        height: 45px;
+    }
+
+    .atajo-card__texto {
+        /* Reduce el tamaño del texto */
+        font-size: 13px;
     }
 
     .compras__grid {
-        /* Una columna */
+        /* Una sola columna */
         grid-template-columns: 1fr;
     }
 
     .compra-card {
-        /* Cambia a columna */
+        /* Cambia a disposición vertical */
         flex-direction: column;
     }
 
@@ -1381,18 +1503,27 @@ body {
     }
 
     .recomendaciones__grid {
-        /* 2 columnas */
+        /* 2 columnas para tablets */
         grid-template-columns: repeat(2, 1fr);
+        /* Reduce el espaciado */
+        gap: 20px;
+    }
+
+    .producto-recomendado__imagen {
+        /* Reduce la altura de la imagen */
+        height: 150px;
     }
 
     .preferencias__contenido {
-        /* Una columna */
+        /* Una sola columna */
         grid-template-columns: 1fr;
     }
 
     .preferencia-item {
-        /* Permite envolver */
+        /* Permite envolver elementos */
         flex-wrap: wrap;
+        /* Reduce el padding */
+        padding: 20px;
     }
 
     .preferencia-item__editar {
@@ -1402,11 +1533,18 @@ body {
         margin-top: 10px;
     }
 
+    .seccion__titulo {
+        /* Reduce el tamaño del título */
+        font-size: 20px;
+    }
+
     .footer {
-        /* Una columna */
+        /* Una sola columna */
         grid-template-columns: 1fr;
         /* Centra el texto */
         text-align: center;
+        /* Reduce el padding */
+        padding: 40px 20px 30px;
     }
 
     .footer__left {
@@ -1419,69 +1557,314 @@ body {
         align-items: center;
     }
 
-    .nav__link {
-        /* Reduce tamaño */
-        font-size: 12px;
-        /* Reduce padding */
-        padding: 8px 10px;
+    .footer__logo img {
+        /* Reduce el logo del footer */
+        height: 80px;
     }
 
     .nav-container {
-        /* Permite envolver */
+        /* Permite envolver elementos */
         flex-wrap: wrap;
+        /* Reduce el padding */
+        padding: 0 15px;
+    }
+
+    .nav__link {
+        /* Reduce el tamaño de fuente */
+        font-size: 12px;
+        /* Reduce el padding */
+        padding: 8px 10px;
+    }
+
+    .nav-encabezado__icono--user img,
+    .nav-encabezado__icono--carrito img,
+    .nav-encabezado__icono--menu img {
+        /* Reduce el tamaño de los iconos */
+        width: 24px;
+        /* Mantiene la proporción */
+        height: 24px;
+    }
+
+    .resumen-card {
+        /* Reduce el padding */
+        padding: 25px;
+    }
+
+    .resumen-card__stats {
+        /* Cambia a disposición vertical */
+        flex-direction: column;
+        /* Reduce el espaciado */
+        gap: 15px;
+    }
+
+    .stat__numero {
+        /* Reduce el tamaño del número */
+        font-size: 28px;
     }
 }
 
-/* === Móviles pequeños (hasta 480px) === */
-@media (max-width: 480px) {
+/* === Móviles (max-width: 406px) === */
+/* Ajustes para teléfonos móviles y pantallas pequeñas */
+@media (max-width: 406px) {
+    .encabezado__top {
+        /* Reduce aún más el espaciado */
+        padding: 10px;
+        /* Reduce el gap entre elementos */
+        gap: 10px;
+    }
+
     .header__logo img {
-        /* Reduce el logo */
+        /* Reduce significativamente el logo */
         height: 60px;
     }
 
     .panel {
-        /* Reduce el padding */
+        /* Reduce el padding al mínimo */
         padding: 15px;
+        /* Reduce el margen */
+        margin: 15px auto;
+    }
+
+    .panel__hero {
+        /* Reduce el padding del hero */
+        padding: 25px 15px;
     }
 
     .panel__avatar {
-        /* Reduce el avatar */
-        width: 80px;
-        /* Reduce la altura */
-        height: 80px;
+        /* Reduce el avatar al mínimo */
+        width: 70px;
+        /* Mantiene la proporción */
+        height: 70px;
     }
 
-    .seccion__titulo {
-        /* Reduce el tamaño */
+    .panel__nombre-usuario {
+        /* Reduce el tamaño del nombre */
         font-size: 20px;
     }
 
+    .panel__miembro {
+        /* Reduce el tamaño del texto */
+        font-size: 11px;
+    }
+
+    .seccion__titulo {
+        /* Reduce el tamaño del título */
+        font-size: 18px;
+        /* Reduce el margen inferior */
+        margin-bottom: 15px;
+    }
+
     .atajos__grid {
-        /* Mantiene 2 columnas */
-        grid-template-columns: repeat(2, 1fr);
-        /* Reduce el gap */
-        gap: 12px;
+        /* Mantiene 2 columnas pero reduce el espaciado */
+        gap: 10px;
     }
 
     .atajo-card {
         /* Reduce el padding */
-        padding: 20px 15px;
+        padding: 15px 10px;
     }
 
     .atajo-card__icono {
-        /* Reduce el icono */
-        width: 45px;
-        /* Reduce la altura */
-        height: 45px;
+        /* Reduce el tamaño del icono */
+        width: 40px;
+        /* Mantiene la proporción */
+        height: 40px;
+        /* Reduce el margen inferior */
+        margin-bottom: 10px;
+    }
+
+    .atajo-card__icono svg,
+    .atajo-card__icono img {
+        /* Reduce el tamaño del icono interno */
+        width: 18px;
+        /* Mantiene la proporción */
+        height: 18px;
     }
 
     .atajo-card__texto {
-        /* Reduce el tamaño */
+        /* Reduce el tamaño del texto */
+        font-size: 12px;
+    }
+
+    .compra-card {
+        /* Reduce el padding */
+        padding: 12px;
+    }
+
+    .compra-card__imagen {
+        /* Reduce la altura de la imagen */
+        height: 120px;
+    }
+
+    .compra-card__info h3 {
+        /* Reduce el tamaño del título */
+        font-size: 13px;
+    }
+
+    .compra-card__fecha,
+    .compra-card__precio {
+        /* Reduce el tamaño del texto */
         font-size: 12px;
     }
 
     .recomendaciones__grid {
-        /* Una columna */
+        /* Una sola columna para móviles */
         grid-template-columns: 1fr;
+        /* Reduce el espaciado */
+        gap: 15px;
+    }
+
+    .producto-recomendado__imagen {
+        /* Reduce la altura */
+        height: 140px;
+    }
+
+    .producto-recomendado__info {
+        /* Reduce el padding */
+        padding: 15px;
+    }
+
+    .producto-recomendado__titulo {
+        /* Reduce el tamaño del título */
+        font-size: 13px;
+    }
+
+    .producto-recomendado__precio {
+        /* Reduce el tamaño del precio */
+        font-size: 16px;
+    }
+
+    .producto-recomendado__btn {
+        /* Reduce el padding */
+        padding: 12px;
+        /* Reduce el tamaño de fuente */
+        font-size: 13px;
+    }
+
+    .preferencia-item {
+        /* Reduce el padding */
+        padding: 15px;
+        /* Reduce el espaciado entre elementos */
+        gap: 15px;
+    }
+
+    .preferencia-item__icono {
+        /* Reduce el tamaño del icono */
+        width: 35px;
+        /* Mantiene la proporción */
+        height: 35px;
+    }
+
+    .preferencia-item__icono img {
+        /* Reduce el tamaño del icono interno */
+        width: 20px;
+        /* Mantiene la proporción */
+        height: 20px;
+    }
+
+    .preferencia-item__titulo {
+        /* Reduce el tamaño del título */
+        font-size: 14px;
+    }
+
+    .tag {
+        /* Reduce el tamaño de los tags */
+        font-size: 11px;
+        /* Reduce el padding */
+        padding: 5px 10px;
+    }
+
+    .preferencia-item__editar {
+        /* Reduce el tamaño del botón */
+        font-size: 12px;
+        /* Reduce el padding */
+        padding: 6px 15px;
+    }
+
+    .resumen-card {
+        /* Reduce el padding */
+        padding: 20px;
+    }
+
+    .resumen-card__titulo {
+        /* Reduce el tamaño del título */
+        font-size: 16px;
+    }
+
+    .stat__numero {
+        /* Reduce el tamaño del número */
+        font-size: 24px;
+    }
+
+    .stat__label {
+        /* Reduce el tamaño de la etiqueta */
+        font-size: 11px;
+    }
+
+    .puntos__icono {
+        /* Reduce el tamaño del icono */
+        font-size: 28px;
+    }
+
+    .puntos__cantidad {
+        /* Reduce el tamaño de la cantidad */
+        font-size: 20px;
+    }
+
+    .btn-ver-mas {
+        /* Reduce el padding del botón */
+        padding: 10px 25px;
+        /* Reduce el tamaño de fuente */
+        font-size: 13px;
+    }
+
+    .footer {
+        /* Reduce el padding */
+        padding: 30px 15px 25px;
+        /* Reduce el margen superior */
+        margin-top: 40px;
+        /* Reduce el espaciado */
+        gap: 25px;
+    }
+
+    .footer__titulo {
+        /* Reduce el tamaño de los títulos */
+        font-size: 16px;
+    }
+
+    .footer__link {
+        /* Reduce el tamaño de fuente */
+        font-size: 14px;
+    }
+
+    .footer__logo img {
+        /* Reduce el logo del footer */
+        height: 60px;
+    }
+
+    .nav-container {
+        /* Reduce el padding */
+        padding: 0 10px;
+    }
+
+    .nav__link {
+        /* Reduce el tamaño de fuente */
+        font-size: 11px;
+        /* Reduce el padding */
+        padding: 6px 8px;
+    }
+
+    .nav-encabezado__icono--user img,
+    .nav-encabezado__icono--carrito img,
+    .nav-encabezado__icono--menu img {
+        /* Reduce el tamaño de los iconos */
+        width: 22px;
+        /* Mantiene la proporción */
+        height: 22px;
+    }
+
+    .encabezado__top--nav-encabezado {
+        /* Reduce el espacio entre iconos */
+        gap: 8px;
     }
 }
