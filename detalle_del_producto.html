@@ -170,9 +170,9 @@
                     </div>
                 </div>
 
-                <button class="producto-info__btn-agregar">
+                <a href="carrito_de_compras.html" class="producto-info__btn-agregar">
                     Agregar al Carrito
-                </button>
+                </a>
             </div>
         </section>
     </main>
@@ -215,28 +215,6 @@
             </div>
         </section>
     </footer>
-
-    <script>
-        // Script para cambiar la imagen principal al hacer clic en las miniaturas
-        document.querySelectorAll('.miniatura:not(.miniatura--guia)').forEach(btn => {
-            btn.addEventListener('click', function () {
-                const imgSrc = this.dataset.img;
-                document.getElementById('imagen-principal').src = imgSrc;
-
-                // Actualizar clase activa
-                document.querySelectorAll('.miniatura').forEach(m => m.classList.remove('activa'));
-                this.classList.add('activa');
-            });
-        });
-
-        // Script para selección de talla
-        document.querySelectorAll('.talla__opcion').forEach(btn => {
-            btn.addEventListener('click', function () {
-                document.querySelectorAll('.talla__opcion').forEach(t => t.classList.remove('talla__opcion--activo'));
-                this.classList.add('talla__opcion--activo');
-            });
-        });
-    </script>
 </body>
 
 </html>
