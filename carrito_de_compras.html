@@ -25,6 +25,13 @@
                 <button class="nav-encabezado__icono--user"><img src="Images/avatar.png" alt="Avatar Usuario"></button>
                 <a href="carrito_de_compras.html" class="nav-encabezado__icono--carrito"><img
                         src="Images/carrito-de-compras.png" alt="Carrito de compras"></a>
+                <a href="index.html" class="nav-encabezado__icono--salir" title="Salir">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24"
+                        height="24">
+                        <path
+                            d="M17 7l-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5zM4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4V5z" />
+                    </svg>
+                </a>
             </nav>
         </section>
 
@@ -570,126 +577,7 @@
         </section>
     </footer>
 
-    <script>
-        // Tab Navigation
-        const tabs = document.querySelectorAll('.tab');
-        const tabContents = document.querySelectorAll('.tab-content');
 
-        tabs.forEach(tab => {
-            tab.addEventListener('click', () => {
-                // Remove active class from all tabs and contents
-                tabs.forEach(t => t.classList.remove('tab--activo'));
-                tabContents.forEach(c => c.classList.remove('tab-content--activo'));
-
-                // Add active class to clicked tab
-                tab.classList.add('tab--activo');
-
-                // Show corresponding content
-                const tabId = tab.getAttribute('data-tab');
-                document.getElementById(tabId).classList.add('tab-content--activo');
-            });
-        });
-
-        // Quantity Controls
-        document.querySelectorAll('.cantidad-btn--menos').forEach(btn => {
-            btn.addEventListener('click', function () {
-                const input = this.parentElement.querySelector('.cantidad-input');
-                if (parseInt(input.value) > 1) {
-                    input.value = parseInt(input.value) - 1;
-                    updateTotal();
-                }
-            });
-        });
-
-        document.querySelectorAll('.cantidad-btn--mas').forEach(btn => {
-            btn.addEventListener('click', function () {
-                const input = this.parentElement.querySelector('.cantidad-input');
-                if (parseInt(input.value) < 10) {
-                    input.value = parseInt(input.value) + 1;
-                    updateTotal();
-                }
-            });
-        });
-
-        function updateTotal() {
-            // This would recalculate totals in a real implementation
-            console.log('Updating totals...');
-        }
-
-        // Checkout Button - Creates Sale Record
-        document.getElementById('btnFinalizarCompra').addEventListener('click', function () {
-            // Simulate creating a sale record
-            const ventaData = {
-                id: 'VT-2024-' + Math.floor(Math.random() * 999999).toString().padStart(6, '0'),
-                fecha: new Date().toISOString(),
-                productos: [
-                    { nombre: 'Balón de baloncesto TARMAK', cantidad: 1, precio: 79000 },
-                    { nombre: 'Tenis de baloncesto NBA Lakers', cantidad: 1, precio: 429000 },
-                    { nombre: 'Balón de Fútbol KIPSTA', cantidad: 2, precio: 89000 }
-                ],
-                total: 686000,
-                estado: 'pendiente'
-            };
-
-            console.log('Venta creada:', ventaData);
-
-            // Show confirmation modal
-            document.getElementById('modalConfirmacion').classList.add('modal--visible');
-            document.querySelector('.modal__mensaje strong').textContent = '#' + ventaData.id;
-        });
-
-        // Modal Controls
-        document.getElementById('btnCerrarModal').addEventListener('click', function () {
-            document.getElementById('modalConfirmacion').classList.remove('modal--visible');
-        });
-
-        document.getElementById('btnVerHistorial').addEventListener('click', function () {
-            document.getElementById('modalConfirmacion').classList.remove('modal--visible');
-            // Switch to history tab
-            document.querySelector('[data-tab="historial"]').click();
-        });
-
-        // Return Request Buttons from History
-        document.querySelectorAll('.btn-accion--devolver').forEach(btn => {
-            btn.addEventListener('click', function () {
-                const pedidoId = this.getAttribute('data-pedido');
-                // Switch to returns tab
-                document.querySelector('[data-tab="devoluciones"]').click();
-                // Pre-select the order
-                document.getElementById('pedidoSelect').value = pedidoId;
-            });
-        });
-
-        // Return Form Submission
-        document.getElementById('formDevolucion').addEventListener('submit', function (e) {
-            e.preventDefault();
-
-            const devolucionData = {
-                id: 'DEV-2024-' + Math.floor(Math.random() * 99999).toString().padStart(5, '0'),
-                pedido: document.getElementById('pedidoSelect').value,
-                motivo: document.getElementById('motivoSelect').value,
-                descripcion: document.getElementById('descripcionDevolucion').value,
-                solucion: document.getElementById('solucionSelect').value,
-                fecha: new Date().toISOString(),
-                estado: 'recibida'
-            };
-
-            console.log('Solicitud de devolución creada:', devolucionData);
-
-            alert('¡Solicitud de devolución enviada exitosamente!\n\nNúmero de solicitud: ' + devolucionData.id);
-            this.reset();
-        });
-
-        // Delete Cart Item
-        document.querySelectorAll('.carrito-item__eliminar').forEach(btn => {
-            btn.addEventListener('click', function () {
-                if (confirm('¿Estás seguro de eliminar este producto del carrito?')) {
-                    this.closest('.carrito-item').remove();
-                    updateTotal();
-                }
-            });
-        });
-    </script>
 </body>
 
 </html>
