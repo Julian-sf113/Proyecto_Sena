@@ -216,29 +216,205 @@ body {
   background-color: var(--color-botton--primario-hover);
 }
 
-/* ===== Responsive (Media Query para pantallas pequeñas) ===== */
-@media (max-width: 768px) {
-  /* Reduce el margen del encabezado en pantallas pequeñas */
-  .encabezado {
-    margin: 50px 0 20px;
+/* ==================== MEDIA QUERIES ==================== */
+
+/* === Desktop (max-width: 1240px) === */
+/* Ajustes para pantallas de computadores de mesa con resolución reducida */
+@media (max-width: 1240px) {
+  .form {
+    /* Reduce el ancho máximo del formulario */
+    max-width: 900px;
+    /* Reduce el espaciado entre elementos */
+    gap: 35px;
   }
 
-  /* El contenedor de columnas cambia su disposición */
+  .encabezado__logo {
+    /* Reduce el ancho del logo */
+    width: 400px;
+  }
+
+  .form__icon {
+    /* Reduce el tamaño del icono */
+    width: 120px;
+    /* Mantiene la proporción */
+    height: 120px;
+  }
+
   .form__container {
-    /* Las columnas se apilan verticalmente */
-    flex-direction: column;
-    /* Reduce el espaciado entre las columnas apiladas */
+    /* Reduce el espaciado entre columnas */
+    gap: 40px;
+  }
+}
+
+/* === Tablets (max-width: 700px) === */
+/* Ajustes para tabletas y dispositivos de tamaño mediano */
+@media (max-width: 700px) {
+  .encabezado {
+    /* Reduce el margen superior del encabezado */
+    margin: 60px 0 30px;
+  }
+
+  .encabezado__logo {
+    /* Reduce significativamente el logo */
+    width: 300px;
+  }
+
+  .form {
+    /* Reduce el ancho máximo */
+    max-width: 90%;
+    /* Reduce el espaciado */
     gap: 30px;
   }
 
-  /* Reduce el tamaño del icono de sección */
+  .form__container {
+    /* Cambia a disposición vertical */
+    flex-direction: column;
+    /* Reduce el espaciado entre columnas apiladas */
+    gap: 30px;
+  }
+
   .form__icon {
+    /* Reduce el tamaño del icono */
     width: 100px;
+    /* Mantiene la proporción */
     height: 100px;
   }
 
-  /* Asegura que el slider ocupe todo el ancho en móvil */
+  .form__section-header {
+    /* Reduce el padding superior e inferior */
+    padding-top: 40px;
+    /* Reduce el padding inferior */
+    padding-bottom: 40px;
+  }
+
+  .form__section-titulo {
+    /* Reduce el tamaño del título */
+    font-size: 16px;
+  }
+
+  .card__subtitulo {
+    /* Reduce el tamaño del subtítulo */
+    font-size: 18px;
+    /* Reduce el margen */
+    margin: 20px 0;
+  }
+
   .form__range {
+    /* Permite que ocupe todo el ancho */
     max-width: 100%;
+  }
+
+  .button--primary,
+  .button--secundario {
+    /* Aumenta el ancho del botón para mejor accesibilidad */
+    width: 95%;
+    /* Reduce el tamaño de fuente */
+    font-size: 16px;
+    /* Reduce el padding */
+    padding: 12px;
+  }
+
+  .form__actions {
+    /* Reduce el margen superior */
+    margin: 20px auto 0;
+    /* Reduce el padding inferior */
+    padding-bottom: 20px;
+  }
+}
+
+/* === Móviles (max-width: 406px) === */
+/* Ajustes para teléfonos móviles y pantallas pequeñas */
+@media (max-width: 406px) {
+  .encabezado {
+    /* Reduce aún más el margen */
+    margin: 40px 0 20px;
+  }
+
+  .encabezado__logo {
+    /* Reduce el logo para móviles */
+    width: 240px;
+  }
+
+  .form {
+    /* Ajusta el ancho para móviles */
+    max-width: 95%;
+    /* Reduce el espaciado */
+    gap: 25px;
+  }
+
+  .form__icon {
+    /* Reduce el icono para móviles */
+    width: 80px;
+    /* Mantiene la proporción */
+    height: 80px;
+  }
+
+  .form__section-header {
+    /* Reduce el padding */
+    padding-top: 30px;
+    /* Reduce el padding inferior */
+    padding-bottom: 30px;
+    /* Reduce el espacio entre icono y título */
+    gap: 8px;
+  }
+
+  .form__section-titulo {
+    /* Reduce el tamaño del título */
+    font-size: 14px;
+  }
+
+  .card__subtitulo {
+    /* Reduce el tamaño del subtítulo */
+    font-size: 16px;
+    /* Reduce el margen */
+    margin: 15px 0;
+  }
+
+  .form__label {
+    /* Reduce el tamaño de las etiquetas */
+    font-size: 12px;
+  }
+
+  .form__input {
+    /* Reduce el padding del input */
+    padding: 8px;
+    /* Reduce el radio del borde */
+    border-radius: 5px;
+  }
+
+  .form__container {
+    /* Reduce el espaciado entre elementos */
+    gap: 20px;
+  }
+
+  .form__column {
+    /* Reduce el espaciado entre inputs */
+    gap: 10px;
+  }
+
+  .button--primary,
+  .button--secundario {
+    /* Ocupa casi todo el ancho */
+    width: 100%;
+    /* Reduce el tamaño de fuente */
+    font-size: 15px;
+    /* Reduce el padding */
+    padding: 10px;
+    /* Reduce el radio del borde */
+    border-radius: 8px;
+  }
+
+  .form__actions {
+    /* Reduce el espaciado entre botones */
+    gap: 20px;
+    /* Reduce el margen superior */
+    margin: 15px auto 0;
+    /* Reduce el padding inferior */
+    padding-bottom: 15px;
+  }
+
+  .form__ranges-container {
+    /* Reduce el espaciado entre sliders */
+    gap: 8px;
   }
 }
