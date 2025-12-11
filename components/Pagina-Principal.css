@@ -161,6 +161,42 @@ body {
     transform: scale(1.1);
 }
 
+/* === Icono de Salir === */
+.nav-encabezado__icono--salir {
+    /* Sin color de fondo */
+    background: none;
+    /* Sin borde visible */
+    border: none;
+    /* Cursor de mano */
+    cursor: pointer;
+    /* Espaciado interno */
+    padding: 5px;
+    /* Flexbox para centrar */
+    display: flex;
+    /* Centra verticalmente */
+    align-items: center;
+    /* Centra horizontalmente */
+    justify-content: center;
+    /* Color blanco del icono */
+    color: white;
+    /* Transición suave */
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.nav-encabezado__icono--salir svg {
+    /* Ancho del icono SVG */
+    width: 28px;
+    /* Alto del icono SVG */
+    height: 28px;
+}
+
+.nav-encabezado__icono--salir:hover {
+    /* Agranda el icono al hover */
+    transform: scale(1.1);
+    /* Color rojo al hover */
+    color: #ff6b6b;
+}
+
 /* ==================== CONTENEDOR DE NAVEGACIÓN ==================== */
 .nav-container {
     /* Utiliza Flexbox para la disposición */
@@ -554,52 +590,111 @@ body {
     padding-left: 5px;
 }
 
-/* ==================== RESPONSIVE DESIGN ==================== */
-/* === Pantallas medianas (hasta 1200px) === */
-@media (max-width: 1200px) {
+/* ==================== MEDIA QUERIES ==================== */
+
+/* === Desktop (max-width: 1240px) === */
+/* Ajustes para pantallas de computadores de mesa con resolución reducida */
+@media (max-width: 1240px) {
+    .encabezado__top {
+        /* Reduce el ancho máximo para pantallas más pequeñas */
+        max-width: 100%;
+        /* Reduce el espaciado lateral */
+        padding: 15px 20px;
+    }
+
     .productos {
-        /* Reduce a 2 columnas en pantallas medianas */
+        /* Reduce a 2 columnas para mejor visualización */
         grid-template-columns: repeat(2, 1fr);
+        /* Reduce el espaciado entre tarjetas */
+        gap: 25px;
+        /* Reduce el padding lateral */
+        padding: 0 20px;
     }
 
     .footer {
-        /* Reduce a 2 columnas en pantallas medianas */
+        /* Reduce a 2 columnas en el footer */
         grid-template-columns: 1fr 1fr;
+        /* Reduce el espaciado entre columnas */
+        gap: 30px;
+    }
+
+    .header__logo img {
+        /* Reduce el tamaño del logo */
+        height: 100px;
+    }
+
+    .footer__logo img {
+        /* Reduce el tamaño del logo del footer */
+        height: 100px;
+    }
+
+    .contenido__barra-busqueda {
+        /* Reduce el ancho máximo de la barra de búsqueda */
+        max-width: 350px;
     }
 }
 
-/* === Tablets y móviles (hasta 768px) === */
-@media (max-width: 768px) {
+/* === Tablets (max-width: 700px) === */
+/* Ajustes para tabletas y dispositivos de tamaño mediano */
+@media (max-width: 700px) {
     .encabezado__top {
-        /* Permite que los elementos se envuelvan */
+        /* Permite que los elementos se envuelvan en múltiples líneas */
         flex-wrap: wrap;
-        /* Reduce el gap a 15px */
+        /* Reduce el espaciado entre elementos */
         gap: 15px;
-        /* Reduce el padding */
+        /* Reduce el espaciado lateral */
         padding: 15px;
     }
 
     .contenido__barra-busqueda {
-        /* Mueve el buscador al final */
+        /* Mueve el buscador al final del orden */
         order: 3;
-        /* Ocupa todo el ancho */
+        /* Ocupa todo el ancho disponible */
         max-width: 100%;
-        /* Ancho completo */
+        /* Asegura el ancho completo */
         width: 100%;
     }
 
+    .header__logo img {
+        /* Reduce el logo para tablets */
+        height: 80px;
+    }
+
     .productos {
-        /* Una sola columna en móviles */
+        /* Cambia a una sola columna */
         grid-template-columns: 1fr;
+        /* Reduce el espaciado entre tarjetas */
+        gap: 20px;
         /* Reduce el padding lateral */
         padding: 0 15px;
+        /* Reduce el margen superior */
+        margin: 30px auto;
+    }
+
+    .producto-card {
+        /* Reduce el padding de las tarjetas */
+        padding: 15px;
+    }
+
+    .producto-card__titulo {
+        /* Reduce el tamaño del título */
+        font-size: 14px;
+    }
+
+    .producto-card__img {
+        /* Reduce la altura de las imágenes */
+        height: 160px;
     }
 
     .footer {
-        /* Una sola columna en móviles */
+        /* Cambia a una sola columna */
         grid-template-columns: 1fr;
-        /* Centra el texto */
+        /* Centra el texto del footer */
         text-align: center;
+        /* Reduce el espaciado */
+        gap: 30px;
+        /* Reduce el padding */
+        padding: 40px 20px 30px;
     }
 
     .footer__left {
@@ -612,6 +707,18 @@ body {
         align-items: center;
     }
 
+    .footer__logo img {
+        /* Reduce el logo del footer */
+        height: 80px;
+    }
+
+    .nav-container {
+        /* Permite que los elementos de navegación se envuelvan */
+        flex-wrap: wrap;
+        /* Reduce el padding lateral */
+        padding: 0 15px;
+    }
+
     .nav__link {
         /* Reduce el tamaño de fuente */
         font-size: 12px;
@@ -619,21 +726,167 @@ body {
         padding: 8px 10px;
     }
 
-    .nav-container {
-        /* Permite que los elementos se envuelvan */
-        flex-wrap: wrap;
+    .nav__submenu {
+        /* Reduce el ancho mínimo del submenú */
+        min-width: 150px;
+    }
+
+    .nav__submenu-link {
+        /* Reduce el tamaño de fuente del submenú */
+        font-size: 12px;
+        /* Reduce el padding */
+        padding: 8px 15px;
+    }
+
+    .encabezado__top--nav-encabezado {
+        /* Reduce el espacio entre iconos */
+        gap: 10px;
+    }
+
+    .nav-encabezado__icono--user img,
+    .nav-encabezado__icono--carrito img,
+    .nav-encabezado__icono--menu img {
+        /* Reduce el tamaño de los iconos */
+        width: 24px;
+        /* Mantiene la proporción */
+        height: 24px;
     }
 }
 
-/* === Móviles pequeños (hasta 480px) === */
-@media (max-width: 480px) {
-    .producto-card__img {
-        /* Reduce la altura de las imágenes */
-        height: 150px;
+/* === Móviles (max-width: 406px) === */
+/* Ajustes para teléfonos móviles y pantallas pequeñas */
+@media (max-width: 406px) {
+    .encabezado__top {
+        /* Reduce aún más el espaciado */
+        padding: 10px;
+        /* Reduce el gap entre elementos */
+        gap: 10px;
     }
 
     .header__logo img {
-        /* Reduce el tamaño del logo */
-        height: 40px;
+        /* Reduce significativamente el logo */
+        height: 60px;
+    }
+
+    .contenido__barra-busqueda input {
+        /* Reduce el padding del input */
+        padding: 10px 40px 10px 12px;
+        /* Reduce el tamaño de fuente */
+        font-size: 13px;
+    }
+
+    .productos {
+        /* Reduce el padding lateral */
+        padding: 0 10px;
+        /* Reduce el espaciado entre tarjetas */
+        gap: 15px;
+        /* Reduce el margen superior */
+        margin: 20px auto;
+    }
+
+    .producto-card {
+        /* Reduce el padding de las tarjetas */
+        padding: 12px;
+    }
+
+    .producto-card__img {
+        /* Reduce la altura de las imágenes */
+        height: 140px;
+        /* Reduce el margen inferior */
+        margin-bottom: 10px;
+    }
+
+    .producto-card__titulo {
+        /* Reduce el tamaño del título */
+        font-size: 13px;
+        /* Reduce el margen inferior */
+        margin-bottom: 5px;
+    }
+
+    .producto-card__descripcion {
+        /* Reduce el tamaño de fuente */
+        font-size: 12px;
+        /* Reduce el margen inferior */
+        margin-bottom: 8px;
+    }
+
+    .producto-card__precio {
+        /* Reduce el tamaño de fuente */
+        font-size: 11px;
+        /* Reduce el padding */
+        padding: 5px 10px;
+        /* Reduce el margen inferior */
+        margin-bottom: 10px;
+    }
+
+    .producto-card__btn {
+        /* Reduce el padding del botón */
+        padding: 8px 15px;
+        /* Reduce el tamaño de fuente */
+        font-size: 11px;
+    }
+
+    .producto-card__rating-img {
+        /* Reduce el tamaño de las estrellas */
+        width: 12px;
+        /* Mantiene la proporción */
+        height: 12px;
+    }
+
+    .producto-card__rating-valor {
+        /* Reduce el tamaño del valor */
+        font-size: 11px;
+    }
+
+    .footer {
+        /* Reduce el padding */
+        padding: 30px 15px 25px;
+        /* Reduce el margen superior */
+        margin-top: 40px;
+        /* Reduce el espaciado */
+        gap: 25px;
+    }
+
+    .footer__titulo {
+        /* Reduce el tamaño de los títulos */
+        font-size: 16px;
+        /* Reduce el margen inferior */
+        margin-bottom: 10px;
+    }
+
+    .footer__link {
+        /* Reduce el tamaño de fuente */
+        font-size: 14px;
+    }
+
+    .footer__logo img {
+        /* Reduce el logo del footer */
+        height: 60px;
+    }
+
+    .nav-container {
+        /* Reduce el padding */
+        padding: 0 10px;
+    }
+
+    .nav__link {
+        /* Reduce el tamaño de fuente */
+        font-size: 11px;
+        /* Reduce el padding */
+        padding: 6px 8px;
+    }
+
+    .nav-encabezado__icono--user img,
+    .nav-encabezado__icono--carrito img,
+    .nav-encabezado__icono--menu img {
+        /* Reduce el tamaño de los iconos */
+        width: 22px;
+        /* Mantiene la proporción */
+        height: 22px;
+    }
+
+    .encabezado__top--nav-encabezado {
+        /* Reduce el espacio entre iconos */
+        gap: 8px;
     }
 }
