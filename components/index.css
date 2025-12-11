@@ -1,117 +1,336 @@
 @import url("../Style.css");
+
 /* Estilos para el cuerpo (body) de la página */
-body{
-    display: flex; /* Utiliza Flexbox para la disposición de los elementos internos */
-    flex-direction: column; /* Coloca los elementos hijos en una columna vertical */
-    align-items: center; /* Centra los elementos hijos horizontalmente */
-    justify-content: center; /* Centra los elementos hijos verticalmente (aunque 'overflow: hidden' puede interferir) */
-    background-color: var(--color-primario); /* Establece el color de fondo usando la variable global */
-    overflow: hidden; /* Oculta el contenido que se desborda del cuerpo (puede evitar barras de desplazamiento) */
+body {
+    display: flex;
+    /* Utiliza Flexbox para la disposición de los elementos internos */
+    flex-direction: column;
+    /* Coloca los elementos hijos en una columna vertical */
+    align-items: center;
+    /* Centra los elementos hijos horizontalmente */
+    justify-content: center;
+    /* Centra los elementos hijos verticalmente (aunque 'overflow: hidden' puede interferir) */
+    background-color: var(--color-primario);
+    /* Establece el color de fondo usando la variable global */
+    overflow: hidden;
+    /* Oculta el contenido que se desborda del cuerpo (puede evitar barras de desplazamiento) */
 }
+
 /* Estilos para la clase que probablemente contiene el logo en el encabezado */
-.encabezado__logo{
-    width: 450px;/* Define un ancho fijo para la imagen del logo */
-    height: 200px; /* Permite que la altura se ajuste automáticamente manteniendo la proporción */
+.encabezado__logo {
+    width: 450px;
+    /* Define un ancho fijo para la imagen del logo */
+    height: 200px;
+    /* Permite que la altura se ajuste automáticamente manteniendo la proporción */
     margin-top: 50px;
 }
+
 /* Estilos para el botón principal */
-.contenido--boton__primario{
-    background-color: var(--color-botton--primario); /* Color de fondo verde neón */
+.contenido--boton__primario {
+    background-color: var(--color-botton--primario);
+    /* Color de fondo verde neón */
     /* padding: 1.5rem, 1.8rem; Establecer el espacio interno */
-    height: 100px; /* Altura fija */
-    width: 300px;/* Ancho fijo */
-    border-radius: 11px; /* Borde redondeado */
-    font-family: var(--font-family);/* Aplica la fuente Poppins */
-    font-size: xx-large; /* Tamaño de fuente grande */
-    font-style: var(--font-style); /* Estilo de fuente normal */
-    color: var(--color-texto-alterno); /* Color de texto azul oscuro (alterno) */
+    height: 100px;
+    /* Altura fija */
+    width: 300px;
+    /* Ancho fijo */
+    border-radius: 11px;
+    /* Borde redondeado */
+    font-family: var(--font-family);
+    /* Aplica la fuente Poppins */
+    font-size: xx-large;
+    /* Tamaño de fuente grande */
+    font-style: var(--font-style);
+    /* Estilo de fuente normal */
+    color: var(--color-texto-alterno);
+    /* Color de texto azul oscuro (alterno) */
 }
+
 /* Estilos al pasar el ratón (hover) sobre el botón principal */
-.contenido--boton__primario:hover{
-    background-color: var(--color-botton--primario-hover); /* Cambia el color de fondo a azul vibrante */
-    cursor: pointer;  /* Cambia el cursor a una mano, indicando que es interactivo */
+.contenido--boton__primario:hover {
+    background-color: var(--color-botton--primario-hover);
+    /* Cambia el color de fondo a azul vibrante */
+    cursor: pointer;
+    /* Cambia el cursor a una mano, indicando que es interactivo */
 }
+
 /* Estilos para el botón secundario */
-.contenido--boton__secundario{
-    background-color: var(--color-botton--primario);/* Color de fondo azul vibrante */
-    padding: 1.5rem 1.8rem; /*Establecer el espacio interno*/
-    height: 100px; /* Altura fija */
-    width: 300px; /* Ancho fijo */
-    border-radius: 11px; /* Borde redondeado */
-    font-family: var(--font-family); /* Aplica la fuente Poppins */
-    font-size: xx-large;  /* Tamaño de fuente grande */
-    font-style: var(--font-style); /* Estilo de fuente normal */
-    color: var(--color-texto-alterno); /* Color de texto claro */
+.contenido--boton__secundario {
+    background-color: var(--color-botton--primario);
+    /* Color de fondo azul vibrante */
+    padding: 1.5rem 1.8rem;
+    /*Establecer el espacio interno*/
+    height: 100px;
+    /* Altura fija */
+    width: 300px;
+    /* Ancho fijo */
+    border-radius: 11px;
+    /* Borde redondeado */
+    font-family: var(--font-family);
+    /* Aplica la fuente Poppins */
+    font-size: xx-large;
+    /* Tamaño de fuente grande */
+    font-style: var(--font-style);
+    /* Estilo de fuente normal */
+    color: var(--color-texto-alterno);
+    /* Color de texto claro */
 }
+
 /* Estilos al pasar el ratón (hover) sobre el botón secundario */
-.contenido--boton__secundario:hover{
-    background-color: var(--color-botton--secundario-hover); /* Cambia el color de fondo a verde neón */
-    cursor: pointer; /* Cambia el cursor a una mano, indicando que es interactivo */
+.contenido--boton__secundario:hover {
+    background-color: var(--color-botton--secundario-hover);
+    /* Cambia el color de fondo a verde neón */
+    cursor: pointer;
+    /* Cambia el cursor a una mano, indicando que es interactivo */
 }
+
 /* Estilos para el botón terciario*/
-.contenido--boton__terciario{
-    background-color: var(--color-botton--primario); /* Color de fondo azul vibrante */
-    padding: 1.5rem, 1.8rem;/*Establecer el espacio interno*/
-    height: 100px; /* Altura fija */
-    width: 300px; /* Ancho fijo */
-    border-radius: 11px; /* Borde redondeado */
-    font-family: var(--font-family); /* Aplica la fuente Poppins */
-    font-size: xx-large; /* Tamaño de fuente grande */
-    font-style: var(--font-style);/* Estilo de fuente normal */
-    color: var(--color-texto); /* Color de texto claro */
+.contenido--boton__terciario {
+    background-color: var(--color-botton--primario);
+    /* Color de fondo azul vibrante */
+    padding: 1.5rem, 1.8rem;
+    /*Establecer el espacio interno*/
+    height: 100px;
+    /* Altura fija */
+    width: 300px;
+    /* Ancho fijo */
+    border-radius: 11px;
+    /* Borde redondeado */
+    font-family: var(--font-family);
+    /* Aplica la fuente Poppins */
+    font-size: xx-large;
+    /* Tamaño de fuente grande */
+    font-style: var(--font-style);
+    /* Estilo de fuente normal */
+    color: var(--color-texto);
+    /* Color de texto claro */
 }
+
 /* Estilos al pasar el ratón (hover) sobre el botón terciario */
-.contenido--boton__terciario:hover{
-   background-color: var(--color-botton--secundario-hover); /* Cambia el color de fondo a verde neón */
-    cursor: pointer; /* Cambia el cursor a una mano, indicando que es interactivo */
+.contenido--boton__terciario:hover {
+    background-color: var(--color-botton--secundario-hover);
+    /* Cambia el color de fondo a verde neón */
+    cursor: pointer;
+    /* Cambia el cursor a una mano, indicando que es interactivo */
 }
+
 /* Estilos para el contenedor principal de contenido */
-.main{
-    display: flex; /* Utiliza Flexbox para la disposición */
-    flex-direction: column; /* Coloca los elementos hijos en una columna vertical */
-    gap: 44px; /* Espacio vertical de 20px entre los elementos hijos */
+.main {
+    display: flex;
+    /* Utiliza Flexbox para la disposición */
+    flex-direction: column;
+    /* Coloca los elementos hijos en una columna vertical */
+    gap: 44px;
+    /* Espacio vertical de 20px entre los elementos hijos */
 }
+
 /* Estilos para el pie de página */
-.footer{
-    padding: 20px 45px; /* Padding interno arriba y abajo */
-    text-align: center; /* Centra el texto */
-    color: var(--color-texto); /* Color de texto claro */
+.footer {
+    padding: 20px 45px;
+    /* Padding interno arriba y abajo */
+    text-align: center;
+    /* Centra el texto */
+    color: var(--color-texto);
+    /* Color de texto claro */
 
 }
+
 /* Estilos para el contenedor de enlaces del pie de página */
-.footer__links{
- list-style: none; /* Elimina los marcadores de lista (puntos/viñetas) */
- padding-top: 3rem; 
- display: flex; /* Utiliza Flexbox para la disposición de los enlaces */
- justify-content: center; /* Centra los enlaces horizontalmente */
- gap: 2rem; /* Espacio horizontal de 40px entre los enlaces */
+.footer__links {
+    list-style: none;
+    /* Elimina los marcadores de lista (puntos/viñetas) */
+    padding-top: 3rem;
+    display: flex;
+    /* Utiliza Flexbox para la disposición de los enlaces */
+    justify-content: center;
+    /* Centra los enlaces horizontalmente */
+    gap: 2rem;
+    /* Espacio horizontal de 40px entre los enlaces */
 }
+
 /* Estilos para el primer enlace del pie de página */
-.footer__primer--link{
-  color: var(--color-texto); /* Color de texto claro */
-  font-size: 20px; /* Tamaño de fuente de 20px */
-  font-family: var(--font-family); /* Aplica la fuente Poppins */
-  padding: 22px; /* Aplica espacio entre footer y el contenido*/
+.footer__primer--link {
+    color: var(--color-texto);
+    /* Color de texto claro */
+    font-size: 20px;
+    /* Tamaño de fuente de 20px */
+    font-family: var(--font-family);
+    /* Aplica la fuente Poppins */
+    padding: 22px;
+    /* Aplica espacio entre footer y el contenido*/
 }
+
 /* Estilos para el segundo enlace del pie de página (duplicado del primero) */
-.footer__segundo--link{
- color: var(--color-texto); /* Color de texto claro */
- font-size: 20px; /* Tamaño de fuente de 20px */
- font-family: var(--font-family); /* Aplica la fuente Poppins */
- padding: 22px; /* Aplica espacio entre footer y el contenido*/
+.footer__segundo--link {
+    color: var(--color-texto);
+    /* Color de texto claro */
+    font-size: 20px;
+    /* Tamaño de fuente de 20px */
+    font-family: var(--font-family);
+    /* Aplica la fuente Poppins */
+    padding: 22px;
+    /* Aplica espacio entre footer y el contenido*/
 }
+
 /* Selector de clase para un enlace que inicia una encuesta. */
-.empezar__encuesta--link{
-   text-decoration: none; /* Elimina el subrayado (decoración) predeterminado de los enlaces para que parezca texto normal. */
-   color:var(--color-texto-alterno); /* Establece el color del texto utilizando la variable de color alternativo (azul oscuro). */
+.empezar__encuesta--link {
+    text-decoration: none;
+    /* Elimina el subrayado (decoración) predeterminado de los enlaces para que parezca texto normal. */
+    color: var(--color-texto-alterno);
+    /* Establece el color del texto utilizando la variable de color alternativo (azul oscuro). */
 }
+
 /*Selector de clase para un enlace que inicia sesión*/
-.iniciar__sesion--link{
- text-decoration: none; /* Elimina el subrayado (decoración) predeterminado de los enlaces para que parezca texto normal. */
-   color:var(--color-texto-alterno); /* Establece el color del texto utilizando la variable de color alternativo (azul oscuro). */
+.iniciar__sesion--link {
+    text-decoration: none;
+    /* Elimina el subrayado (decoración) predeterminado de los enlaces para que parezca texto normal. */
+    color: var(--color-texto-alterno);
+    /* Establece el color del texto utilizando la variable de color alternativo (azul oscuro). */
 }
+
 /*Selector de clase para un enlace que registra*/
-.registrarse--link{
-   text-decoration: none; /* Elimina el subrayado (decoración) predeterminado de los enlaces para que parezca texto normal. */
-   color:var(--color-texto-alterno); /* Establece el color del texto utilizando la variable de color alternativo (azul oscuro). */
+.registrarse--link {
+    text-decoration: none;
+    /* Elimina el subrayado (decoración) predeterminado de los enlaces para que parezca texto normal. */
+    color: var(--color-texto-alterno);
+    /* Establece el color del texto utilizando la variable de color alternativo (azul oscuro). */
+}
+
+/* ==================== MEDIA QUERIES ==================== */
+
+/* === Desktop (max-width: 1240px) === */
+/* Ajustes para pantallas de computadores de mesa con resolución reducida */
+@media (max-width: 1240px) {
+    .encabezado__logo {
+        /* Reduce el ancho del logo */
+        width: 380px;
+        /* Reduce la altura */
+        height: 170px;
+        /* Reduce el margen superior */
+        margin-top: 40px;
+    }
+
+    .contenido--boton__primario,
+    .contenido--boton__secundario,
+    .contenido--boton__terciario {
+        /* Reduce el ancho de los botones */
+        width: 280px;
+        /* Reduce la altura */
+        height: 90px;
+        /* Reduce el tamaño de fuente */
+        font-size: x-large;
+    }
+
+    .main {
+        /* Reduce el espacio entre elementos */
+        gap: 35px;
+    }
+}
+
+/* === Tablets (max-width: 700px) === */
+/* Ajustes para tabletas y dispositivos de tamaño mediano */
+@media (max-width: 700px) {
+    .encabezado__logo {
+        /* Reduce significativamente el logo */
+        width: 300px;
+        /* Reduce la altura */
+        height: 140px;
+        /* Reduce el margen superior */
+        margin-top: 30px;
+    }
+
+    .contenido--boton__primario,
+    .contenido--boton__secundario,
+    .contenido--boton__terciario {
+        /* Reduce el ancho de los botones */
+        width: 250px;
+        /* Reduce la altura */
+        height: 80px;
+        /* Reduce el tamaño de fuente */
+        font-size: large;
+        /* Reduce el radio del borde */
+        border-radius: 9px;
+    }
+
+    .main {
+        /* Reduce el espacio entre elementos */
+        gap: 30px;
+    }
+
+    .footer {
+        /* Reduce el padding */
+        padding: 15px 30px;
+    }
+
+    .footer__links {
+        /* Permite envolver elementos */
+        flex-wrap: wrap;
+        /* Reduce el espacio entre enlaces */
+        gap: 1rem;
+        /* Reduce el padding superior */
+        padding-top: 2rem;
+    }
+
+    .footer__primer--link,
+    .footer__segundo--link {
+        /* Reduce el tamaño de fuente */
+        font-size: 16px;
+        /* Reduce el padding */
+        padding: 15px;
+    }
+}
+
+/* === Móviles (max-width: 406px) === */
+/* Ajustes para teléfonos móviles y pantallas pequeñas */
+@media (max-width: 406px) {
+    .encabezado__logo {
+        /* Reduce aún más el logo */
+        width: 240px;
+        /* Reduce la altura */
+        height: 110px;
+        /* Reduce el margen superior */
+        margin-top: 20px;
+    }
+
+    .contenido--boton__primario,
+    .contenido--boton__secundario,
+    .contenido--boton__terciario {
+        /* Reduce el ancho de los botones */
+        width: 220px;
+        /* Reduce la altura */
+        height: 70px;
+        /* Reduce el tamaño de fuente */
+        font-size: medium;
+        /* Reduce el radio del borde */
+        border-radius: 8px;
+    }
+
+    .main {
+        /* Reduce el espacio entre elementos */
+        gap: 25px;
+    }
+
+    .footer {
+        /* Reduce el padding */
+        padding: 10px 20px;
+    }
+
+    .footer__links {
+        /* Cambia a disposición vertical */
+        flex-direction: column;
+        /* Centra los elementos */
+        align-items: center;
+        /* Reduce el espacio entre enlaces */
+        gap: 0.5rem;
+        /* Reduce el padding superior */
+        padding-top: 1.5rem;
+    }
+
+    .footer__primer--link,
+    .footer__segundo--link {
+        /* Reduce el tamaño de fuente */
+        font-size: 14px;
+        /* Reduce el padding */
+        padding: 10px;
+    }
 }
