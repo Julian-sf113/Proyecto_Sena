@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../components/Pagina-Principal.css">
+    <title>Pagina Principal - Deportex Studio</title>
+</head>
+
+<body>
+    <header class="encabezado">
+
+        <section class="encabezado__top">
+            <figure class="header__logo">
+                <img src="../Images/Logo2.0.png" alt="Logo Deportex Studio">
+            </figure>
+
+            <form class="contenido__barra-busqueda">
+                <input type="text" placeholder="Buscar productos..." class="contenido__barra-busqueda">
+                <button class="contenido__boton-buscador" type="submit"><img src="../Images/lupa.png"
+                        alt="lupa del buscador" class=".contenido__barra-busqueda "></button>
+            </form>
+
+            <nav class="encabezado__top--nav-encabezado">
+                <button class="nav-encabezado__icono--user"><a href="panel_de_control.html"><img src="../Images/avatar.png"
+                            alt="Avatar Usuario"></a></button>
+                <a href="carrito_de_compras.html" class="nav-encabezado__icono--carrito"><img
+                        src="../Images/carrito-de-compras.png" alt="Carrito de compras"></a>
+                <a href="index.html" class="nav-encabezado__icono--salir" title="Salir">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24"
+                        height="24">
+                        <path
+                            d="M17 7l-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5zM4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4V5z" />
+                    </svg>
+                </a>
+            </nav>
+        </section>
+
+        <section class="nav-container">
+            <nav class="nav">
+                <li class="nav__item"><a class="nav__link" href="Principal.html">Inicio</a></li>
+            </nav>
+
+            <nav class="nav">
+                <li class="nav__item"><a class="nav__link" href="#">Deportes</a></li>
+                <ul class="nav__submenu">
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Baloncesto</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Fútbol</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Voleibol</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Ciclismo</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Natación</a></li>
+                </ul>
+            </nav>
+
+            <nav class="nav">
+                <li class="nav__item"><a class="nav__link" href="#">Hombre</a></li>
+                <ul class="nav__submenu">
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Ropa</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Calzado</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Accesorios</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Novedades</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Colección</a></li>
+                </ul>
+            </nav>
+
+            <nav class="nav">
+                <li class="nav__item"><a class="nav__link" href="#">Mujer</a></li>
+                <ul class="nav__submenu">
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Ropa</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Calzado</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Accesorios</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Novedades</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Coleccion</a></li>
+                </ul>
+            </nav>
+
+            <nav class="nav">
+                <li class="nav__item"><a class="nav__link" href="#">Junior</a></li>
+                <ul class="nav__submenu">
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Ropa</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Calzado</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Accesorios</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Novedades</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Coleccion</a></li>
+                </ul>
+            </nav>
+        </section>
+    </header>
+
+    <main class="productos">
+        <article class="producto-card">
+            <img src="../Images/Tarmak.avif" alt="Balon de baloncesto Tarmak" class="producto-card__img">
+            <h3 class="producto-card__titulo">TARMAK</h3>
+            <p class="producto-card__descripcion">Balon de baloncesto talla 7 - R500 morado negro</p>
+
+            <div class="producto-card__rating">
+                <img src="../Images/star.png" alt="Estrella de producto-card__rating" class="producto-card__rating-img">
+                <h3 class="producto-card__rating-valor">4.7</h3>
+            </div>
+
+            <span class="producto-card__precio">$79.000</span>
+            <button class="producto-card__btn">Agregar al Carrito</button>
+        </article>
+
+        <article class="producto-card">
+            <img src="../Images/Kispsta_Balon.avif" alt="Balon de fútbol Kipsta" class="producto-card__img">
+            <h3 class="producto-card__titulo">KIPSTA</h3>
+            <p class="producto-card__descripcion">Balon de Fútbol Hibrido talla 5 RAINING BALL - Blanco</p>
+
+            <div class="producto-card__rating">
+                <img src="../Images/star.png" alt="Estrella de producto-card__rating" class="producto-card__rating-img">
+                <h3 class="producto-card__rating-valor">4.7</h3>
+            </div>
+
+            <span class="producto-card__precio">$89.000</span>
+            <button class="producto-card__btn">Agregar al Carrito</button>
+        </article>
+
+        <article class="producto-card">
+            <img src="../Images/Kipsta_balon.avif" alt="Balon de Voleibol Kipsta" class="producto-card__img">
+            <h3 class="producto-card__titulo">ALLSIX</h3>
+            <p class="producto-card__descripcion">Balón de voleibol Allsix VB 100 amarillo</p>
+
+            <div class="producto-card__rating">
+                <img src="../Images/star.png" alt="Estrella de producto-card__rating" class="producto-card__rating-img">
+                <h3 class="producto-card__rating-valor">4.7</h3>
+            </div>
+
+            <span class="producto-card__precio">$45.000</span>
+            <button class="producto-card__btn">Agregar al Carrito</button>
+        </article>
+
+        <article class="producto-card">
+            <img src="../Images/Tarmak_zapatilla.avif" alt="Zapatilla de baloncesto Tarmak" class="producto-card__img">
+            <h3 class="producto-card__titulo">TARMAK</h3>
+            <p class="producto-card__descripcion">Tenis de baloncesto NBA Lakers hombre/mujer - FAST 900 low-1 negro</p>
+
+            <div class="producto-card__rating">
+                <img src="../Images/star.png" alt="Estrella de producto-card__rating" class="producto-card__rating-img">
+                <h3 class="producto-card__rating-valor">4.7</h3>
+            </div>
+
+            <span class="producto-card__precio">$429.000</span>
+            <button class="producto-card__btn">Agregar al Carrito</button>
+        </article>
+
+        <article class="producto-card">
+            <img src="../Images/Kispta_Guayo.avif" alt="Balon de baloncesto Tarmak" class="producto-card__img">
+            <h3 class="producto-card__titulo">KIPSTA</h3>
+            <p class="producto-card__descripcion">Guayos de fútbol terrenos secos para Adulto Kispa verde neón</p>
+
+            <div class="producto-card__rating">
+                <img src="../Images/star.png" alt="Estrella de producto-card__rating" class="producto-card__rating-img">
+                <h3 class="producto-card__rating-valor">4.7</h3>
+            </div>
+
+            <span class="producto-card__precio">$305.000</span>
+            <button class="producto-card__btn">Agregar al Carrito</button>
+        </article>
+
+        <article class="producto-card">
+            <img src="../Images/Aletas_Natacion.avif" alt="Aletas de natación" class="producto-card__img">
+            <h3 class="producto-card__titulo">NABAIJI</h3>
+            <p class="producto-card__descripcion">Aletas de natación pala corta Nabaiji 500 - Negro</p>
+
+            <div class="producto-card__rating">
+                <img src="../Images/star.png" alt="Estrella de producto-card__rating" class="producto-card__rating-img">
+                <h3 class="producto-card__rating-valor">4.3</h3>
+            </div>
+
+            <span class="producto-card__precio">$76.000</span>
+            <button class="producto-card__btn">Agregar al Carrito</button>
+        </article>
+
+        <article class="producto-card">
+            <img src="../Images/VAN_RYSEL.avif" alt="Balon de baloncesto Tarmak" class="producto-card__img">
+            <h3 class="producto-card__titulo">Van Rysel</h3>
+            <p class="producto-card__descripcion">Bicicleta de ruta Van Rysel EDR CF rojo</p>
+
+            <div class="producto-card__rating">
+                <img src="../Images/star.png" alt="Estrella de producto-card__rating" class="producto-card__rating-img">
+                <h3 class="producto-card__rating-valor">4.8</h3>
+            </div>
+
+            <span class="producto-card__precio">$11.990.000</span>
+            <button class="producto-card__btn">Agregar al Carrito</button>
+        </article>
+
+        <article class="producto-card">
+            <img src="../Images/Tarmak_Rodillera.avif" alt="Codera de baloncesto Tarmak" class="producto-card__img">
+            <h3 class="producto-card__titulo">TARMAK</h3>
+            <p class="producto-card__descripcion">Codera de Baloncesto NBA de protección para adulto Tarmak Dualshock
+                EP500 negro</p>
+
+            <div class="producto-card__rating">
+                <img src="../Images/star.png" alt="Estrella de producto-card__rating" class="producto-card__rating-img">
+                <h3 class="producto-card__rating-valor">4.8</h3>
+            </div>
+
+            <span class="producto-card__precio">$79.000</span>
+            <button class="producto-card__btn">Agregar al Carrito</button>
+        </article>
+
+        <article class="producto-card">
+            <img src="../Images/Peto futbol.avif" alt="Balon de baloncesto Tarmak" class="producto-card__img">
+            <h3 class="producto-card__titulo">KIPSTA</h3>
+            <p class="producto-card__descripcion">Peto de fútbol doble faz para adulto Kipsta FBIB JR verde fluorescente
+            </p>
+
+            <div class="producto-card__rating">
+                <img src="../Images/star.png" alt="Estrella de producto-card__rating" class="producto-card__rating-img">
+                <h3 class="producto-card__rating-valor">4.3</h3>
+            </div>
+
+            <span class="producto-card__precio">$37.000</span>
+            <button class="producto-card__btn">Agregar al Carrito</button>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <section class="footer__left">
+            <figure class="footer__logo">
+                <img src="../Images/Logo2.0.png" alt="Logo Deportex Studio">
+            </figure>
+        </section>
+
+        <section class="footer__columns">
+
+            <div class="footer__columns">
+                <h4 class="footer__titulo">COMPRA</h4>
+                <a href="#" class="footer__link">Método de Pago</a>
+                <a href="#" class="footer__link">Métodos de entrega</a>
+                <a href="#" class="footer__link">Envíos Gratis</a>
+                <a href="#" class="footer__link">Guía de Tallas</a>
+                <a href="#" class="footer__link">Tarjeta Regalo</a>
+            </div>
+        </section>
+
+        <section class="footer__columns">
+            <div class="footer__columns">
+                <h4 class="footer__titulo">EXPERIENCIA</h4>
+                <a href="#" class="footer__link">Ventas Corporativas</a>
+                <a href="#" class="footer__link">Consejos Deportivos</a>
+                <a href="#" class="footer__link">Deportex Actividades</a>
+                <a href="#" class="footer__link">Nuestras Tiendas</a>
+            </div>
+        </section>
+
+        <section class="footer__columns">
+            <div class="footer__columns">
+                <h4 class="footer__titulo">Legal</h4>
+                <a href="#" class="footer__link">Políticas, Términos y condiciones</a>
+                <a href="#" class="footer__link">Avisos de Seguridad</a>
+                <a href="#" class="footer__link">Factura Electronica</a>
+                <a href="#" class="footer__link">SIC</a>
+            </div>
+        </section>
+    </footer>
+</body>
+
+</html>

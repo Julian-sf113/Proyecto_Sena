@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="e">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../components/panel_control.css">
+    <title>Panel de Control - Deportex Studio</title>
+</head>
+
+<body>
+    <header class="encabezado">
+        <section class="encabezado__top">
+            <figure class="header__logo">
+                <img src="../Images/Logo2.0.png" alt="Logo Deportex Studio">
+            </figure>
+
+            <form class="contenido__barra-busqueda">
+                <input type="text" placeholder="Buscar productos..." class="contenido__barra-busqueda">
+                <button class="contenido__boton-buscador" type="submit"><img src="../Images/lupa.png"
+                        alt="lupa del buscador" class=".contenido__barra-busqueda "></button>
+            </form>
+
+            <nav class="encabezado__top--nav-encabezado">
+                <button class="nav-encabezado__icono--user"><img src="../Images/avatar.png" alt="Avatar Usuario"></button>
+                <a href="carrito_de_compras.html" class="nav-encabezado__icono--carrito"><img
+                        src="../Images/carrito-de-compras.png" alt="Carrito de compras"></a>
+                <a href="index.html" class="nav-encabezado__icono--salir" title="Salir">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24"
+                        height="24">
+                        <path
+                            d="M17 7l-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5zM4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4V5z" />
+                    </svg>
+                </a>
+            </nav>
+        </section>
+
+        <section class="nav-container">
+            <nav class="nav">
+                <li class="nav__item"><a class="nav__link" href="Principal.html">Inicio</a></li>
+            </nav>
+
+            <nav class="nav">
+                <li class="nav__item"><a class="nav__link" href="#">Deportes</a></li>
+                <ul class="nav__submenu">
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Baloncesto</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Fútbol</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Voleibol</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Ciclismo</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Natación</a></li>
+                </ul>
+            </nav>
+
+            <nav class="nav">
+                <li class="nav__item"><a class="nav__link" href="#">Hombre</a></li>
+                <ul class="nav__submenu">
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Ropa</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Calzado</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Accesorios</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Novedades</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Colección</a></li>
+                </ul>
+            </nav>
+
+            <nav class="nav">
+                <li class="nav__item"><a class="nav__link" href="#">Mujer</a></li>
+                <ul class="nav__submenu">
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Ropa</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Calzado</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Accesorios</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Novedades</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Coleccion</a></li>
+                </ul>
+            </nav>
+
+            <nav class="nav">
+                <li class="nav__item"><a class="nav__link" href="#">Junior</a></li>
+                <ul class="nav__submenu">
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Ropa</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Calzado</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Accesorios</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Novedades</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Coleccion</a></li>
+                </ul>
+            </nav>
+        </section>
+    </header>
+
+    <!-- Panel de Usuario -->
+    <main class="panel">
+        <!-- Hero del Panel -->
+        <section class="panel__hero">
+            <div class="panel__usuario-info">
+                <div class="panel__avatar">
+                    <img src="../Images/usuario.png" alt="Avatar del Usuario">
+                </div>
+                <div class="panel__bienvenida">
+                    <span class="panel__saludo">¡Hola de nuevo!</span>
+                    <h1 class="panel__nombre-usuario">Pedro Bernal</h1>
+                    <span class="panel__miembro">Miembro desde Julio 2025</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Atajos Rápidos -->
+        <section class="atajos">
+            <h2 class="seccion__titulo">Accesos Rápidos</h2>
+            <div class="atajos__grid">
+                <a href="#" class="atajo-card">
+                    <div class="atajo-card__icono atajo-card__icono--perfil">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                        </svg>
+                    </div>
+                    <span class="atajo-card__texto">Mi Perfil</span>
+                </a>
+
+                <a href="carrito_de_compras.html" class="atajo-card">
+                    <div class="atajo-card__icono atajo-card__icono--carrito">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" />
+                        </svg>
+                    </div>
+                    <span class="atajo-card__texto">Mi Carrito</span>
+                </a>
+
+                <a href="#" class="atajo-card">
+                    <div class="atajo-card__icono atajo-card__icono--pedidos">
+                        <img src="../Images/pedidos.png" alt="">
+                    </div>
+                    <span class="atajo-card__texto">Mis Pedidos</span>
+                </a>
+
+                <a href="#" class="atajo-card">
+                    <div class="atajo-card__icono atajo-card__icono--favoritos">
+                        <img src="../Images/forma-de-corazon-negro-para-san-valentin.png" alt="Favoritos">
+                    </div>
+                    <span class="atajo-card__texto">Favoritos</span>
+                </a>
+
+                <a href="recomendaciones.html" class="atajo-card">
+                    <div class="atajo-card__icono atajo-card__icono--recomendaciones">
+                        <img src="../Images/star.png" alt="Recomendaciones">
+                    </div>
+                    <span class="atajo-card__texto">Recomendaciones</span>
+                </a>
+
+                <a href="#" class="atajo-card">
+                    <div class="atajo-card__icono atajo-card__icono--config">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M19.14 12.94c.04-.31.06-.63.06-.94 0-.31-.02-.63-.06-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.04.31-.06.63-.06.94s.02.63.06.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z" />
+                        </svg>
+                    </div>
+                    <span class="atajo-card__texto">Configuración</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Últimas Compras -->
+        <section class="compras">
+            <h2 class="seccion__titulo">Últimas Compras</h2>
+            <div class="compras__grid">
+                <article class="compra-card">
+                    <div class="compra-card__imagen">
+                        <img src="../Images/Tarmak.avif" alt="Balón de baloncesto">
+                    </div>
+                    <div class="compra-card__info">
+                        <h3 class="compra-card__titulo">TARMAK</h3>
+                        <p class="compra-card__descripcion">Balón de baloncesto talla 7 - R500</p>
+                        <div class="compra-card__detalles">
+                            <span class="compra-card__fecha">28 Nov 2024</span>
+                            <span class="compra-card__precio">$79.000</span>
+                        </div>
+                        <span class="compra-card__estado compra-card__estado--entregado">Entregado</span>
+                    </div>
+                </article>
+
+                <article class="compra-card">
+                    <div class="compra-card__imagen">
+                        <img src="../Images/VAN_RYSEL.avif" alt="Bicicleta de ruta">
+                    </div>
+                    <div class="compra-card__info">
+                        <h3 class="compra-card__titulo">Van Rysel</h3>
+                        <p class="compra-card__descripcion">Bicicleta de ruta EDR CF rojo</p>
+                        <div class="compra-card__detalles">
+                            <span class="compra-card__fecha">15 Nov 2024</span>
+                            <span class="compra-card__precio">$11.990.000</span>
+                        </div>
+                        <span class="compra-card__estado compra-card__estado--entregado">Entregado</span>
+                    </div>
+                </article>
+
+                <article class="compra-card">
+                    <div class="compra-card__imagen">
+                        <img src="../Images/Kispta_Guayo.avif" alt="Guayos de fútbol">
+                    </div>
+                    <div class="compra-card__info">
+                        <h3 class="compra-card__titulo">KIPSTA</h3>
+                        <p class="compra-card__descripcion">Guayos de fútbol terrenos secos</p>
+                        <div class="compra-card__detalles">
+                            <span class="compra-card__fecha">02 Dic 2024</span>
+                            <span class="compra-card__precio">$305.000</span>
+                        </div>
+                        <span class="compra-card__estado compra-card__estado--enviado">En Camino</span>
+                    </div>
+                </article>
+            </div>
+            <a href="#" class="btn-ver-mas">Ver todas mis compras</a>
+        </section>
+
+        <!-- Recomendaciones Personalizadas -->
+        <section class="recomendaciones-panel">
+            <h2 class="seccion__titulo">Recomendados para Ti</h2>
+            <div class="recomendaciones__grid">
+                <article class="producto-recomendado">
+                    <div class="producto-recomendado__badge">Nuevo</div>
+                    <div class="producto-recomendado__imagen">
+                        <img src="../Images/Tarmak_zapatilla.avif" alt="Tenis de baloncesto">
+                    </div>
+                    <div class="producto-recomendado__info">
+                        <h3 class="producto-recomendado__titulo">TARMAK</h3>
+                        <p class="producto-recomendado__descripcion">Tenis de baloncesto NBA Lakers</p>
+                        <div class="producto-recomendado__rating">
+                            <span class="rating__star">★</span>
+                            <span class="rating__star">★</span>
+                            <span class="rating__star">★</span>
+                            <span class="rating__star">★</span>
+                            <span class="rating__star rating__star--empty">★</span>
+                            <span class="rating__valor">4.7</span>
+                        </div>
+                        <span class="producto-recomendado__precio">$429.000</span>
+                    </div>
+                    <a href="detalle_del_producto.html" class="producto-recomendado__btn">Agregar al Carrito</a>
+                </article>
+
+                <article class="producto-recomendado">
+                    <div class="producto-recomendado__badge producto-recomendado__badge--oferta">-20%</div>
+                    <div class="producto-recomendado__imagen">
+                        <img src="../Images/Aletas_Natacion.avif" alt="Aletas de natación">
+                    </div>
+                    <div class="producto-recomendado__info">
+                        <h3 class="producto-recomendado__titulo">NABAIJI</h3>
+                        <p class="producto-recomendado__descripcion">Aletas de natación pala corta</p>
+                        <div class="producto-recomendado__rating">
+                            <span class="rating__star">★</span>
+                            <span class="rating__star">★</span>
+                            <span class="rating__star">★</span>
+                            <span class="rating__star">★</span>
+                            <span class="rating__star rating__star--empty">★</span>
+                            <span class="rating__valor">4.3</span>
+                        </div>
+                        <span class="producto-recomendado__precio">$60.800</span>
+                    </div>
+                    <a href="detalle_del_producto.html" class="producto-recomendado__btn">Agregar al Carrito</a>
+                </article>
+
+                <article class="producto-recomendado">
+                    <div class="producto-recomendado__imagen">
+                        <img src="../Images/Tarmak_Rodillera.avif" alt="Codera de baloncesto">
+                    </div>
+                    <div class="producto-recomendado__info">
+                        <h3 class="producto-recomendado__titulo">TARMAK</h3>
+                        <p class="producto-recomendado__descripcion">Codera de Baloncesto NBA Dualshock</p>
+                        <div class="producto-recomendado__rating">
+                            <span class="rating__star">★</span>
+                            <span class="rating__star">★</span>
+                            <span class="rating__star">★</span>
+                            <span class="rating__star">★</span>
+                            <span class="rating__star">★</span>
+                            <span class="rating__valor">4.8</span>
+                        </div>
+                        <span class="producto-recomendado__precio">$79.000</span>
+                    </div>
+                    <a href="detalle_del_producto.html" class="producto-recomendado__btn">Agregar al Carrito</a>
+                </article>
+
+                <article class="producto-recomendado">
+                    <div class="producto-recomendado__badge">Popular</div>
+                    <div class="producto-recomendado__imagen">
+                        <img src="../Images/Kispsta_Balon.avif" alt="Balón de fútbol">
+                    </div>
+                    <div class="producto-recomendado__info">
+                        <h3 class="producto-recomendado__titulo">KIPSTA</h3>
+                        <p class="producto-recomendado__descripcion">Balón de Fútbol Híbrido talla 5</p>
+                        <div class="producto-recomendado__rating">
+                            <span class="rating__star">★</span>
+                            <span class="rating__star">★</span>
+                            <span class="rating__star">★</span>
+                            <span class="rating__star">★</span>
+                            <span class="rating__star rating__star--empty">★</span>
+                            <span class="rating__valor">4.7</span>
+                        </div>
+                        <span class="producto-recomendado__precio">$89.000</span>
+                    </div>
+                    <a href="detalle_del_producto.html" class="producto-recomendado__btn">Agregar al Carrito</a>
+                </article>
+            </div>
+            <a href="recomendaciones.html" class="btn-ver-mas">Ver más recomendaciones</a>
+        </section>
+
+        <!-- Mis Preferencias -->
+        <section class="preferencias-usuario">
+            <h2 class="seccion__titulo">Mis Preferencias</h2>
+            <div class="preferencias__contenido">
+                <div class="preferencias__lista">
+                    <article class="preferencia-item">
+                        <div class="preferencia-item__icono">
+                            <img src="../Images/Icono.Deporte.png" alt="Deporte">
+                        </div>
+                        <div class="preferencia-item__info">
+                            <h4 class="preferencia-item__titulo">Deportes Favoritos</h4>
+                            <div class="preferencia-item__tags">
+                                <span class="tag">Ciclismo</span>
+                                <span class="tag">Baloncesto</span>
+                                <span class="tag">Natación</span>
+                            </div>
+                        </div>
+                        <button class="preferencia-item__editar">Editar</button>
+                    </article>
+
+                    <article class="preferencia-item">
+                        <div class="preferencia-item__icono">
+                            <img src="../Images/Nivel_Experiencia.png" alt="Nivel">
+                        </div>
+                        <div class="preferencia-item__info">
+                            <h4 class="preferencia-item__titulo">Nivel de Experiencia</h4>
+                            <div class="preferencia-item__tags">
+                                <span class="tag tag--activo">Avanzado</span>
+                            </div>
+                        </div>
+                        <button class="preferencia-item__editar">Editar</button>
+                    </article>
+
+                    <article class="preferencia-item">
+                        <div class="preferencia-item__icono">
+                            <img src="../Images/precio-alto.png" alt="Presupuesto">
+                        </div>
+                        <div class="preferencia-item__info">
+                            <h4 class="preferencia-item__titulo">Rango de Presupuesto</h4>
+                            <div class="preferencia-item__tags">
+                                <span class="tag">$100.000 - $500.000</span>
+                            </div>
+                        </div>
+                        <button class="preferencia-item__editar">Editar</button>
+                    </article>
+
+                    <article class="preferencia-item">
+                        <div class="preferencia-item__icono">
+                            <img src="../Images/objetivo_deportivo.png" alt="Objetivo">
+                        </div>
+                        <div class="preferencia-item__info">
+                            <h4 class="preferencia-item__titulo">Objetivos Deportivos</h4>
+                            <div class="preferencia-item__tags">
+                                <span class="tag">Rendimiento</span>
+                                <span class="tag">Competición</span>
+                            </div>
+                        </div>
+                        <button class="preferencia-item__editar">Editar</button>
+                    </article>
+                </div>
+
+                <div class="preferencias__resumen">
+                    <div class="resumen-card">
+                        <h4 class="resumen-card__titulo">Resumen de Actividad</h4>
+                        <div class="resumen-card__stats">
+                            <div class="stat">
+                                <span class="stat__numero">12</span>
+                                <span class="stat__label">Compras</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat__numero">5</span>
+                                <span class="stat__label">Favoritos</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat__numero">3</span>
+                                <span class="stat__label">Reseñas</span>
+                            </div>
+                        </div>
+                        <div class="resumen-card__puntos">
+                            <span class="puntos__icono">🏆</span>
+                            <div class="puntos__info">
+                                <span class="puntos__cantidad">1,250</span>
+                                <span class="puntos__label">Puntos Deportex</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <section class="footer__left">
+            <figure class="footer__logo">
+                <img src="../Images/Logo2.0.png" alt="Logo Deportex Studio">
+            </figure>
+        </section>
+
+        <section class="footer__columns">
+            <div class="footer__columns">
+                <h4 class="footer__titulo">COMPRA</h4>
+                <a href="#" class="footer__link">Método de Pago</a>
+                <a href="#" class="footer__link">Métodos de entrega</a>
+                <a href="#" class="footer__link">Envíos Gratis</a>
+                <a href="#" class="footer__link">Guía de Tallas</a>
+                <a href="#" class="footer__link">Tarjeta Regalo</a>
+            </div>
+        </section>
+
+        <section class="footer__columns">
+            <div class="footer__columns">
+                <h4 class="footer__titulo">EXPERIENCIA</h4>
+                <a href="#" class="footer__link">Ventas Corporativas</a>
+                <a href="#" class="footer__link">Consejos Deportivos</a>
+                <a href="#" class="footer__link">Deportex Actividades</a>
+                <a href="#" class="footer__link">Nuestras Tiendas</a>
+            </div>
+        </section>
+
+        <section class="footer__columns">
+            <div class="footer__columns">
+                <h4 class="footer__titulo">Legal</h4>
+                <a href="#" class="footer__link">Políticas, Términos y condiciones</a>
+                <a href="#" class="footer__link">Avisos de Seguridad</a>
+                <a href="#" class="footer__link">Factura Electronica</a>
+                <a href="#" class="footer__link">SIC</a>
+            </div>
+        </section>
+    </footer>
+</body>
+
+</html>

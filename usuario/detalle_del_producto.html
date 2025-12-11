@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../components/detalle_del_producto.css">
+    <title>Detalle del Producto - Deportex Studio</title>
+</head>
+
+<body>
+    <header class="encabezado">
+        <section class="encabezado__top">
+            <figure class="header__logo">
+                <img src="../Images/Logo2.0.png" alt="Logo Deportex Studio">
+            </figure>
+
+            <form class="contenido__barra-busqueda">
+                <input type="text" placeholder="Buscar Productos..." class="contenido__barra-busqueda">
+                <button class="contenido__boton-buscador" type="submit"><img src="../Images/lupa.png"
+                        alt="lupa del buscador" class=".contenido__barra-busqueda "></button>
+            </form>
+
+            <nav class="encabezado__top--nav-encabezado">
+                <button class="nav-encabezado__icono--user"><a href="panel_de_control.html"><img src="../Images/avatar.png"
+                            alt="Avatar Usuario"></a></button>
+                <a href="carrito_de_compras.html" class="nav-encabezado__icono--carrito"><img
+                        src="../Images/carrito-de-compras.png" alt="Carrito de compras"></a>
+                <a href="index.html" class="nav-encabezado__icono--salir" title="Salir">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24"
+                        height="24">
+                        <path
+                            d="M17 7l-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5zM4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4V5z" />
+                    </svg>
+                </a>
+                <button class="nav-encabezado__icono--menu"><img src="../Images/menu.png" alt="Menú"></button>
+            </nav>
+        </section>
+
+        <section class="nav-container">
+            <nav class="nav">
+                <li class="nav__item"><a class="nav__link" href="Principal.html">Inicio</a></li>
+            </nav>
+
+            <nav class="nav">
+                <li class="nav__item"><a class="nav__link" href="#">Deportes</a></li>
+                <ul class="nav__submenu">
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Baloncesto</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Fútbol</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Voleibol</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Ciclismo</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Natación</a></li>
+                </ul>
+            </nav>
+
+            <nav class="nav">
+                <li class="nav__item"><a class="nav__link" href="#">Hombre</a></li>
+                <ul class="nav__submenu">
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Ropa</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Calzado</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Accesorios</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Novedades</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Colección</a></li>
+                </ul>
+            </nav>
+
+            <nav class="nav">
+                <li class="nav__item"><a class="nav__link" href="#">Mujer</a></li>
+                <ul class="nav__submenu">
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Ropa</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Calzado</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Accesorios</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Novedades</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Coleccion</a></li>
+                </ul>
+            </nav>
+
+            <nav class="nav">
+                <li class="nav__item"><a class="nav__link" href="#">Junior</a></li>
+                <ul class="nav__submenu">
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Ropa</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Calzado</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Accesorios</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Novedades</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Coleccion</a></li>
+                </ul>
+            </nav>
+        </section>
+    </header>
+
+    <!-- Sección Principal del Producto -->
+    <main class="producto-detalle">
+        <section class="producto-detalle__contenido">
+            <!-- Galería de Imágenes -->
+            <div class="producto-galeria">
+                <div class="producto-galeria__principal">
+                    <img src="../Images/bicicleta-de-ruta-Lateral.avif" alt="Bicicleta Van Rysel - Vista principal"
+                        id="imagen-principal">
+                </div>
+                <div class="producto-galeria__miniaturas">
+                    <button class="miniatura activa" data-img="Images/bicicleta-de-ruta-Lateral.avif">
+                        <img src="../Images/bicicleta-de-ruta-Lateral.avif" alt="Vista lateral">
+                    </button>
+                    <button class="miniatura" data-img="Images/bicicleta-de-ruta-Delantera.avif">
+                        <img src="../Images/bicicleta-de-ruta-Delantera.avif" alt="Vista delantera">
+                    </button>
+                    <button class="miniatura" data-img="Images/bicicleta-de-ruta-edr-Trasera.avif">
+                        <img src="../Images/bicicleta-de-ruta-edr-Trasera.avif" alt="Vista trasera">
+                    </button>
+                    <button class="miniatura miniatura--guia">
+                        <div class="miniatura__guia-tallas">
+                            <h4>Guía de tallas para bicicletas</h4>
+                            <p>Para medir tu cuerpo, ve a un espejo con cinta métrica y en ella y ve a medición largo...
+                            </p>
+                            <img src="../Images/Guia-Tallas_Bicicletas.avif" alt="Guía de tallas">
+                        </div>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Información del Producto -->
+            <div class="producto-info">
+                <span class="producto-info__marca">Van Rysel</span>
+                <h1 class="producto-info__nombre">Bicicleta de ruta Van Rysel EDR CF rojo</h1>
+
+                <div class="producto-info__rating">
+                    <div class="rating">
+                        <span class="rating__star">★</span>
+                        <span class="rating__star">★</span>
+                        <span class="rating__star">★</span>
+                        <span class="rating__star">★</span>
+                        <span class="rating__star">★</span>
+                    </div>
+                    <span class="rating__valor">4.7</span>
+                </div>
+
+                <p class="producto-info__descripcion-corta">
+                    Bicicleta de ruta Van Rysel, grupo Shimano 105 con 12 velocidades
+                </p>
+
+                <p class="producto-info__descripcion">
+                    Cómoda en la montaña como en terrenos mixtos. Este marco te sorprenderá por su fuerza y comodidad.
+                </p>
+
+                <div class="producto-info__precio">
+                    <span class="precio__cantidad">$ 11.990.000</span>
+                    <span class="precio__iva">IVA Incluido</span>
+                </div>
+
+                <div class="producto-info__color">
+                    <span class="color__label">Color:</span>
+                    <span class="color__valor">Rojo</span>
+                    <div class="color__muestra">
+                        <button class="color__opcion color__opcion--activo" style="background-color: #E31E24;"
+                            title="Rojo"></button>
+                    </div>
+                </div>
+
+                <div class="producto-info__talla">
+                    <div class="talla__header">
+                        <span class="talla__label">Talla</span>
+                        <a href="#" class="talla__guia">Guía de tallas (ES - CO)</a>
+                    </div>
+                    <div class="talla__opciones">
+                        <button class="talla__opcion">XS</button>
+                        <button class="talla__opcion">S</button>
+                        <button class="talla__opcion talla__opcion--activo">M</button>
+                        <button class="talla__opcion">L</button>
+                        <button class="talla__opcion">XL</button>
+                    </div>
+                </div>
+
+                <a href="carrito_de_compras.html" class="producto-info__btn-agregar">
+                    Agregar al Carrito
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <section class="footer__left">
+            <figure class="footer__logo">
+                <img src="../Images/Logo2.0.png" alt="Logo Deportex Studio">
+            </figure>
+        </section>
+
+        <section class="footer__columns">
+            <div class="footer__columns">
+                <h4 class="footer__titulo">COMPRA</h4>
+                <a href="#" class="footer__link">Método de Pago</a>
+                <a href="#" class="footer__link">Métodos de entrega</a>
+                <a href="#" class="footer__link">Envíos Gratis</a>
+                <a href="#" class="footer__link">Guía de Tallas</a>
+                <a href="#" class="footer__link">Tarjeta Regalo</a>
+            </div>
+        </section>
+
+        <section class="footer__columns">
+            <div class="footer__columns">
+                <h4 class="footer__titulo">EXPERIENCIA</h4>
+                <a href="#" class="footer__link">Ventas Corporativas</a>
+                <a href="#" class="footer__link">Consejos Deportivos</a>
+                <a href="#" class="footer__link">Deportex Actividades</a>
+                <a href="#" class="footer__link">Nuestras Tiendas</a>
+            </div>
+        </section>
+
+        <section class="footer__columns">
+            <div class="footer__columns">
+                <h4 class="footer__titulo">Legal</h4>
+                <a href="#" class="footer__link">Políticas, Términos y condiciones</a>
+                <a href="#" class="footer__link">Avisos de Seguridad</a>
+                <a href="#" class="footer__link">Factura Electronica</a>
+                <a href="#" class="footer__link">SIC</a>
+            </div>
+        </section>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../components/carrito_de_compras.css">
+    <title>Carrito de Compras - Deportex Studio</title>
+</head>
+
+<body>
+    <header class="encabezado">
+        <section class="encabezado__top">
+            <figure class="header__logo">
+                <img src="../Images/Logo2.0.png" alt="Logo Deportex Studio">
+            </figure>
+
+            <form class="contenido__barra-busqueda">
+                <input type="text" placeholder="Buscar productos..." class="contenido__barra-busqueda">
+                <button class="contenido__boton-buscador" type="submit"><img src="../Images/lupa.png"
+                        alt="lupa del buscador" class=".contenido__barra-busqueda "></button>
+            </form>
+
+            <nav class="encabezado__top--nav-encabezado">
+                <button class="nav-encabezado__icono--user"><img src="../Images/avatar.png" alt="Avatar Usuario"></button>
+                <a href="carrito_de_compras.html" class="nav-encabezado__icono--carrito"><img
+                        src="../Images/carrito-de-compras.png" alt="Carrito de compras"></a>
+                <a href="index.html" class="nav-encabezado__icono--salir" title="Salir">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24"
+                        height="24">
+                        <path
+                            d="M17 7l-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5zM4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4V5z" />
+                    </svg>
+                </a>
+            </nav>
+        </section>
+
+        <section class="nav-container">
+            <nav class="nav">
+                <li class="nav__item"><a class="nav__link" href="Principal.html">Inicio</a></li>
+            </nav>
+
+            <nav class="nav">
+                <li class="nav__item"><a class="nav__link" href="#">Deportes</a></li>
+                <ul class="nav__submenu">
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Baloncesto</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Fútbol</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Voleibol</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Ciclismo</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Natación</a></li>
+                </ul>
+            </nav>
+
+            <nav class="nav">
+                <li class="nav__item"><a class="nav__link" href="#">Hombre</a></li>
+                <ul class="nav__submenu">
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Ropa</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Calzado</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Accesorios</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Novedades</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Colección</a></li>
+                </ul>
+            </nav>
+
+            <nav class="nav">
+                <li class="nav__item"><a class="nav__link" href="#">Mujer</a></li>
+                <ul class="nav__submenu">
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Ropa</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Calzado</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Accesorios</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Novedades</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Coleccion</a></li>
+                </ul>
+            </nav>
+
+            <nav class="nav">
+                <li class="nav__item"><a class="nav__link" href="#">Junior</a></li>
+                <ul class="nav__submenu">
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Ropa</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Calzado</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Accesorios</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Novedades</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="#">Coleccion</a></li>
+                </ul>
+            </nav>
+        </section>
+    </header>
+
+    <!-- Main Content -->
+    <main class="carrito-main">
+        <!-- Tabs Navigation -->
+        <section class="tabs">
+            <button class="tab tab--activo" data-tab="carrito">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" />
+                </svg>
+                Carrito
+                <span class="tab__badge">3</span>
+            </button>
+            <button class="tab" data-tab="historial">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M13 3a9 9 0 0 0-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42A8.954 8.954 0 0 0 13 21a9 9 0 0 0 0-18zm-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8H12z" />
+                </svg>
+                Historial de Compras
+            </button>
+            <button class="tab" data-tab="devoluciones">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19 7v4H5.83l3.58-3.59L8 6l-6 6 6 6 1.41-1.41L5.83 13H21V7z" />
+                </svg>
+                Devoluciones
+            </button>
+        </section>
+
+        <!-- Tab: Carrito de Compras -->
+        <section id="carrito" class="tab-content tab-content--activo">
+            <div class="carrito-container">
+                <!-- Lista de Productos en el Carrito -->
+                <div class="carrito-productos">
+                    <h2 class="seccion__titulo">Tu Carrito de Compras</h2>
+
+                    <!-- Producto 1 -->
+                    <article class="carrito-item">
+                        <div class="carrito-item__imagen">
+                            <img src="../Images/Tarmak.avif" alt="Balón de baloncesto">
+                        </div>
+                        <div class="carrito-item__info">
+                            <h3 class="carrito-item__nombre">TARMAK</h3>
+                            <p class="carrito-item__descripcion">Balón de baloncesto talla 7 - R500</p>
+                            <span class="carrito-item__disponibilidad carrito-item__disponibilidad--stock">En
+                                stock</span>
+                        </div>
+                        <div class="carrito-item__cantidad">
+                            <button class="cantidad-btn cantidad-btn--menos">−</button>
+                            <input type="number" value="1" min="1" max="10" class="cantidad-input">
+                            <button class="cantidad-btn cantidad-btn--mas">+</button>
+                        </div>
+                        <div class="carrito-item__precio">
+                            <span class="precio-unitario">$79.000</span>
+                            <span class="precio-total">$79.000</span>
+                        </div>
+                        <button class="carrito-item__eliminar" title="Eliminar producto">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z" />
+                            </svg>
+                        </button>
+                    </article>
+
+                    <!-- Producto 2 -->
+                    <article class="carrito-item">
+                        <div class="carrito-item__imagen">
+                            <img src="../Images/Tarmak_zapatilla.avif" alt="Tenis de baloncesto">
+                        </div>
+                        <div class="carrito-item__info">
+                            <h3 class="carrito-item__nombre">TARMAK</h3>
+                            <p class="carrito-item__descripcion">Tenis de baloncesto NBA Lakers</p>
+                            <span class="carrito-item__disponibilidad carrito-item__disponibilidad--stock">En
+                                stock</span>
+                        </div>
+                        <div class="carrito-item__cantidad">
+                            <button class="cantidad-btn cantidad-btn--menos">−</button>
+                            <input type="number" value="1" min="1" max="10" class="cantidad-input">
+                            <button class="cantidad-btn cantidad-btn--mas">+</button>
+                        </div>
+                        <div class="carrito-item__precio">
+                            <span class="precio-unitario">$429.000</span>
+                            <span class="precio-total">$429.000</span>
+                        </div>
+                        <button class="carrito-item__eliminar" title="Eliminar producto">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z" />
+                            </svg>
+                        </button>
+                    </article>
+
+                    <!-- Producto 3 -->
+                    <article class="carrito-item">
+                        <div class="carrito-item__imagen">
+                            <img src="../Images/Kispsta_Balon.avif" alt="Balón de fútbol">
+                        </div>
+                        <div class="carrito-item__info">
+                            <h3 class="carrito-item__nombre">KIPSTA</h3>
+                            <p class="carrito-item__descripcion">Balón de Fútbol Híbrido talla 5</p>
+                            <span class="carrito-item__disponibilidad carrito-item__disponibilidad--stock">En
+                                stock</span>
+                        </div>
+                        <div class="carrito-item__cantidad">
+                            <button class="cantidad-btn cantidad-btn--menos">−</button>
+                            <input type="number" value="2" min="1" max="10" class="cantidad-input">
+                            <button class="cantidad-btn cantidad-btn--mas">+</button>
+                        </div>
+                        <div class="carrito-item__precio">
+                            <span class="precio-unitario">$89.000</span>
+                            <span class="precio-total">$178.000</span>
+                        </div>
+                        <button class="carrito-item__eliminar" title="Eliminar producto">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z" />
+                            </svg>
+                        </button>
+                    </article>
+                </div>
+
+                <!-- Resumen del Pedido y Checkout -->
+                <aside class="resumen-pedido">
+                    <h3 class="resumen-pedido__titulo">Resumen del Pedido</h3>
+
+                    <div class="resumen-pedido__linea">
+                        <span>Subtotal (4 productos)</span>
+                        <span>$686.000</span>
+                    </div>
+                    <div class="resumen-pedido__linea">
+                        <span>Envío</span>
+                        <span class="envio-gratis">GRATIS</span>
+                    </div>
+                    <div class="resumen-pedido__linea">
+                        <span>Descuento</span>
+                        <span class="descuento">- $0</span>
+                    </div>
+
+                    <div class="resumen-pedido__cupon">
+                        <input type="text" placeholder="Código de cupón" class="cupon-input">
+                        <button class="cupon-btn">Aplicar</button>
+                    </div>
+
+                    <div class="resumen-pedido__total">
+                        <span>Total</span>
+                        <span class="total-precio">$686.000</span>
+                    </div>
+
+                    <button class="btn-checkout" id="btnFinalizarCompra">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z" />
+                        </svg>
+                        Finalizar Compra
+                    </button>
+
+                    <div class="metodos-pago">
+                        <span>Métodos de pago aceptados:</span>
+                        <div class="metodos-pago__iconos">
+                            <span class="pago-icono">💳</span>
+                            <span class="pago-icono">🏦</span>
+                            <span class="pago-icono">📱</span>
+                        </div>
+                    </div>
+
+                    <div class="seguridad">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z" />
+                        </svg>
+                        <span>Compra 100% segura</span>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <!-- Tab: Historial de Compras -->
+        <section id="historial" class="tab-content">
+            <h2 class="seccion__titulo">Historial de Compras</h2>
+
+            <div class="historial-filtros">
+                <select class="filtro-select">
+                    <option value="todos">Todas las compras</option>
+                    <option value="mes">Último mes</option>
+                    <option value="trimestre">Últimos 3 meses</option>
+                    <option value="año">Último año</option>
+                </select>
+                <input type="text" placeholder="Buscar por producto..." class="filtro-busqueda">
+            </div>
+
+            <div class="historial-lista">
+                <!-- Compra 1 -->
+                <article class="historial-item">
+                    <div class="historial-item__header">
+                        <div class="historial-item__pedido">
+                            <span class="pedido-numero">Pedido #VT-2024-001234</span>
+                            <span class="pedido-fecha">28 de Noviembre, 2024</span>
+                        </div>
+                        <span class="historial-item__estado historial-item__estado--entregado">Entregado</span>
+                    </div>
+
+                    <div class="historial-item__productos">
+                        <div class="historial-producto">
+                            <img src="../Images/Tarmak.avif" alt="Balón de baloncesto">
+                            <div class="historial-producto__info">
+                                <h4>TARMAK - Balón de baloncesto talla 7</h4>
+                                <span>Cantidad: 1</span>
+                            </div>
+                            <span class="historial-producto__precio">$79.000</span>
+                        </div>
+                    </div>
+
+                    <div class="historial-item__footer">
+                        <div class="historial-item__total">
+                            <span>Total pagado:</span>
+                            <span class="total-valor">$79.000</span>
+                        </div>
+                        <div class="historial-item__acciones">
+                            <button class="btn-accion btn-accion--secundario">Ver Detalle</button>
+                            <button class="btn-accion btn-accion--devolver" data-pedido="VT-2024-001234">Solicitar
+                                Devolución</button>
+                            <button class="btn-accion btn-accion--primario">Comprar de Nuevo</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Compra 2 -->
+                <article class="historial-item">
+                    <div class="historial-item__header">
+                        <div class="historial-item__pedido">
+                            <span class="pedido-numero">Pedido #VT-2024-001198</span>
+                            <span class="pedido-fecha">15 de Noviembre, 2024</span>
+                        </div>
+                        <span class="historial-item__estado historial-item__estado--entregado">Entregado</span>
+                    </div>
+
+                    <div class="historial-item__productos">
+                        <div class="historial-producto">
+                            <img src="../Images/VAN_RYSEL.avif" alt="Bicicleta de ruta">
+                            <div class="historial-producto__info">
+                                <h4>Van Rysel - Bicicleta de ruta EDR CF</h4>
+                                <span>Cantidad: 1 | Color: Rojo</span>
+                            </div>
+                            <span class="historial-producto__precio">$11.990.000</span>
+                        </div>
+                    </div>
+
+                    <div class="historial-item__footer">
+                        <div class="historial-item__total">
+                            <span>Total pagado:</span>
+                            <span class="total-valor">$11.990.000</span>
+                        </div>
+                        <div class="historial-item__acciones">
+                            <button class="btn-accion btn-accion--secundario">Ver Detalle</button>
+                            <button class="btn-accion btn-accion--devolver" data-pedido="VT-2024-001198">Solicitar
+                                Devolución</button>
+                            <button class="btn-accion btn-accion--primario">Comprar de Nuevo</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Compra 3 - En camino -->
+                <article class="historial-item">
+                    <div class="historial-item__header">
+                        <div class="historial-item__pedido">
+                            <span class="pedido-numero">Pedido #VT-2024-001256</span>
+                            <span class="pedido-fecha">02 de Diciembre, 2024</span>
+                        </div>
+                        <span class="historial-item__estado historial-item__estado--enviado">En Camino</span>
+                    </div>
+
+                    <div class="historial-item__productos">
+                        <div class="historial-producto">
+                            <img src="../Images/Kispta_Guayo.avif" alt="Guayos de fútbol">
+                            <div class="historial-producto__info">
+                                <h4>KIPSTA - Guayos de fútbol terrenos secos</h4>
+                                <span>Cantidad: 1 | Talla: 42</span>
+                            </div>
+                            <span class="historial-producto__precio">$305.000</span>
+                        </div>
+                    </div>
+
+                    <div class="historial-item__footer">
+                        <div class="historial-item__total">
+                            <span>Total pagado:</span>
+                            <span class="total-valor">$305.000</span>
+                        </div>
+                        <div class="historial-item__acciones">
+                            <button class="btn-accion btn-accion--secundario">Rastrear Envío</button>
+                            <button class="btn-accion btn-accion--primario">Ver Detalle</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Tab: Devoluciones -->
+        <section id="devoluciones" class="tab-content">
+            <h2 class="seccion__titulo">Solicitud de Devolución</h2>
+
+            <!-- Formulario de Nueva Devolución -->
+            <div class="devolucion-form-container">
+                <div class="devolucion-info">
+                    <div class="devolucion-info__icono">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M11 17h2v-6h-2v6zm1-15C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM11 9h2V7h-2v2z" />
+                        </svg>
+                    </div>
+                    <div class="devolucion-info__texto">
+                        <h4>Política de Devoluciones</h4>
+                        <p>Tienes hasta 30 días naturales después de la entrega para solicitar una devolución. El
+                            producto debe estar en su estado original sin usar.</p>
+                    </div>
+                </div>
+
+                <form class="devolucion-form" id="formDevolucion">
+                    <div class="form-grupo">
+                        <label for="pedidoSelect">Selecciona el Pedido</label>
+                        <select id="pedidoSelect" class="form-control" required>
+                            <option value="">-- Selecciona un pedido --</option>
+                            <option value="VT-2024-001234">Pedido #VT-2024-001234 - Balón TARMAK ($79.000)</option>
+                            <option value="VT-2024-001198">Pedido #VT-2024-001198 - Bicicleta Van Rysel ($11.990.000)
+                            </option>
+                        </select>
+                    </div>
+
+                    <div class="form-grupo">
+                        <label for="motivoSelect">Motivo de la Devolución</label>
+                        <select id="motivoSelect" class="form-control" required>
+                            <option value="">-- Selecciona un motivo --</option>
+                            <option value="defectuoso">Producto defectuoso</option>
+                            <option value="diferente">El producto no es como se describe</option>
+                            <option value="talla">Talla/Tamaño incorrecto</option>
+                            <option value="arrepentimiento">Cambié de opinión</option>
+                            <option value="daño">Producto llegó dañado</option>
+                            <option value="otro">Otro motivo</option>
+                        </select>
+                    </div>
+
+                    <div class="form-grupo">
+                        <label for="descripcionDevolucion">Descripción del Problema</label>
+                        <textarea id="descripcionDevolucion" class="form-control" rows="4"
+                            placeholder="Describe el problema o motivo de la devolución con más detalle..."
+                            required></textarea>
+                    </div>
+
+                    <div class="form-grupo">
+                        <label>Adjuntar Evidencia (Opcional)</label>
+                        <div class="file-upload">
+                            <input type="file" id="evidenciaFile" accept="image/*" multiple>
+                            <div class="file-upload__placeholder">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z" />
+                                </svg>
+                                <span>Arrastra imágenes aquí o haz clic para seleccionar</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-grupo">
+                        <label for="solucionSelect">Solución Preferida</label>
+                        <select id="solucionSelect" class="form-control" required>
+                            <option value="">-- Selecciona tu preferencia --</option>
+                            <option value="reembolso">Reembolso completo</option>
+                            <option value="cambio">Cambio por otro producto</option>
+                            <option value="reparacion">Reparación del producto</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn-devolucion">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 7v4H5.83l3.58-3.59L8 6l-6 6 6 6 1.41-1.41L5.83 13H21V7z" />
+                        </svg>
+                        Enviar Solicitud de Devolución
+                    </button>
+                </form>
+            </div>
+
+            <!-- Lista de Devoluciones Existentes -->
+            <div class="devoluciones-historial">
+                <h3 class="subtitulo">Mis Solicitudes de Devolución</h3>
+
+                <article class="devolucion-item">
+                    <div class="devolucion-item__header">
+                        <div class="devolucion-item__info">
+                            <span class="devolucion-numero">Solicitud #DEV-2024-00056</span>
+                            <span class="devolucion-fecha">Creada: 25 de Noviembre, 2024</span>
+                        </div>
+                        <span class="devolucion-item__estado devolucion-item__estado--procesando">En Proceso</span>
+                    </div>
+                    <div class="devolucion-item__detalle">
+                        <p><strong>Pedido:</strong> #VT-2024-001150</p>
+                        <p><strong>Motivo:</strong> Producto llegó dañado</p>
+                        <p><strong>Solución solicitada:</strong> Reembolso completo</p>
+                    </div>
+                    <div class="devolucion-item__progreso">
+                        <div class="progreso-paso progreso-paso--completado">
+                            <span class="progreso-icono">✓</span>
+                            <span>Solicitud recibida</span>
+                        </div>
+                        <div class="progreso-linea progreso-linea--activa"></div>
+                        <div class="progreso-paso progreso-paso--activo">
+                            <span class="progreso-icono">●</span>
+                            <span>En revisión</span>
+                        </div>
+                        <div class="progreso-linea"></div>
+                        <div class="progreso-paso">
+                            <span class="progreso-icono">○</span>
+                            <span>Aprobado</span>
+                        </div>
+                        <div class="progreso-linea"></div>
+                        <div class="progreso-paso">
+                            <span class="progreso-icono">○</span>
+                            <span>Reembolsado</span>
+                        </div>
+                    </div>
+                </article>
+
+                <div class="sin-devoluciones" style="display: none;">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                    </svg>
+                    <p>No tienes solicitudes de devolución activas</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal de Confirmación de Compra -->
+        <div class="modal" id="modalConfirmacion">
+            <div class="modal__contenido">
+                <div class="modal__icono modal__icono--exito">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                    </svg>
+                </div>
+                <h3 class="modal__titulo">¡Compra Realizada con Éxito!</h3>
+                <p class="modal__mensaje">Tu pedido <strong>#VT-2024-001278</strong> ha sido registrado correctamente.
+                </p>
+                <div class="modal__detalles">
+                    <p>📧 Recibirás un correo de confirmación en breve.</p>
+                    <p>🚚 Tiempo estimado de entrega: 3-5 días hábiles.</p>
+                </div>
+                <div class="modal__acciones">
+                    <button class="btn-modal btn-modal--secundario" id="btnVerHistorial">Ver Historial</button>
+                    <button class="btn-modal btn-modal--primario" id="btnCerrarModal">Continuar Comprando</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <section class="footer__left">
+            <figure class="footer__logo">
+                <img src="../Images/Logo2.0.png" alt="Logo Deportex Studio">
+            </figure>
+        </section>
+
+        <section class="footer__columns">
+            <div class="footer__columns">
+                <h4 class="footer__titulo">COMPRA</h4>
+                <a href="#" class="footer__link">Método de Pago</a>
+                <a href="#" class="footer__link">Métodos de entrega</a>
+                <a href="#" class="footer__link">Envíos Gratis</a>
+                <a href="#" class="footer__link">Guía de Tallas</a>
+                <a href="#" class="footer__link">Tarjeta Regalo</a>
+            </div>
+        </section>
+
+        <section class="footer__columns">
+            <div class="footer__columns">
+                <h4 class="footer__titulo">EXPERIENCIA</h4>
+                <a href="#" class="footer__link">Ventas Corporativas</a>
+                <a href="#" class="footer__link">Consejos Deportivos</a>
+                <a href="#" class="footer__link">Deportex Actividades</a>
+                <a href="#" class="footer__link">Nuestras Tiendas</a>
+            </div>
+        </section>
+
+        <section class="footer__columns">
+            <div class="footer__columns">
+                <h4 class="footer__titulo">Legal</h4>
+                <a href="#" class="footer__link">Políticas, Términos y condiciones</a>
+                <a href="#" class="footer__link">Avisos de Seguridad</a>
+                <a href="#" class="footer__link">Factura Electronica</a>
+                <a href="#" class="footer__link">SIC</a>
+            </div>
+        </section>
+    </footer>
+
+
+</body>
+
+</html>
