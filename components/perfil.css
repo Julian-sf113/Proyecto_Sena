@@ -1142,10 +1142,79 @@ body {
     color: white;
 }
 
-/* ==================== RESPONSIVE ==================== */
-@media (max-width: 768px) {
+/* ==================== MEDIA QUERIES ==================== */
+
+/* === Desktop (max-width: 1240px) === */
+/* Ajustes para pantallas de computadores de mesa con resolución reducida */
+@media (max-width: 1240px) {
+    .perfil {
+        /* Reduce el ancho máximo del contenedor */
+        max-width: 900px;
+    }
+
+    .header__logo img {
+        /* Reduce el tamaño del logo */
+        height: 100px;
+    }
+
     .perfil__hero {
-        /* Cambia a columna */
+        /* Reduce el padding */
+        padding: 35px;
+        /* Reduce el espacio entre elementos */
+        gap: 25px;
+    }
+
+    .perfil__avatar {
+        /* Reduce el tamaño del avatar */
+        width: 100px;
+        /* Mantiene la proporción */
+        height: 100px;
+    }
+
+    .perfil__nombre {
+        /* Reduce el tamaño del nombre */
+        font-size: 28px;
+    }
+
+    .preferencias__grid {
+        /* Reduce el tamaño mínimo de las columnas */
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+/* === Tablets (max-width: 700px) === */
+/* Ajustes para tabletas y dispositivos de tamaño mediano */
+@media (max-width: 700px) {
+    .encabezado__top {
+        /* Permite que los elementos se envuelvan */
+        flex-wrap: wrap;
+        /* Reduce el espaciado entre elementos */
+        gap: 15px;
+        /* Reduce el espaciado lateral */
+        padding: 15px;
+    }
+
+    .contenido__barra-busqueda {
+        /* Mueve el buscador al final del orden */
+        order: 3;
+        /* Ocupa todo el ancho disponible */
+        max-width: 100%;
+        /* Asegura el ancho completo */
+        width: 100%;
+    }
+
+    .header__logo img {
+        /* Reduce el logo para tablets */
+        height: 80px;
+    }
+
+    .perfil {
+        /* Reduce el padding */
+        padding: 20px 15px;
+    }
+
+    .perfil__hero {
+        /* Cambia a disposición vertical */
         flex-direction: column;
         /* Centra el texto */
         text-align: center;
@@ -1153,18 +1222,42 @@ body {
         padding: 30px 20px;
     }
 
+    .perfil__avatar {
+        /* Reduce el avatar */
+        width: 90px;
+        /* Mantiene la proporción */
+        height: 90px;
+    }
+
     .perfil__nombre {
-        /* Reduce el tamaño */
+        /* Reduce el tamaño del nombre */
         font-size: 24px;
     }
 
+    .perfil__email-hero {
+        /* Reduce el tamaño del email */
+        font-size: 13px;
+    }
+
     .perfil__nav {
-        /* Cambia a columna */
+        /* Cambia a disposición vertical */
         flex-direction: column;
+        /* Reduce el espaciado */
+        gap: 8px;
+    }
+
+    .perfil__seccion {
+        /* Reduce el padding */
+        padding: 20px;
+    }
+
+    .seccion__titulo {
+        /* Reduce el tamaño del título */
+        font-size: 18px;
     }
 
     .campo__input-wrapper {
-        /* Cambia a columna */
+        /* Cambia a disposición vertical */
         flex-direction: column;
     }
 
@@ -1176,7 +1269,7 @@ body {
     }
 
     .seguridad__info {
-        /* Cambia a columna */
+        /* Cambia a disposición vertical */
         flex-direction: column;
     }
 
@@ -1186,7 +1279,7 @@ body {
     }
 
     .perfil__acciones {
-        /* Cambia a columna */
+        /* Cambia a disposición vertical */
         flex-direction: column;
     }
 
@@ -1196,5 +1289,188 @@ body {
         width: 100%;
         /* Centra el texto */
         text-align: center;
+    }
+
+    .nav-container {
+        /* Permite envolver elementos */
+        flex-wrap: wrap;
+        /* Reduce el padding */
+        padding: 0 15px;
+    }
+
+    .nav__link {
+        /* Reduce el tamaño de fuente */
+        font-size: 12px;
+        /* Reduce el padding */
+        padding: 8px 10px;
+    }
+
+    .footer {
+        /* Cambia a 2 columnas */
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* === Móviles (max-width: 406px) === */
+/* Ajustes para teléfonos móviles y pantallas pequeñas */
+@media (max-width: 406px) {
+    .encabezado__top {
+        /* Reduce aún más el espaciado */
+        padding: 10px;
+        /* Reduce el gap entre elementos */
+        gap: 10px;
+    }
+
+    .header__logo img {
+        /* Reduce significativamente el logo */
+        height: 60px;
+    }
+
+    .perfil {
+        /* Reduce el padding */
+        padding: 15px 10px;
+    }
+
+    .perfil__hero {
+        /* Reduce el padding */
+        padding: 25px 15px;
+        /* Reduce el espacio entre elementos */
+        gap: 15px;
+    }
+
+    .perfil__avatar {
+        /* Reduce el avatar */
+        width: 70px;
+        /* Mantiene la proporción */
+        height: 70px;
+        /* Reduce el margen inferior */
+        margin-bottom: 10px;
+    }
+
+    .perfil__nombre {
+        /* Reduce el tamaño del nombre */
+        font-size: 20px;
+    }
+
+    .perfil__email-hero {
+        /* Reduce el tamaño del email */
+        font-size: 12px;
+    }
+
+    .perfil__miembro {
+        /* Reduce el tamaño del texto */
+        font-size: 11px;
+    }
+
+    .perfil__cambiar-foto {
+        /* Reduce el tamaño del botón */
+        font-size: 11px;
+        /* Reduce el padding */
+        padding: 6px 12px;
+    }
+
+    .perfil__nav-item {
+        /* Reduce el tamaño de fuente */
+        font-size: 13px;
+        /* Reduce el padding */
+        padding: 10px 15px;
+    }
+
+    .perfil__seccion {
+        /* Reduce el padding */
+        padding: 15px;
+        /* Reduce el margen inferior */
+        margin-bottom: 15px;
+    }
+
+    .seccion__titulo {
+        /* Reduce el tamaño del título */
+        font-size: 16px;
+        /* Reduce el margen inferior */
+        margin-bottom: 15px;
+    }
+
+    .campo__label {
+        /* Reduce el tamaño de la etiqueta */
+        font-size: 12px;
+    }
+
+    .campo__input {
+        /* Reduce el padding */
+        padding: 12px 14px;
+        /* Reduce el tamaño de fuente */
+        font-size: 14px;
+    }
+
+    .campo__btn-editar {
+        /* Reduce el tamaño de fuente */
+        font-size: 12px;
+        /* Reduce el padding */
+        padding: 10px 15px;
+    }
+
+    .seguridad__item {
+        /* Reduce el padding */
+        padding: 12px 15px;
+    }
+
+    .seguridad__icono {
+        /* Reduce el tamaño del icono */
+        width: 35px;
+        /* Mantiene la proporción */
+        height: 35px;
+    }
+
+    .preferencia-card {
+        /* Reduce el padding */
+        padding: 20px;
+    }
+
+    .preferencia-card__icono {
+        /* Reduce el tamaño del icono */
+        width: 40px;
+        /* Mantiene la proporción */
+        height: 40px;
+    }
+
+    .preferencia-card__titulo {
+        /* Reduce el tamaño del título */
+        font-size: 14px;
+    }
+
+    .footer {
+        /* Cambia a una sola columna */
+        grid-template-columns: 1fr;
+        /* Centra el texto */
+        text-align: center;
+        /* Reduce el padding */
+        padding: 30px 15px 25px;
+    }
+
+    .footer__left {
+        /* Centra el logo */
+        justify-content: center;
+    }
+
+    .footer__columns {
+        /* Centra los enlaces */
+        align-items: center;
+    }
+
+    .footer__logo img {
+        /* Reduce el logo del footer */
+        height: 60px;
+    }
+
+    .nav-container {
+        /* Reduce el padding */
+        padding: 0 10px;
+    }
+
+    .nav__link {
+        /* Reduce el tamaño de fuente */
+        font-size: 11px;
+        /* Reduce el padding */
+        padding: 6px 8px;
     }
 }
