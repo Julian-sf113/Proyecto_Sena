@@ -796,6 +796,10 @@ body {
     transition: all 0.3s ease;
     /* Posición relativa para badge */
     position: relative;
+    /* Utiliza Flexbox para alinear contenido */
+    display: flex;
+    /* Columna vertical */
+    flex-direction: column;
 }
 
 .producto-recomendado:hover {
@@ -867,6 +871,12 @@ body {
 .producto-recomendado__info {
     /* Espaciado interno */
     padding: 20px;
+    /* Ocupa el espacio restante para empujar el botón abajo */
+    flex: 1;
+    /* Utiliza Flexbox para alinear contenido */
+    display: flex;
+    /* Columna vertical */
+    flex-direction: column;
 }
 
 .producto-recomendado__titulo {
@@ -945,6 +955,8 @@ body {
     color: white;
     /* Sin borde */
     border: none;
+    /* Esquinas redondeadas solo en la parte inferior */
+    border-radius: 0 0 20px 20px;
     /* Tamaño de fuente */
     font-size: 14px;
     /* Texto semi-negrita */
@@ -955,6 +967,14 @@ body {
     cursor: pointer;
     /* Transición suave */
     transition: all 0.3s ease;
+    /* Sin subrayado (es un enlace) */
+    text-decoration: none;
+    /* Texto centrado */
+    text-align: center;
+    /* Display block para que ocupe todo el ancho */
+    display: block;
+    /* Margen superior automático para empujar al fondo */
+    margin-top: auto;
 }
 
 .producto-recomendado__btn:hover {
